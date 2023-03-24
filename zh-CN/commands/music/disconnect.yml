@@ -1,0 +1,35 @@
+---
+meta:
+  name: 音乐（退出语音通道）
+  description: 退出语音通道。
+constants: { }
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '我断开了语音通道。 :wave:'
+        fields: [ ]
+        footer: ''
+  success_and_stop:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '我停止播放并断开与语音通道的连接。:wave:'
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: |-
+          您已经与语音通道断开连接。
+          要播放媒体，请运行`{bot:prefix}play <keyword | URL>`。
+        fields: [ ]
+        footer: ''

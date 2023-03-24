@@ -1,0 +1,36 @@
+constants:
+  name: ページネーション
+  sort: 並び替える方法を選択
+
+components:
+  index:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:information}{global:separator}{paginator:name}'
+        title: ''
+        description: |-
+          ページ番号を1から**{replace:pages}**の中で入力するか、キャンセルを押してください。
+          ※ **{replace:time}**秒で自動キャンセルされます。
+        fields: []
+        footer: ''
+  success:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{paginator:name}'
+        title: ''
+        description: '**{replace}**ページに移動します。しばらくお待ちください…'
+        fields: []
+        footer: ''
+  error:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{paginator:name}'
+        title: ''
+        description: |-
+          入力された番号のページがありませんでした。
+          前回表示していたページに移動します。しばらくお待ちください…
+        fields: []
+        footer: ''

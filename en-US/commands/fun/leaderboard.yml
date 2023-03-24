@@ -1,0 +1,35 @@
+---
+meta:
+  name: Leaderboard
+  description: Displays the leaderboard.
+constants:
+  here: here
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: ''
+        fields:
+          - name: Leaderboard for Web
+            value: |-
+              You can check all the user levels that have said on the server in the web version of leaderboard.
+              [Click here]({replace}) for details. (Login required)
+          - name: Level
+            value: ''
+          - name: Experience (Max)
+            value: ''
+          - name: Preliminary ranking
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: Data acquisition in progress...{global:separator}{meta:name}
+        description: We are retrieving data. Please wait a moment...
+        fields: [ ]
+        footer: ''

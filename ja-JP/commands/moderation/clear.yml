@@ -1,0 +1,91 @@
+meta:
+  name: メッセージの削除
+  description: 指定した数だけメッセージを削除します。
+
+constants:
+  action: 実行
+  cancel: キャンセル
+
+components:
+  help:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label} <削除したい数> [メンバー ID | メンバー メンション ...]`:
+          　指定した数のメッセージを削除
+        fields:
+          - name: ヒント
+            value: |-
+              ・ピン留めされていないメッセージのみ削除
+              ・2週間以内に送信されたメッセージを削除
+
+              ・IDとメンションを混合してメンバーの指定が可能
+              ・複数のメンバーをまとめて指定することが可能
+        footer: ''
+  success:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '**{replace}個**のメッセージを削除しました。'
+        fields: []
+        footer: このメッセージは5秒後に削除されます。
+  successWithUsers:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '**{replace:users}人**が送信した**{replace:count}個**のメッセージを削除しました。'
+        fields:
+          - name: ユーザー
+            value: ''
+        footer: このメッセージは5秒後に削除されます。
+  cancelled:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '**{replace}個**のメッセージの削除をキャンセルしました。'
+        fields: []
+        footer: ''
+  cancelledWithUsers:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '**{replace:users}人**が送信した**{replace:count}個**のメッセージの削除をキャンセルしました。'
+        fields:
+          - name: ユーザー
+            value: ''
+        footer: ''
+  confirm:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          本当に**{replace}個**のメッセージを削除してもよろしいですか？
+          :warning: この操作は取り消すことができません！
+        fields: []
+        footer: ''
+  confirmWithUsers:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          本当に**{replace:users}人**が送信した**{replace:count}個**のメッセージを削除してもよろしいですか？
+          :warning: この操作は取り消すことができません！
+        fields:
+          - name: ユーザー
+            value: ''
+        footer: ''

@@ -1,0 +1,37 @@
+---
+constants:
+  name: 페이지 네이션
+  sort: 정렬 방법 선택
+components:
+  move:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{paginator:name}'
+        description: |-
+          입력 한 번호의 페이지로 이동합니다. 1**{replace:pages}**에서 입력하십시오.
+          취소하려면이 메시지에있는 :x: 를 클릭하십시오.
+          ※**{replace:time}** 초 자동 취소됩니다.
+        fields: [ ]
+        footer: ''
+  move_success:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{paginator:name}'
+        description: '**{replace}**페이지로 이동합니다. 잠시 기다려주십시오...'
+        fields: [ ]
+        footer: ''
+  move_error:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{paginator:name}'
+        description: |-
+          입력 된 번호의 페이지가 없습니다.
+          지난번 표시하고 페이지로 이동합니다. 잠시 기다려주십시오...
+        fields: [ ]
+        footer: ''

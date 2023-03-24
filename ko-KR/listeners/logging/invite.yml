@@ -1,0 +1,48 @@
+---
+constants:
+  nolimit: 무제한
+components:
+  create:
+    content: ''
+    components: { }
+    embeds:
+      - author: '초대 만들기 {global:separator}{replace:title}'
+        title: ''
+        description: 서버에 {replace} 가 생성되었습니다.
+        fields:
+          - name: 개인 정보
+            value: |-
+              코드: {replace:code}
+              최대 사용 횟수: {replace:max_uses}
+              만료일: {replace:expired_at}
+              임시 액세스: {replace:temporary}
+              작성 날짜: {replace:created_at}
+          - name: 채널 정보
+            value: |-
+              이름(ID): {replace:name} ({replace:id})
+              유형: {replace:type}
+              상위 카테고리: {replace:category}
+              작성 날짜: {replace:created_at}
+        footer: ''
+  delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: '초대 삭제 {global:separator}{replace:title}'
+        title: ''
+        description: 서버에서 {replace} 이 삭제되었습니다.
+        fields:
+          - name: 개인 정보
+            value: |-
+              코드: {replace:code}
+              사용 횟수(상한): {replace:uses} / {replace:max_uses}
+              만료일: {replace:expired_at}
+              임시 액세스: {replace:temporary}
+              작성 날짜: {replace:created_at}
+          - name: 채널 정보
+            value: |-
+              이름(ID): {replace:name} ({replace:id})
+              유형: {replace:type}
+              상위 카테고리: {replace:category}
+              작성 날짜: {replace:created_at}
+        footer: ''

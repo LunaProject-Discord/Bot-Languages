@@ -1,0 +1,26 @@
+---
+constants: { }
+components:
+  music_disconnect:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:information}{global:separator}Music'
+        title: ''
+        description: |-
+          Stopped playback because the queue is empty and disconnected from the voice channel.
+          To play media, run `{bot:prefix}play <keyword | URL>`.
+        fields: [ ]
+        footer: ''
+  speak_disconnect:
+    content: ''
+    components:
+      start: Start reading out
+    embeds:
+      - author: '{global:information}{global:separator}Reading'
+        title: ''
+        description: |-
+          Stopped reading and disconnected from voice channel due to no participants.
+          To start reading out `{bot:prefix}speak`.
+        fields: [ ]
+        footer: ''

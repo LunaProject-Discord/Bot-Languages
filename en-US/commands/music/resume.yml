@@ -1,0 +1,28 @@
+---
+meta:
+  name: Music (Media Resumed)
+  description: Resume the paused media.
+constants: { }
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: '{global:success}{global:separator}{meta:name}'
+        description: |-
+          Playback resumed.
+          To pause playback, run `{bot:prefix}pause`.
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: |-
+          Playback has already been resumed.
+          To pause the playback, run `{bot:prefix}pause`.
+        fields: [ ]
+        footer: ''

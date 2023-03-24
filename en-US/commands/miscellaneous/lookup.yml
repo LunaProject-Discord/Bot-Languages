@@ -1,0 +1,42 @@
+---
+meta:
+  name: Name Change History
+  description: Displays the name change history.
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: 'You are viewing information about {replace}.'
+        fields: [ ]
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Data acquisition in progress...{global:separator}{meta:name}'
+        title: ''
+        description: We are retrieving data. Please wait a moment...
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Searching...{global:separator}{meta:name}'
+        title: ''
+        description: Searching for a name change history that matches the specified criteria. Please wait a moment...
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: No name change history matching the specified criteria was found.
+        fields: [ ]
+        footer: ''

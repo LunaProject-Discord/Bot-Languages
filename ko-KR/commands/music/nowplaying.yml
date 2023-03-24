@@ -1,0 +1,17 @@
+---
+meta:
+  name: 음악 (재생중인 미디어)
+  description: 재생중인 미디어의 정보를 표시합니다.
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: ''
+        fields:
+          - name: 다음 미디어
+            value: ''
+        footer: ''

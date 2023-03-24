@@ -1,0 +1,53 @@
+---
+meta:
+  name: 音乐（跳过媒体）
+  description: 播放队列中的下一个（上一个）媒体。
+constants: { }
+components:
+  success_previous:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 我跳到了以前的媒体。
+        fields: [ ]
+        footer: ''
+  success_next:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 我跳到了下一个媒体。
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: |-
+          你不能再跳过了。
+          运行`{bot:prefix}play <keyword | URL>` 将媒体添加到队列中。
+        fields: [ ]
+        footer: ''
+  vote_success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '我投了票。(投票数: {replace:count} / {replace:max_count})'
+        fields: [ ]
+        footer: ''
+  vote_error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: '你已经投过票。(投票数: {replace:count} / {replace:max_count})'
+        fields: [ ]
+        footer: ''

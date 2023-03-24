@@ -1,0 +1,17 @@
+---
+meta:
+  name: 音乐（播放媒体）
+  description: 显示有关正在播放的媒体的信息。
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: ''
+        fields:
+          - name: 下一个媒体
+            value: ''
+        footer: ''

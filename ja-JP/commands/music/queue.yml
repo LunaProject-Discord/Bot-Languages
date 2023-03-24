@@ -1,0 +1,20 @@
+meta:
+  name: 音楽 (メディアのキュー)
+  description: キューに入っているメディアを表示します。
+
+constants: {}
+
+components:
+  index:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: 'キュー{global:separator}{meta:name}'
+        description: '総再生時間: {replace:total_duration}, キュー数: {replace:queue_size}'
+        fields:
+          - name: 再生中のメディア
+            value: ''
+          - name: 次のメディア
+            value: ''
+        footer: ''

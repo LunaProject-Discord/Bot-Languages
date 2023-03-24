@@ -1,0 +1,125 @@
+---
+constants: { }
+components:
+  delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: '删除消息{global:separator}{replace:title}'
+        title: ''
+        description: '消息 {replace:user} 已从 {replace:channel} 中删除。'
+        fields:
+          - name: 内容
+            value: ''
+          - name: 附件
+            value: ''
+          - name: 添加回应
+            value: ''
+          - name: 身份
+            value: ''
+          - name: 频道信息
+            value: |-
+              名称 (ID): {replace:name} ({replace:id})
+              类型: {replace:type}
+              父类别: {replace:category}
+              创建: {replace:created_at}
+          - name: 用户信息
+            value: |-
+              名称 (ID): {replace:tag} ({replace:id})
+              状态: {replace:status}
+              机器人: {replace:bot}
+              标志: {replace:flags}
+              创建: {replace:created_at}
+        footer: ''
+  update:
+    content: ''
+    components: { }
+    embeds:
+      - author: '编辑消息{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 的消息已被编辑。'
+        fields:
+          - name: 编辑前的内容
+            value: ''
+          - name: 编辑内容
+            value: ''
+          - name: 附件
+            value: ''
+          - name: 添加回应
+            value: ''
+          - name: 身份
+            value: ''
+          - name: 频道信息
+            value: |-
+              名称 (ID): {replace:name} ({replace:id})
+              类型: {replace:type}
+              父类别: {replace:category}
+              创建: {replace:created_at}
+          - name: 用户信息
+            value: |-
+              名称 (ID): {replace:tag} ({replace:id})
+              状态: {replace:status}
+              机器人: {replace:bot}
+              标志: {replace:flags}
+              创建: {replace:created_at}
+        footer: ''
+  pin:
+    content: ''
+    components: { }
+    embeds:
+      - author: '消息固定{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 消息已固定。'
+        fields:
+          - name: 内容
+            value: ''
+          - name: 附件
+            value: ''
+          - name: 添加回应
+            value: ''
+          - name: 身份
+            value: ''
+          - name: 频道信息
+            value: |-
+              名称 (ID): {replace:name} ({replace:id})
+              类型: {replace:type}
+              父类别: {replace:category}
+              创建: {replace:created_at}
+          - name: 用户信息
+            value: |-
+              名称 (ID): {replace:tag} ({replace:id})
+              状态: {replace:status}
+              机器人: {replace:bot}
+              标志: {replace:flags}
+              创建: {replace:created_at}
+        footer: ''
+  unpin:
+    content: ''
+    components: { }
+    embeds:
+      - author: '取消固定消息{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 消息已取消固定。'
+        fields:
+          - name: 内容
+            value: ''
+          - name: 附件
+            value: ''
+          - name: 添加回应
+            value: ''
+          - name: 身份
+            value: ''
+          - name: 频道信息
+            value: |-
+              名称 (ID): {replace:name} ({replace:id})
+              类型: {replace:type}
+              父类别: {replace:category}
+              创建: {replace:created_at}
+          - name: 用户信息
+            value: |-
+              名称 (ID): {replace:tag} ({replace:id})
+              状态: {replace:status}
+              机器人: {replace:bot}
+              标志: {replace:flags}
+              创建: {replace:created_at}
+        footer: ''

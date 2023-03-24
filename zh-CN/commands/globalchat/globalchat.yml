@@ -1,0 +1,113 @@
+---
+meta:
+  name: 全球聊天
+  description: 您可以管理全球聊天。
+constants:
+  unknownGuild: 未知服务器 ({replace})
+  unknownChannel: 未知频道 ({replace})
+  unknownUser: 未知用户 ({replace})
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:title}'
+        description: |-
+          >__ **连接到Global Chat** __
+          　`{bot:prefix}{command:label} connect [ID]`, `{bot:prefix}{command:label} join [ID]`
+          >__ **断开Global Chat** __
+          　`{bot:prefix}{command:label} disconnect`, `{bot:prefix}{command:label} leave`
+          >__ **显示连接的频道** __
+          　`{bot:prefix}{command:label} list`
+          >__ **检查发送的消息** __
+          　`{bot:prefix}{command:label} <ID>`
+        fields: [ ]
+        footer: ''
+  connectSuccess:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:title}'
+        description: |-
+          我已连接到Global Chat。
+          要断开连接，请运行 `{bot:prefix}{command:label} disconnect`。
+        fields:
+          - name: 模式
+            value: ''
+          - name: 组
+            value: ''
+        footer: ''
+  connectError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:title}'
+        description: |-
+          此频道已连接至 Global Chat。
+          使用`{bot:prefix}{command:label} disconnect` 断开连接，然后重试。
+        fields: [ ]
+        footer: ''
+  disconnectSuccess:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:title}'
+        description: |-
+          我已与Global Chat断开连接。
+          要重新连接，请运行`{bot:prefix}{command:label} connect` 。上下文请求
+        fields: [ ]
+        footer: ''
+  disconnectError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:title}'
+        description: |-
+          此频道未连接到 Global Chat。
+          要连接，请运行`{bot:prefix}{command:label} connect`。
+        fields: [ ]
+        footer: ''
+  listSuccess:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:title}'
+        description: '{replace:count} 个频道连接到 {replace:category} 。上下文请求'
+        fields: [ ]
+        footer: ''
+  listError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:title}'
+        description: |-
+          此频道未连接到 Global Chat。
+          要连接，请运行`{bot:prefix}{command:label} connect`。
+        fields: [ ]
+        footer: ''
+  information:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:title}'
+        description: 显示由{replace} 发送的消息。
+        fields:
+          - name: 内容
+            value: ''
+          - name: 服务器
+            value: ''
+          - name: 频道
+            value: ''
+          - name: 用户
+            value: ''
+          - name: 在发送
+            value: ''
+        footer: ''

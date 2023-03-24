@@ -1,0 +1,52 @@
+---
+meta:
+  name: 表情信息
+  description: 显示象形图信息。
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '显示{replace} 信息。'
+        fields:
+          - name: 失效日期
+            value: |-
+              名称 (ID): {replace:name} ({replace:id})
+              动画: {replace:animated}
+              创建: {replace:created_at}
+          - name: 服务器信息
+            value: |-
+              名称 (ID): {replace:name} ({replace:id})
+              所有者: {replace:owner_status}{replace:owner_tag} ({replace:owner_id})
+              创立日期: {replace:created_at}
+          - name: 用户信息
+            value: |-
+              名称 (ID): {replace:tag} ({replace:id})
+              状态: {replace:status}
+              机器人: {replace:bot}
+              标志: {replace:flags}
+              创建: {replace:created_at}
+          - name: 可用职位 ({replace:roles},{replace:members}人)
+            value: ''
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 我们正在搜索符合指定条件的象形图。请稍等…
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 未找到符合指定条件的表情符号。
+        fields: [ ]
+        footer: ''

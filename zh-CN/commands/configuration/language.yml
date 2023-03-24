@@ -1,0 +1,67 @@
+---
+meta:
+  name: 更改语言
+  description: 更改显示语言。
+constants:
+  user: 用户
+  guild: 服务器
+  cancel: 取消
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:help}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          `{bot:prefix}{command:label} <cn-CA | en-US>`:
+          将显示语言更改为指定语言
+        fields: [ ]
+        footer: ''
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '将显示语言更改为 {replace}。'
+        fields: [ ]
+        footer: ''
+  success_user:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '将用户的显示语言更改为 {replace}。'
+        fields: [ ]
+        footer: ''
+  success_guild:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '将服务器的显示语言更改为 {replace}。'
+        fields: [ ]
+        footer: ''
+  cancelled:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: ''
+        description: '取消了对 {replace} 的更改'
+        fields: [ ]
+        footer: ''
+  confirm:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:warning}{global:separator}{meta:name}'
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          我正在尝试将显示语言更改为 {replace}。
+          请选择您要更改语言的目标。
+        fields: [ ]
+        footer: ''

@@ -1,0 +1,90 @@
+meta:
+  name: ヘルプ
+  description: Botのヘルプを表示します。
+
+constants: 
+  channel_all: すべてのチャンネル
+  channel_stable: 結月 -ゆづき- (安定版)
+  channel_beta: 彩月 -さつき- (ベータ版)
+  channel_dev: 菜月 -なつき- (開発版)
+  permission_all: すべての権限
+  permission_owner: オーナー以上
+  permission_subowner: サブオーナー以上
+  permission_admin: 管理者以上
+  permission_staff: スタッフ以上
+  location_all: すべての場所
+  location_guild: サーバー
+  location_private: ダイレクトメッセージ・グループ
+  custom: カスタム ({replace})
+
+components:
+  index:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: すべてのコマンドのプレフィックスは`{bot:prefix}`です。
+        fields: 
+          - name: ''
+            value: '[導入はこちら]({replace:join}) | [サポートサーバーはこちら]({replace:support})'
+          - name: ヒント
+            value: |-
+              ヘルプコマンドの末尾に引数としてコマンド名を入力すると、
+              入力したコマンドの詳細情報が表示されます。
+              例: `{bot:prefix}help about`
+        footer: ''
+  search_category:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: 'カテゴリ: {replace}{global:separator}{meta:name}'
+        description: ''
+        fields: 
+          - name: コマンド
+            value: ''
+        footer: ''
+  search_command:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: 'コマンド: {replace}{global:separator}{meta:name}'
+        description: ''
+        fields: 
+          - name: 使い方
+            value: ''
+          - name: 代替コマンド
+            value: ''
+          - name: 実行できるチャンネル
+            value: ''
+          - name: 実行できる権限 (Bot上)
+            value: ''
+          - name: 実行できる場所
+            value: ''
+          - name: カテゴリ
+            value: ''
+          - name: ユーザーに必要な権限
+            value: ''
+          - name: Botに必要な権限
+            value: ''
+        footer: ''
+  searching:
+    content: ''
+    components: {}
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合うコマンドやカテゴリを検索しています。しばらくお待ちください…
+        fields: []
+        footer: ''
+  error:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合うコマンドやカテゴリが見つかりませんでした。
+        fields: []
+        footer: ''

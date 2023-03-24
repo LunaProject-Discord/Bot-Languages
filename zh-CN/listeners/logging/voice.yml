@@ -1,0 +1,108 @@
+---
+constants: { }
+components:
+  join:
+    content: ''
+    components: { }
+    embeds:
+      - author: '加入语音频道{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member} 已加入 {replace:channel}。'
+        fields:
+          - name: 用户名
+            value: ''
+          - name: 频道名称
+            value: ''
+          - name: 分类
+            value: ''
+          - name: 用户数(上限)
+            value: ''
+          - name: 比特率(上限)
+            value: ''
+        footer: ''
+  leave:
+    content: ''
+    components: { }
+    embeds:
+      - author: '退出语音通道{global:separator}{replace:title}'
+        title: ''
+        description: "{replace:member} 已离开 {replace:channel}。\n上下文请求"
+        fields:
+          - name: 用户名
+            value: ''
+          - name: 频道名称
+            value: ''
+          - name: 分类
+            value: ''
+          - name: 用户数(上限)
+            value: ''
+          - name: 比特率(上限)
+            value: ''
+        footer: ''
+  move:
+    content: ''
+    components: { }
+    embeds:
+      - author: '移动语音通道{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member} 已从 {replace:old_channel} 移至 {replace:new_channel}。'
+        fields:
+          - name: 用户名
+            value: ''
+          - name: 来源渠道
+            value: |-
+              频道名称:{replace:channel}
+              类别:{replace:category}
+              用户数 (上限):{replace:user_limit}
+              比特率 (上限):{replace:bitrate}
+          - name: 目的地频道
+            value: |-
+              频道名称:{replace:channel}
+              类别:{replace:category}
+              用户数 (上限):{replace:user_limit}
+              比特率 (上限):{replace:bitrate}
+        footer: ''
+  mute:
+    content: ''
+    components: { }
+    embeds:
+      - author: '会员静音{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 的服务器静音已设置。'
+        fields:
+          - name: 用户名
+            value: ''
+        footer: ''
+  unmute:
+    content: ''
+    components: { }
+    embeds:
+      - author: '取消静音成员{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 的服务器静音已取消静音。'
+        fields:
+          - name: 用户名
+            value: ''
+        footer: ''
+  deafen:
+    content: ''
+    components: { }
+    embeds:
+      - author: '会员扬声器静音{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 的服务器扬声器静音已设置。'
+        fields:
+          - name: 用户名
+            value: ''
+        footer: ''
+  undeafen:
+    content: ''
+    components: { }
+    embeds:
+      - author: '取消静音成员扬声器{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 的服务器扬声器静音已取消静音。'
+        fields:
+          - name: 用户名
+            value: ''
+        footer: ''

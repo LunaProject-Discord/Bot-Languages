@@ -1,0 +1,43 @@
+meta:
+  name: 名前変更履歴
+  description: 名前変更履歴を表示します。
+
+constants: {}
+
+components:
+  index:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '{replace} の情報を表示しています。'
+        fields: []
+        footer: ''
+  loading:
+    content: ''
+    components: {}
+    embeds:
+      - author: 'データ取得中…{global:separator}{meta:name}'
+        title: ''
+        description: データを取得しています。しばらくお待ちください…
+        fields: []
+        footer: ''
+  searching:
+    content: ''
+    components: {}
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合う名前変更履歴を検索しています。しばらくお待ちください…
+        fields: []
+        footer: ''
+  error:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合う名前変更履歴が見つかりませんでした。
+        fields: []
+        footer: ''

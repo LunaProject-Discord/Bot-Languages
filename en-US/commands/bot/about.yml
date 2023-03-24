@@ -1,0 +1,27 @@
+---
+meta:
+  name: About
+  description: Displays an overview of the bot.
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: Displays an overview of this bot.
+        fields:
+          - name: Version
+            value: '**{bot:version}** ({bot:channel}, Build {bot:build})'
+          - name: Servers
+            value: ''
+          - name: Channels
+            value: '{replace} ({replace:category}, {replace:text}, {replace:voice}, {replace:stage})'
+          - name: Users
+            value: '{replace} ({replace:user}, {replace:bot})'
+          - name: Invite Bot
+            value: ''
+          - name: Join the support server
+            value: ''
+        footer: ''

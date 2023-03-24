@@ -1,0 +1,83 @@
+---
+constants:
+  category: 카테고리
+  channel: 채널
+  text: 텍스트 채널
+  voice: 음성 채널
+  stage: 스테이지 채널
+  name: 이름
+  position: 위치
+  color: 색상
+  mentionable: 멘션 가능
+  hoist: 다른 표시
+  permission: 권한
+components:
+  create:
+    content: ''
+    components: { }
+    embeds:
+      - author: '직책 만들기 {global:separator}{replace:title}'
+        title: ''
+        description: 서버에 {replace} 가 생성되었습니다.
+        fields:
+          - name: 개인 정보
+            value: |-
+              이름(ID): {replace:name} ({replace:id})
+              색상 코드: {replace:color}
+              멘션 가능: {replace:mentionable}
+              다른 표시: {replace:hoisted}
+              작성 날짜: {replace:created_at}
+          - name: Bot 정보
+            value: |-
+              이름 (ID): {replace:tag} ({replace:id})
+              스테이터스: {replace:status}
+              Bot: {replace:bot}
+              Flags: {replace:flags}
+              작성일시: {replace:created_at}
+          - name: 회원 ({replace})
+            value: ''
+          - name: 직책 구분 ({replace})
+            value: ''
+        footer: ''
+  delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: '직책 삭제 {global:separator}{replace:title}'
+        title: ''
+        description: 서버에서 {replace} 이 삭제되었습니다.
+        fields:
+          - name: 개인 정보
+            value: |-
+              이름(ID): {replace:name} ({replace:id})
+              색상 코드: {replace:color}
+              멘션 가능: {replace:mentionable}
+              다른 표시: {replace:hoisted}
+              작성 날짜: {replace:created_at}
+          - name: Bot 정보
+            value: |-
+              이름 (ID): {replace:tag} ({replace:id})
+              스테이터스: {replace:status}
+              Bot: {replace:bot}
+              Flags: {replace:flags}
+              작성일시: {replace:created_at}
+          - name: 회원 ({replace})
+            value: ''
+          - name: 직책 구분 ({replace})
+            value: ''
+        footer: ''
+  update:
+    content: ''
+    components: { }
+    embeds:
+      - author: '직책 변경 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace:role}의 {replace:property}가 변경되었습니다.'
+        fields:
+          - name: 직함
+            value: ''
+          - name: 변경 전의 {replace}
+            value: ''
+          - name: 변경 후 {replace}
+            value: ''
+        footer: ''

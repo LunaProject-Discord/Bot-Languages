@@ -1,0 +1,89 @@
+---
+meta:
+  name: 求助
+  description: 显示机器人帮助。
+constants:
+  channel_all: 所有频道
+  channel_stable: 結月 -ゆづき- (稳定版)
+  channel_beta: 彩月 -さつき- (试生产)
+  channel_dev: 菜月 -なつき- (开发版)
+  permission_all: 所有权限
+  permission_owner: 业主或以上
+  permission_subowner: 副拥有人或以上
+  permission_admin: 管理员或以上
+  permission_staff: 超过员工
+  location_all: 任何位置
+  location_guild: 服务器
+  location_private: 私信群
+  custom: 风俗 ({replace})
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: 所有命令的前缀都是`{bot:prefix}`。
+        fields:
+          - name: ''
+            value: '[点此介绍]({replace:join}) | [单击此处获取支持服务器]({replace:support})'
+          - name: 提示
+            value: |-
+              如果在 help 命令的末尾输入命令名称作为参数，
+              显示有关您输入的命令的详细信息。
+              示例: `{bot:prefix}help about`
+        footer: ''
+  search_category:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '类别: {replace}{global:separator}{meta:name}'
+        description: ''
+        fields:
+          - name: 指令
+            value: ''
+        footer: ''
+  search_command:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '指令: {replace}{global:separator}{meta:name}'
+        description: ''
+        fields:
+          - name: 用法
+            value: ''
+          - name: 备用命令
+            value: ''
+          - name: 可以执行的通道
+            value: ''
+          - name: 可执行权限（在机器人上）
+            value: ''
+          - name: 你可以跑的地方
+            value: ''
+          - name: 分类
+            value: ''
+          - name: 用户所需的权限
+            value: ''
+          - name: 机器人所需的权限
+            value: ''
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 搜索满足指定条件的命令和类别。请稍等…
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 未找到满足指定条件的命令或类别。
+        fields: [ ]
+        footer: ''

@@ -1,0 +1,15 @@
+---
+constants:
+  title: 감시 로그
+components:
+  component:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: ''
+        description: ''
+        fields:
+          - name: 실행한 사용자
+            value: ''
+        footer: ''

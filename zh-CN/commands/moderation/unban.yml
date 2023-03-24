@@ -1,0 +1,106 @@
+---
+meta:
+  name: 解除禁令
+  description: 取消指定用户的禁令。
+constants:
+  action: 运行于
+  cancel: 取消
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix} {command:label} <用户 ID | 用户提及 ...>`：
+          取消指定用户的Ban
+        fields:
+          - name: 提示
+            value: |-
+              ・可以通过混合id和mention来指定用户。
+              ・可以一次指定多个用户。
+        footer: ''
+  successSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '{replace} 禁令已解除。'
+        fields: [ ]
+        footer: ''
+  successMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '取消了对 ** {replace} 人 ** 用户的禁令。'
+        fields:
+          - name: 用户
+            value: ''
+        footer: ''
+  cancelledSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '已取消 {replace} 的禁令取消。'
+        fields: [ ]
+        footer: ''
+  cancelledMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '已取消 ** {replace} 人** 用户的禁令取消。'
+        fields:
+          - name: 用户
+            value: ''
+        footer: ''
+  confirmSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          您确定要移除 {replace} 禁令吗？
+          :warning:这个操作是不可逆的！
+        fields: [ ]
+        footer: ''
+  confirmMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          您确定要解禁 ** {replace} 人 ** 用户吗？
+          :warning:这个操作是不可逆的！
+        fields:
+          - name: ''
+            value: |-
+              某些用户的禁令无法解锁。
+              点击“{global:viewDetail}”了解详情。
+          - name: 用户
+            value: ''
+        footer: ''
+  helpMembers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          某些用户的禁令无法解锁。
+          详细原因如下。
+        fields:
+          - name: 这些用户已经被解除禁令。
+            value: ''
+          - name: Ban 不能被释放，因为这些用户是不存在的用户。
+            value: ''
+        footer: ''

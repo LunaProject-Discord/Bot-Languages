@@ -1,0 +1,15 @@
+---
+constants:
+  title: 审核日志
+components:
+  component:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: ''
+        description: ''
+        fields:
+          - name: 运行的用户
+            value: ''
+        footer: ''

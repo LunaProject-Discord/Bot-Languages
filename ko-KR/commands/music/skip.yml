@@ -1,0 +1,53 @@
+---
+meta:
+  name: 음악 (미디어 생략)
+  description: 큐에있는 다음 (이전) 의 미디어를 재생합니다.
+constants: { }
+components:
+  success_previous:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 이전 미디어에 건너 뛰었습니다.
+        fields: [ ]
+        footer: ''
+  success_next:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 다음 미디어에 건너 뛰었습니다.
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: |-
+          더 이상 건너 뛸 수 없습니다.
+          큐에 미디어를 추가하려면 `{bot:prefix}play <키워드 | URL>`실행하십시오.
+        fields: [ ]
+        footer: ''
+  vote_success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '투표했습니다. (투표 수: {replace:count} / {replace:max_count})'
+        fields: [ ]
+        footer: ''
+  vote_error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: '당신은 이미 투표하고 있습니다. (투표 수: {replace:count} / {replace:max_count})'
+        fields: [ ]
+        footer: ''

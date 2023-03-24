@@ -1,0 +1,12 @@
+constants:
+  online: 온라인
+  idle: 자리 비움
+  do_not_disturb: 바쁨
+  offline: 오프라인
+  invisible: 오프라인
+
+  web: 찾아보기
+  desktop: 데스크톱
+  mobile: 모바일
+
+components: {}

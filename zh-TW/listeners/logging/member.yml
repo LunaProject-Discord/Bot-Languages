@@ -1,0 +1,100 @@
+---
+constants:
+  nolimit: 無制限
+  boost_time: ブースト時間
+  nick: ニックネーム
+  pending: 保留中ステータス
+components:
+  join:
+    content: ''
+    components: { }
+    embeds:
+      - author: '参加{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} がサーバーに参加しました。'
+        fields:
+          - name: ユーザー名
+            value: ''
+          - name: 招待リンク
+            value: ''
+          - name: 前のユーザーとの時間差
+            value: ''
+          - name: 作成日時
+            value: ''
+          - name: ユーザー数
+            value: '{replace:total} ({replace:user}, {replace:bot})'
+          - name: Bot
+            value: ''
+          - name: 評価値
+            value: ''
+          - name: 認証済み (Bot上)
+            value: ''
+          - name: 権限 (Bot上)
+            value: ''
+        footer: ''
+  leave:
+    content: ''
+    components: { }
+    embeds:
+      - author: '退出{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} がサーバーから退出しました。'
+        fields:
+          - name: ユーザー名
+            value: ''
+          - name: ユーザー数
+            value: '{replace:total} ({replace:user}, {replace:bot})'
+          - name: 参加日時
+            value: ''
+          - name: 作成日時
+            value: ''
+          - name: Bot
+            value: ''
+          - name: 評価値
+            value: ''
+          - name: 認証済み (Bot上)
+            value: ''
+          - name: 権限 (Bot上)
+            value: ''
+        footer: ''
+  update:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'メンバーの変更{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member} の {replace:property} が変更されました。'
+        fields:
+          - name: ユーザー名
+            value: ''
+          - name: 変更前の{replace}
+            value: ''
+          - name: 変更後の{replace}
+            value: ''
+        footer: ''
+  role_add:
+    content: ''
+    components: { }
+    embeds:
+      - author: '役職の付与{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member} の {replace:roles} の役職が付与されました。'
+        fields:
+          - name: ユーザー名
+            value: ''
+          - name: 付与された役職
+            value: ''
+        footer: ''
+  role_remove:
+    content: ''
+    components: { }
+    embeds:
+      - author: '役職の剥奪{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member} の {replace:roles} の役職が剥奪されました。'
+        fields:
+          - name: ユーザー名
+            value: ''
+          - name: 剥奪された役職
+            value: ''
+        footer: ''

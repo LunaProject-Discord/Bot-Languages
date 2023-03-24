@@ -1,0 +1,76 @@
+---
+meta:
+  name: 초대 정보
+  description: 초대 정보를 표시합니다.
+constants:
+  nolimit: 무제한
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '{replace} 정보를 표시합니다.'
+        fields:
+          - name: 유효 기간
+            value: |-
+              コード: {replace:code}
+              使用回数 (上限): {replace:uses} / {replace:max_uses}
+              有効期限: {replace:expired_at}
+              一時的なアクセス: {replace:temporary}
+              作成日時: {replace:created_at}
+          - name: 서버 정보
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              オーナー: {replace:owner_status} {replace:owner_tag} ({replace:owner_id})
+              メンバー数: {replace:members}
+              作成日時: {replace:created_at}
+          - name: 서버정보 (일부)
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              メンバー数: {replace:members}
+              作成日時: {replace:created_at}
+          - name: 채널 정보
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              種類: {replace:type}
+              親カテゴリ: {replace:category}
+              作成日時: {replace:created_at}
+          - name: 채널 정보 (일부)
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              種類: {replace:type}
+              作成日時: {replace:created_at}
+          - name: 그룹 정보
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              種類: {replace:type}
+              親カテゴリ: {replace:category}
+              作成日時: {replace:created_at}
+          - name: 사용자 정보
+            value: |-
+              名前 (ID): {replace:tag} ({replace:id})
+              ステータス: {replace:status}
+              Bot: {replace:bot}
+              フラグ: {replace:flags}
+              作成日時: {replace:created_at}
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 지정한 조건에 맞는 초대를 검색하고 있습니다. 잠시 기다려주십시오...
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 지정한 조건에 맞는 초대를 찾을 수 없습니다.
+        fields: [ ]
+        footer: ''

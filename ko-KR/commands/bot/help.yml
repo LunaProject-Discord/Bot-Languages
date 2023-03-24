@@ -1,0 +1,89 @@
+---
+meta:
+  name: 도움말
+  description: Bot 도움말보기.
+constants:
+  channel_all: 모든 채널
+  channel_stable: 유즈키 (안정화 버전)
+  channel_beta: 사츠키 (베타 버전)
+  channel_dev: 나츠키 (개발 버전)
+  permission_all: 모든 권한
+  permission_owner: 오너 이상
+  permission_subowner: 서브 오너 이상
+  permission_admin: 관리자 이상
+  permission_staff: 스탭 이상
+  location_all: 모든 장소
+  location_guild: 서버
+  location_private: DM & 그룹
+  custom: 사용자 정의 ({replace})
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: 모든 명령 접두사는 `{bot:prefix}`입니다.
+        fields:
+          - name: ''
+            value: '[소개는 여기]({replace:join}) | [지원 서버는 여기에서]({replace:support})'
+          - name: 팁
+            value: |-
+              도움말 명령의 끝에 인수로 명령 이름을 입력하면
+              입력 한 명령에 대한 자세한 정보가 표시됩니다.
+              예:`{bot:prefix}help about`
+        footer: ''
+  search_category:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '카테고리: {replace}{global:separator}{meta:name}'
+        description: ''
+        fields:
+          - name: 명령어
+            value: ''
+        footer: ''
+  search_command:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '명령어: {replace}{global:separator}{meta:name}'
+        description: ''
+        fields:
+          - name: 사용법
+            value: ''
+          - name: 대체 명령어
+            value: ''
+          - name: 실행가능한 채널
+            value: ''
+          - name: 실행가능한 권한 (Bot 상에서)
+            value: ''
+          - name: 실행가능한 장소
+            value: ''
+          - name: 카테고리
+            value: ''
+          - name: 사용자에게 필요한 권한
+            value: ''
+          - name: Bot에 필요한 권한
+            value: ''
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 지정한 조건에 맞는 명령과 카테고리를 검색합니다. 잠시 기다려주십시오...
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 지정한 조건에 맞는 명령이나 카테고리를 찾을 수 없습니다.
+        fields: [ ]
+        footer: ''

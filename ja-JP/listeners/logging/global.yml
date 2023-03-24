@@ -1,0 +1,15 @@
+constants:
+  title: サーバーログ
+
+components:
+  component:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: ''
+        description: ''
+        fields:
+          - name: 実行したユーザー
+            value: ''
+        footer: ''

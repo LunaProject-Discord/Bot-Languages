@@ -1,0 +1,134 @@
+---
+constants:
+  category: カテゴリ
+  channel: チャンネル
+  text: テキストチャンネル
+  voice: ボイスチャンネル
+  stage: ステージチャンネル
+  role: 役職
+  member: メンバー
+  name: 名前
+  position: 位置
+  parent: 親カテゴリ
+  topic: 説明
+  nsfw: 年齢制限
+  slowmode: スローモード
+  news: アナウンス
+  region: 地域
+  user_limit: ユーザー数
+  bitrate: ビットレート
+components:
+  create:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{replace}の作成{global:separator}{replace:title}'
+        title: ''
+        description: サーバーに {replace} が作成されました。
+        fields:
+          - name: 基本情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              種類: {replace:type}
+              親カテゴリ: {replace:category}
+              作成日時: {replace:created_at}
+          - name: テキストチャンネルの情報
+            value: |-
+              説明: {replace:topic}
+              年齢制限: {replace:age_restricted}
+              スローモード (秒): {replace:slowmode}
+          - name: ボイスチャンネルの情報
+            value: |-
+              地域: {replace:region}
+              ユーザー数 (上限): {replace:user_limit}
+              ビットレート (上限): {replace:bitrate}
+          - name: アクセス可能な役職 ({replace:roles}, {replace:members}人)
+            value: ''
+          - name: アクセス可能なメンバー ({replace})
+            value: ''
+        footer: ''
+  delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{replace}の削除{global:separator}{replace:title}'
+        title: ''
+        description: サーバーから {replace} が削除されました。
+        fields:
+          - name: 基本情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              種類: {replace:type}
+              親カテゴリ: {replace:category}
+              作成日時: {replace:created_at}
+          - name: テキストチャンネルの情報
+            value: |-
+              説明: {replace:topic}
+              年齢制限: {replace:age_restricted}
+              スローモード (秒): {replace:slowmode}
+          - name: ボイスチャンネルの情報
+            value: |-
+              地域: {replace:region}
+              ユーザー数 (上限): {replace:user_limit}
+              ビットレート (上限): {replace:bitrate}
+          - name: アクセス可能な役職 ({replace:roles}, {replace:members}人)
+            value: ''
+          - name: アクセス可能なメンバー ({replace})
+            value: ''
+        footer: ''
+  update:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{replace}の変更{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:channel} の {replace:property} が変更されました。'
+        fields:
+          - name: '{replace}名'
+            value: ''
+          - name: 変更前の{replace}
+            value: ''
+          - name: 変更後の{replace}
+            value: ''
+        footer: ''
+  permission_create:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{replace}の権限設定の作成{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:channel} の {replace:property} に対する権限設定が作成されました。'
+        fields:
+          - name: '{replace}名'
+            value: ''
+          - name: 対象の{replace}
+            value: ''
+        footer: ''
+  permission_delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{replace}の権限設定の削除{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:channel} から {replace:property} に対する権限設定が削除されました。'
+        fields:
+          - name: '{replace}名'
+            value: ''
+          - name: 対象の{replace}
+            value: ''
+        footer: ''
+  permission_update:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{replace}の権限設定の変更{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:channel} の {replace:property} に対する権限設定が変更されました。'
+        fields:
+          - name: '{replace}名'
+            value: ''
+          - name: 対象の{replace}
+            value: ''
+          - name: 変更された権限
+            value: ''
+        footer: ''

@@ -1,0 +1,63 @@
+---
+meta:
+  name: 用户信息
+  description: 显示用户信息。
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '显示{replace} 信息。'
+        fields:
+          - name: 失效日期
+            value: |-
+              名前 (ID): {replace:tag} ({replace:id})
+              ステータス: {replace:status}
+              Bot: {replace:bot}
+              フラグ: {replace:flags}
+              作成日時: {replace:created_at}
+          - name: 服务信息
+            value: |-
+              フラグ: {replace:flags}
+              評価値: {replace:evaluate_value}
+              認証済み: {replace:verified}
+              権限: {replace:permission}
+          - name: 会员信息
+            value: |-
+              ニックネーム: {replace:nickname}
+              参加日時: {replace:joined_at}
+          - name: 导向器({replace})
+            value: ''
+          - name: 权威 ({replace})
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'データ取得中…{global:separator}{meta:name}'
+        title: ''
+        description: 我正在获取数据。请稍等…
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 我们正在搜索满足指定条件的数据。请稍等…
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 没有找到满足指定条件的数据。
+        fields: [ ]
+        footer: ''

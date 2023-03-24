@@ -1,0 +1,54 @@
+meta:
+  name: 音楽 (メディアのスキップ)
+  description: キューに入っている次（前）のメディアを再生します。
+
+constants: {}
+
+components:
+  success_previous:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 前のメディアにスキップしました。
+        fields: []
+        footer: ''
+  success_next:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 次のメディアにスキップしました。
+        fields: []
+        footer: ''
+  error:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          これ以上スキップできません。
+          キューにメディアを追加するには `{bot:prefix}play <キーワード | URL>` と実行してください。
+        fields: []
+        footer: ''
+  vote_success:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '投票しました。(投票数: {replace:count} / {replace:max_count})'
+        fields: []
+        footer: ''
+  vote_error:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: 'あなたはすでに投票しています。(投票数: {replace:count} / {replace:max_count})'
+        fields: []
+        footer: ''

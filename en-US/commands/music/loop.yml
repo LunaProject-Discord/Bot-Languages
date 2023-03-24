@@ -1,0 +1,35 @@
+---
+meta:
+  name: Music (Repeat media)
+  description: Repeats the currently playing media.
+constants:
+  all: Repeat all
+  single: Repeat one
+  none: invalid
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: Repetition is now set to {replace}.
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: Invalid argument. Please specify one of the following options
+        fields:
+          - name: ''
+            value: |-
+              `{bot:prefix}{command:label} all`
+              　__Repeat for all media in the queue.__
+              `{bot:prefix}{command:label} single`
+              　__Repeat the currently playing media.__
+              `{bot:prefix}{command:label} none`
+              　__Disable repeat playback.__
+        footer: ''

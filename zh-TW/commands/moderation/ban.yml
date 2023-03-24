@@ -1,0 +1,124 @@
+---
+meta:
+  name: Ban
+  description: 指定したユーザーをBanします。
+constants:
+  action: 実行
+  cancel: キャンセル
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label} <ユーザー ID | ユーザー メンション ...> [時間] [理由]`:
+          　指定したユーザーをBan
+        fields:
+          - name: ヒント
+            value: |-
+              ・IDとメンションを混合してユーザーの指定が可能
+              ・複数のユーザーをまとめて指定することが可能
+        footer: ''
+  successSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '{replace} を下記の理由でBanしました。'
+        fields:
+          - name: 期限
+            value: ''
+          - name: 理由
+            value: ''
+        footer: ''
+  successMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '**{replace}人**のユーザーを下記の理由でBanしました。'
+        fields:
+          - name: ユーザー
+            value: ''
+          - name: 期限
+            value: ''
+          - name: 理由
+            value: ''
+        footer: ''
+  cancelledSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '{replace} のBanをキャンセルしました。'
+        fields: [ ]
+        footer: ''
+  cancelledMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '**{replace}人**のユーザーのBanをキャンセルしました。'
+        fields:
+          - name: ユーザー
+            value: ''
+        footer: ''
+  confirmSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          本当に {replace} を下記の理由でBanしてもよろしいですか？
+          :warning: この操作は取り消すことができません！
+        fields:
+          - name: 期限
+            value: ''
+          - name: 理由
+            value: ''
+        footer: ''
+  confirmMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          本当に**{replace}人**のユーザーを下記の理由でBanしてもよろしいですか？
+          :warning: この操作は取り消すことができません！
+        fields:
+          - name: ''
+            value: |-
+              一部のユーザーはBanできません。
+              詳細は「{global:viewDetail}」をタップしてください。
+          - name: ユーザー
+            value: ''
+          - name: 期限
+            value: ''
+          - name: 理由
+            value: ''
+        footer: ''
+  helpMembers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          一部のユーザーはBanできません。
+          以下に詳細な理由が掲載されています。
+        fields:
+          - name: あなたに権限がないためこれらのユーザーをBanすることができません。
+            value: ''
+          - name: Botに権限がないためこれらのユーザーをBanすることができません。
+            value: ''
+          - name: これらのユーザーはサーバーに参加していないか、存在していないユーザーのためBanできません。
+            value: ''
+        footer: ''

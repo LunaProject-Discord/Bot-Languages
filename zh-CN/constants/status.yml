@@ -1,0 +1,12 @@
+constants:
+  online: 在线
+  idle: 挂机
+  do_not_disturb: 正忙
+  offline: 离线
+  invisible: 离线
+
+  web: 浏览
+  desktop: 桌面
+  mobile: 移动端
+
+components: {}

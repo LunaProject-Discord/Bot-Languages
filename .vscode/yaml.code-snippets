@@ -1,0 +1,43 @@
+{
+    "component": {
+        "prefix": "component",
+        "body": [
+            "$1:",
+            "  content: |-",
+            "    $2",
+            "  components: {}",
+            "  embeds:",
+            "    - author: '$3'",
+            "      title: '$4'",
+            "      description: |-",
+            "        $5",
+            "      fields: $6",
+            "      footer: '$7'",
+            "$0"
+        ],
+        "description": "コンポーネント"
+    },
+    "embed": {
+        "prefix": "embed",
+        "body": [
+            "- author: '$1'",
+            "  title: '$2'",
+            "  description: |-",
+            "    $3",
+            "  fields: $4",
+            "  footer: '$5'",
+            "$0"
+        ],
+        "description": "Embed"
+    },
+    "field": {
+        "prefix": "field",
+        "body": [
+            "- name: '$1'",
+            "  value: |-",
+            "    $2",
+            "$0"
+        ],
+        "description": "Embed field"
+    }
+}

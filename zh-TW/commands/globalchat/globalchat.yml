@@ -1,0 +1,113 @@
+---
+meta:
+  name: グローバルチャット
+  description: グローバルチャットの管理ができます。
+constants:
+  unknownGuild: 不明なサーバー ({replace})
+  unknownChannel: 不明なチャンネル ({replace})
+  unknownUser: 不明なユーザー ({replace})
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:title}'
+        description: |-
+          > __**グローバルチャットへの接続**__
+          　`{bot:prefix}{command:label} connect [ID]`, `{bot:prefix}{command:label} join [ID]`
+          > __**グローバルチャットから切断**__
+          　`{bot:prefix}{command:label} disconnect`, `{bot:prefix}{command:label} leave`
+          > __**接続中のチャンネルを表示**__
+          　`{bot:prefix}{command:label} list`
+          > __**送信されたメッセージを確認**__
+          　`{bot:prefix}{command:label} <ID>`
+        fields: [ ]
+        footer: ''
+  connectSuccess:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:title}'
+        description: |-
+          グローバルチャットへの接続をしました。
+          切断するには `{bot:prefix}{command:label} disconnect` と実行してください。
+        fields:
+          - name: モード
+            value: ''
+          - name: グループ
+            value: ''
+        footer: ''
+  connectError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:title}'
+        description: |-
+          このチャンネルはすでにグローバルチャットに接続しています。
+          `{bot:prefix}{command:label} disconnect` で切断をしてから再度実行してください。
+        fields: [ ]
+        footer: ''
+  disconnectSuccess:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:title}'
+        description: |-
+          グローバルチャットから切断しました。
+          再度接続するには `{bot:prefix}{command:label} connect` と実行してください。
+        fields: [ ]
+        footer: ''
+  disconnectError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:title}'
+        description: |-
+          このチャンネルはグローバルチャットに接続していません。
+          接続するには `{bot:prefix}{command:label} connect` と実行してください。
+        fields: [ ]
+        footer: ''
+  listSuccess:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:title}'
+        description: '{replace:count} 個のチャンネルが {replace:category} に接続しています。'
+        fields: [ ]
+        footer: ''
+  listError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:title}'
+        description: |-
+          このチャンネルはグローバルチャットに接続していません。
+          接続するには `{bot:prefix}{command:label} connect` と実行してください。
+        fields: [ ]
+        footer: ''
+  information:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:title}'
+        description: '{replace} が送信したメッセージを表示しています。'
+        fields:
+          - name: コンテンツ
+            value: ''
+          - name: サーバー
+            value: ''
+          - name: チャンネル
+            value: ''
+          - name: ユーザー
+            value: ''
+          - name: 送信日時
+            value: ''
+        footer: ''

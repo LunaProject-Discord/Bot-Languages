@@ -1,0 +1,48 @@
+constants:
+  nolimit: 無制限
+
+components:
+  create:
+    content: ''
+    components: {}
+    embeds:
+      - author: '招待の作成{global:separator}{replace:title}'
+        title: ''
+        description: サーバーに {replace} が作成されました。
+        fields:
+          - name: 基本情報
+            value: |-
+              コード: {replace:code}
+              最大使用回数: {replace:max_uses}
+              有効期限: {replace:expired_at}
+              一時的なアクセス: {replace:temporary}
+              作成日時: {replace:created_at}
+          - name: チャンネル情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              種類: {replace:type}
+              親カテゴリ: {replace:category}
+              作成日時: {replace:created_at}
+        footer: ''
+  delete:
+    content: ''
+    components: {}
+    embeds:
+      - author: '招待の削除{global:separator}{replace:title}'
+        title: ''
+        description: サーバーから {replace} が削除されました。
+        fields:
+          - name: 基本情報
+            value: |-
+              コード: {replace:code}
+              使用回数 (上限): {replace:uses} / {replace:max_uses}
+              有効期限: {replace:expired_at}
+              一時的なアクセス: {replace:temporary}
+              作成日時: {replace:created_at}
+          - name: チャンネル情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              種類: {replace:type}
+              親カテゴリ: {replace:category}
+              作成日時: {replace:created_at}
+        footer: ''

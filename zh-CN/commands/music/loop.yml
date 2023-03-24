@@ -1,0 +1,35 @@
+---
+meta:
+  name: 音乐（重复媒体）
+  description: 重复播放正在播放的媒体。
+constants:
+  all: 全部重复
+  single: 只重复一首歌
+  none: 永不
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: '{global:success}{global:separator}{meta:name}'
+        description: 我将重复设置为 {replace}。
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 论据无效。请指定以下选项之一。
+        fields:
+          - name: ''
+            value: |-
+              `{bot:prefix} {command:label} all`
+              __ 重复队列中的所有媒体 __
+              `{bot:prefix} {command:label} single`
+              __ 重复当前播放的媒体 __
+              `{bot:prefix} {command:label} none`
+              __禁用重复播放__
+        footer: ''

@@ -1,0 +1,60 @@
+---
+meta:
+  name: 翻译
+  description: 您可以翻译成指定的语言。
+constants:
+  auto_detection: 自动检测
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: ''
+        fields:
+          - name: 语言信息
+            value: '翻译前: {replace:source} → 翻译后: {replace:target}'
+          - name: 提示
+            value: |-
+              您还可以指定翻译源语言进行翻译。
+              示例:`{bot:prefix}{command:label} cn en 你好！`
+        footer: ''
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:help}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          `{bot:prefix}{command:label} <翻译的语言代码(符合 ISO 639-1)> <文本>`：
+          __翻译前通过自动检测语言进行翻译__
+          `{bot:prefix}{command:label} <翻译前语言代码(符合 ISO 639-1)> < 翻译后语言代码(符合 ISO 639-1)> < 文本>`：
+          __翻译前指定语言进行翻译__
+        fields:
+          - name: 语言列表
+            value: '请参阅此处({replace})。'
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 在翻译...{global:separator}{meta:name}
+        description: 我正在翻译文本。请稍等…
+        fields: [ ]
+        footer: ''
+  select:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 语言选择{global:separator}{meta:name}
+        description: |-
+          {replace: country}有多种语言。
+          在 **{replace: time}秒** 内选择要翻译的语言。
+          如果您想取消，请选择此消息所附的{replace:cancel}。
+        fields:
+          - name: 提示
+            value: 如果您设置了默认语言，如果您选择该国家/地区的表情符号，它将自动翻译成设置的语言。
+        footer: ''

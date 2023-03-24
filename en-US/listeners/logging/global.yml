@@ -1,0 +1,15 @@
+---
+constants:
+  title: Audit Log
+components:
+  component:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: ''
+        description: ''
+        fields:
+          - name: User who executed
+            value: ''
+        footer: ''

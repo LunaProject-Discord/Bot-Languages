@@ -1,0 +1,108 @@
+---
+constants: { }
+components:
+  join:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'ボイスチャンネルに参加{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member} が {replace:channel} に参加しました。'
+        fields:
+          - name: ユーザー名
+            value: ''
+          - name: チャンネル名
+            value: ''
+          - name: カテゴリ
+            value: ''
+          - name: ユーザー数 (上限)
+            value: ''
+          - name: ビットレート (上限)
+            value: ''
+        footer: ''
+  leave:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'ボイスチャンネルから退出{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member} が {replace:channel} から退出しました。'
+        fields:
+          - name: ユーザー名
+            value: ''
+          - name: チャンネル名
+            value: ''
+          - name: カテゴリ
+            value: ''
+          - name: ユーザー数 (上限)
+            value: ''
+          - name: ビットレート (上限)
+            value: ''
+        footer: ''
+  move:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'ボイスチャンネルの移動{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member} が {replace:old_channel} から {replace:new_channel} に移動しました。'
+        fields:
+          - name: ユーザー名
+            value: ''
+          - name: 移動元のチャンネル
+            value: |-
+              チャンネル名: {replace:channel}
+              カテゴリ: {replace:category}
+              ユーザー数 (上限): {replace:user_limit}
+              ビットレート (上限): {replace:bitrate}
+          - name: 移動先のチャンネル
+            value: |-
+              チャンネル名: {replace:channel}
+              カテゴリ: {replace:category}
+              ユーザー数 (上限): {replace:user_limit}
+              ビットレート (上限): {replace:bitrate}
+        footer: ''
+  mute:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'メンバーのミュート{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} のサーバーミュートが設定されました。'
+        fields:
+          - name: ユーザー名
+            value: ''
+        footer: ''
+  unmute:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'メンバーのミュート解除{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} のサーバーミュートが解除されました。'
+        fields:
+          - name: ユーザー名
+            value: ''
+        footer: ''
+  deafen:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'メンバーのスピーカーミュート{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} のサーバースピーカーミュートが設定されました。'
+        fields:
+          - name: ユーザー名
+            value: ''
+        footer: ''
+  undeafen:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'メンバーのスピーカーミュート解除{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} のサーバースピーカーミュートが解除されました。'
+        fields:
+          - name: ユーザー名
+            value: ''
+        footer: ''

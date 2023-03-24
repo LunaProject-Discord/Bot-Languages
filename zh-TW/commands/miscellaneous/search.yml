@@ -1,0 +1,50 @@
+---
+meta:
+  name: インテリジェント・サーチ
+  description: サーバー内のオブジェクトをまとめて検索します。
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '概要{global:separator}{meta:name}'
+        description: 指定した条件に合うオブジェクトが**{replace}件**見つかりました。
+        fields:
+          - name: カテゴリ・チャンネル
+            value: ''
+          - name: 役職
+            value: ''
+          - name: メンバー
+            value: ''
+          - name: 絵文字
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'データ取得中…{global:separator}{meta:name}'
+        title: ''
+        description: データを取得しています。しばらくお待ちください…
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合うオブジェクトを検索しています。しばらくお待ちください…
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合うオブジェクトが見つかりませんでした。
+        fields: [ ]
+        footer: ''

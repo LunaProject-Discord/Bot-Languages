@@ -1,0 +1,52 @@
+---
+meta:
+  name: Vote
+  description: You can make a simple vote using the reaction.
+
+constants: {}
+
+components:
+  index:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: ''
+        description: ''
+        fields: []
+        footer: ''
+  create:
+    content: ''
+    components:
+      add: Add Choice
+      remove: Remove Choice
+      anonymous_enable: Enable Anonymous Voting
+      anonymous_disable: Disable Anonymous Voting
+      multiple_enable: Enable Multiple Voting
+      multiple_disable: Disable Multiple Voting
+    embeds:
+      - author: ''
+        title: 'Vote Add{global:separator}{meta:title}'
+        description: ''
+        fields: []
+        footer: ''
+  choice_add:
+    content: ''
+    components:
+      confirm: Add
+    embeds:
+      - author: ''
+        title: 'Add Choice (Vote Add){global:separator}{meta:title}'
+        description: Click the button below to add the Choice.
+        fields: []
+        footer: ''
+  choice_remove:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: 'Remove Choice (Vote Add){global:separator}{meta:title}'
+        description: Select the choice you wish to remove from the ballot below or press Cancel.
+        fields: []
+        footer: ''
+  

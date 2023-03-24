@@ -1,0 +1,23 @@
+constants:
+  online: オンライン
+  idle: 退席中
+  do_not_disturb: 取り込み中
+  offline: オフライン
+  invisible: オフライン
+
+  web: Web
+  desktop: デスクトップ
+  mobile: モバイル
+
+  category: カテゴリ
+  channel: チャンネル
+  text: テキストチャンネル
+  voice: ボイスチャンネル
+  news: アナウンスチャンネル
+  stage: ステージチャンネル
+  forum: フォーラムチャンネル
+  thread: スレッド
+  group: グループ
+  private: プライベート
+
+components: {}

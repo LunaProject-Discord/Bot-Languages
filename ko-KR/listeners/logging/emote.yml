@@ -1,0 +1,59 @@
+---
+constants:
+  name: 이름
+  roles: 직책
+components:
+  add:
+    content: ''
+    components: { }
+    embeds:
+      - author: '이모티콘 추가 {global:separator}{replace:title}'
+        title: ''
+        description: 서버에 {replace} 가 추가되었습니다.
+        fields:
+          - name: 개인 정보
+            value: |-
+              이름 (ID): {replace:name} ({replace:id})
+              애니메이션: {replace:animated}
+              작성일시: {replace:created_at}
+          - name: 사용자 정보
+            value: |-
+              이름 (ID): {replace:tag} ({replace:id})
+              스테이터스: {replace:status}
+              Bot: {replace:bot}
+              Flags: {replace:flags}
+              작성일시: {replace:created_at}
+          - name: 액세스 가능한 직책 ({replace:roles}, {replace:members} 명)
+            value: ''
+        footer: ''
+  remove:
+    content: ''
+    components: { }
+    embeds:
+      - author: '이모티콘 삭제 {global:separator}{replace:title}'
+        title: ''
+        description: 서버에서 {replace} 이 삭제되었습니다.
+        fields:
+          - name: 개인 정보
+            value: |-
+              이름 (ID): {replace:name} ({replace:id})
+              애니메이션: {replace:animated}
+              작성일시: {replace:created_at}
+          - name: 액세스 가능한 직책 ({replace:roles}, {replace:members} 명)
+            value: ''
+        footer: ''
+  update:
+    content: ''
+    components: { }
+    embeds:
+      - author: '이모티콘 변경 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace:emote}의 {replace:property}가 변경되었습니다.'
+        fields:
+          - name: 이모지 이름
+            value: ''
+          - name: 변경 전의 {replace}
+            value: ''
+          - name: 변경 후 {replace}
+            value: ''
+        footer: ''

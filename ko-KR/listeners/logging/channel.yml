@@ -1,0 +1,134 @@
+---
+constants:
+  category: 카테고리
+  channel: 채널
+  text: 텍스트 채널
+  voice: 음성 채널
+  stage: 스테이지 채널
+  role: 직책
+  member: 회원
+  name: 이름
+  position: 위치
+  parent: 상위
+  topic: 설명
+  nsfw: 심의 등급
+  slowmode: 슬로우 모드
+  news: 공지사항
+  region: 지역
+  user_limit: 사용자 수
+  bitrate: 비트 레이트
+components:
+  create:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{replace} 만들기 {global:separator}{replace:title}'
+        title: ''
+        description: 서버에 {replace} 가 생성되었습니다.
+        fields:
+          - name: 개인 정보
+            value: |-
+              이름(ID): {replace:name} ({replace:id})
+              유형: {replace:type}
+              상위 카테고리: {replace:category}
+              작성 날짜: {replace:created_at}
+          - name: 텍스트 채널의 정보
+            value: |-
+              설명: {replace:topic}
+              연령 제한: {replace:age_restricted}
+              슬로우 모드(초): {replace:slowmode}
+          - name: 음성 채널 정보
+            value: |-
+              지역: {replace:region}
+              최대 사용자 수: {replace:user_limit}
+              비트 전송률(상한): {replace:bitrate}
+          - name: 액세스 가능한 직책 ({replace:roles}, {replace:members} 사람)
+            value: ''
+          - name: 액세스 가능한 멤버 ({replace})
+            value: ''
+        footer: ''
+  delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{replace} 삭제 {global:separator}{replace:title}'
+        title: ''
+        description: 서버에서 {replace} 이 삭제되었습니다.
+        fields:
+          - name: 개인 정보
+            value: |-
+              이름(ID): {replace:name} ({replace:id})
+              유형: {replace:type}
+              상위 카테고리: {replace:category}
+              작성 날짜: {replace:created_at}
+          - name: 텍스트 채널의 정보
+            value: |-
+              설명: {replace:topic}
+              연령 제한: {replace:age_restricted}
+              슬로우 모드(초): {replace:slowmode}
+          - name: 음성 채널의 정보
+            value: |-
+              지역: {replace:region}
+              최대 사용자 수: {replace:user_limit}
+              비트 전송률(상한): {replace:bitrate}
+          - name: 액세스 가능한 직책 ({replace:roles}, {replace:members} 사람)
+            value: ''
+          - name: 액세스 가능한 멤버 ({replace})
+            value: ''
+        footer: ''
+  update:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{replace} 변경 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace:channel}의 {replace:property}가 변경되었습니다.'
+        fields:
+          - name: '{replace} 이름'
+            value: ''
+          - name: 변경 전의 {replace}
+            value: ''
+          - name: 변경 후 {replace}
+            value: ''
+        footer: ''
+  permission_create:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{replace} 권한 설정 만들기 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace:channel}의 {replace:property}에 대한 권한 설정이 생성되었습니다.'
+        fields:
+          - name: '{replace} 이름'
+            value: ''
+          - name: 대상 {replace}
+            value: ''
+        footer: ''
+  permission_delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{replace} 권한 설정 삭제 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace:channel}에서 {replace:property}에 대한 권한 설정이 제거되었습니다.'
+        fields:
+          - name: '{replace} 이름'
+            value: ''
+          - name: 대상 {replace}
+            value: ''
+        footer: ''
+  permission_update:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{replace} 권한 설정 변경 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace:channel}의 {replace:property}에 대한 권한 설정이 변경되었습니다.'
+        fields:
+          - name: '{replace} 이름'
+            value: ''
+          - name: 대상 {replace}
+            value: ''
+          - name: 변경된 권한
+            value: ''
+        footer: ''

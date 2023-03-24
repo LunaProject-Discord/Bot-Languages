@@ -1,0 +1,35 @@
+---
+meta:
+  name: 음악 (미디어의 반복)
+  description: 재생중인 미디어를 반복합니다.
+constants:
+  all: 모든 반복
+  single: 한 곡만 반복
+  none: 해제
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: '{global:success}{global:separator}{meta:name}'
+        description: 반복 {replace}로 설정했습니다.
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 인수가 잘못되었습니다. 다음 옵션 중 하나를 지정하십시오.
+        fields:
+          - name: ''
+            value: |-
+              `{bot:prefix}{command:label} all`
+              __ 큐에 들어있는 용지를 반복 __
+              `{bot:prefix}{command:label} single`
+              __ 현재 재생중인 미디어를 반복 __
+              `{bot:prefix}{command:label} none`
+              __ 반복 재생을 해제하려면 __
+        footer: ''

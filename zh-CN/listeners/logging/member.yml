@@ -1,0 +1,100 @@
+---
+constants:
+  nolimit: 无限制
+  boost_time: 提升时间
+  nick: 昵称
+  pending: 提升时间
+components:
+  join:
+    content: ''
+    components: { }
+    embeds:
+      - author: '参与{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 已加入服务器。'
+        fields:
+          - name: 用户名
+            value: ''
+          - name: 邀请链接
+            value: ''
+          - name: 与前一个用户的时间差
+            value: ''
+          - name: 创建日期
+            value: ''
+          - name: 用户数
+            value: '{replace:total} ({replace:user}, {replace:bot})'
+          - name: 机器人
+            value: ''
+          - name: 评定值
+            value: ''
+          - name: 已认证 (在机器人上)
+            value: ''
+          - name: 特权 (在机器人上)
+            value: ''
+        footer: ''
+  leave:
+    content: ''
+    components: { }
+    embeds:
+      - author: '退出{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 已离开服务器。'
+        fields:
+          - name: 用户名
+            value: ''
+          - name: 用户数
+            value: '{replace:total} ({replace:user}, {replace:bot})'
+          - name: 参加日期和时间
+            value: ''
+          - name: 创建日期
+            value: ''
+          - name: 机器人
+            value: ''
+          - name: 评定值
+            value: ''
+          - name: 已认证 (在机器人上)
+            value: ''
+          - name: 特权 (在机器人上)
+            value: ''
+        footer: ''
+  update:
+    content: ''
+    components: { }
+    embeds:
+      - author: '成员变更{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member} 的{replace:property} 已更改。'
+        fields:
+          - name: 用户名
+            value: ''
+          - name: '{replace} 更改前'
+            value: ''
+          - name: 更改后的{replace}
+            value: ''
+        footer: ''
+  role_add:
+    content: ''
+    components: { }
+    embeds:
+      - author: '授予职位{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member} 的 {replace:roles} 的标题已被授予。'
+        fields:
+          - name: 用户名
+            value: ''
+          - name: 分配的职位
+            value: ''
+        footer: ''
+  role_remove:
+    content: ''
+    components: { }
+    embeds:
+      - author: '剥夺职称{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member} 中 {replace:roles} 的位置已被剥离。'
+        fields:
+          - name: 用户名
+            value: ''
+          - name: 被剥夺的职位
+            value: ''
+        footer: ''

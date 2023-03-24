@@ -1,0 +1,15 @@
+---
+meta:
+  name: コマンドの名前
+  description: コマンドの説明
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: ''
+        description: ''
+        fields: [ ]
+        footer: ''

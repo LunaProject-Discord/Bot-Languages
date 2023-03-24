@@ -1,0 +1,49 @@
+meta:
+  name: レベル情報
+  description: レベル情報を表示します。
+
+constants: {}
+
+components:
+  index:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '{replace} の情報を表示しています。'
+        fields:
+          - name: レベル
+            value: ''
+          - name: 経験値 (最大)
+            value: ''
+          - name: 暫定順位
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: {}
+    embeds:
+      - author: 'データ取得中…{global:separator}{meta:name}'
+        title: ''
+        description: データを取得しています。しばらくお待ちください…
+        fields: []
+        footer: ''
+  searching:
+    content: ''
+    components: {}
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合うユーザーを検索しています。しばらくお待ちください…
+        fields: []
+        footer: ''
+  error:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合うユーザーが見つかりませんでした。
+        fields: []
+        footer: ''

@@ -1,0 +1,66 @@
+---
+meta:
+  name: Server Information
+  description: Displays the server information.
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: 'You are viewing information about {replace}.'
+        fields:
+          - name: Basic Information
+            value: |-
+              Name (ID): {replace:name} ({replace:id})
+              Owner: {replace:owner_status} {replace:owner_tag} ({replace:owner_id})
+              Created at: {replace:created_at}
+          - name: Information in service
+            value: |-
+              Flags: {replace:flags}
+              Verified?: {replace:verified}
+          - name: Description
+            value: ''
+          - name: Community Information
+            value: |-
+              Primary Language: {replace:language}
+              Rule Channel: {replace:rule_channel}
+              Announce Channel: {replace:announce_channel}
+          - name: Statistics
+            value: |-
+              Boosts: {replace:boost_tier} ({replace:boost_count})
+              Channels: {replace:total_channels} ({replace:category}, {replace:text}, {replace:voice}, {replace:stage})
+              Members: {replace:total_members} ({replace:user}, {replace:bot}) / {replace:max_members}
+              Emotes: {replace:total_emotes} (Normal: {replace:normal}, GIF: {replace:animated}) / {replace:max_emotes}
+          - name: Roles ({replace})
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Data acquisition in progress...{global:separator}{meta:name}'
+        title: ''
+        description: We are retrieving data. Please wait a moment...
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Searching...{global:separator}{meta:name}'
+        title: ''
+        description: Searching for a server that matches the specified criteria. Please wait a moment...
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: No servers were found that match the specified criteria.
+        fields: [ ]
+        footer: ''

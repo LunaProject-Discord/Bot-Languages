@@ -1,0 +1,49 @@
+meta:
+  name: 音楽 (音量の変更)
+  description: 音量を変更します。
+
+constants:
+  action: 実行
+  cancel: キャンセル
+
+components:
+  success:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 音量を{replace}に変更しました。
+        fields: []
+        footer: ''
+  cancel:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: ''
+        description: キャンセルしました。
+        fields: []
+        footer: ''
+  confirm:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:warning}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          推奨レベルを超えるまで音量を上げ続けますか？これ以上の音量で音を聞き続けると聴力を損なう可能性があります。
+          また、この機能を使用して使用者に何らかの身体的影響を及ぼしても責任を取ることはできません。
+        fields: []
+        footer: ''
+  error:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          引数が不正です。引数は**半角数字**で指定してください。
+          例: `{bot:prefix}{command:label} 50`
+        fields: []
+        footer: ''

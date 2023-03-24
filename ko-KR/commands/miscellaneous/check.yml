@@ -1,0 +1,52 @@
+---
+meta:
+  name: 처벌 정보
+  description: 처벌 정보를 표시합니다.
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '{replace} 정보를 표시합니다.'
+        fields:
+          - name: 음소거
+            value: ''
+          - name: 경고
+            value: ''
+          - name: 킥
+            value: ''
+          - name: 로컬 Ban
+            value: ''
+          - name: 글로벌 Ban
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'データ取得中…{global:separator}{meta:name}'
+        title: ''
+        description: 데이터를 검색하고 있습니다. 잠시 기다려주십시오...
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 지정한 조건에 맞는 처벌 정보를 검색하고 있습니다. 잠시 기다려주십시오...
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 지정한 조건에 맞는 처벌 정보를 찾을 수 없습니다.
+        fields: [ ]
+        footer: ''

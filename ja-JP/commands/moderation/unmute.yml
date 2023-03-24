@@ -1,0 +1,120 @@
+meta:
+  name: ミュートの解除
+  description: 指定したメンバーのミュートを解除します。
+
+constants:
+  action: 実行
+  cancel: キャンセル
+
+components:
+  help:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label} <メンバー ID | メンバー メンション ...>`:
+          　指定したメンバーのミュートを解除
+        fields:
+          - name: ヒント
+            value: |-
+              ・IDとメンションを混合してメンバーの指定が可能
+              ・複数のメンバーをまとめて指定することが可能
+        footer: ''
+  successSingle:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '{replace} のミュートを解除しました。'
+        fields: []
+        footer: ''
+  successMultiple:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '**{replace}人**のメンバーのミュートを解除しました。'
+        fields:
+          - name: メンバー
+            value: ''
+        footer: ''
+  cancelledSingle:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '{replace} のミュート解除をキャンセルしました。'
+        fields: []
+        footer: ''
+  cancelledMultiple:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '**{replace}人**のメンバーのミュート解除をキャンセルしました。'
+        fields:
+          - name: メンバー
+            value: ''
+        footer: ''
+  confirmSingle:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          本当に {replace} のミュートを解除してもよろしいですか？
+          :warning: この操作は取り消すことができません！
+        fields: []
+        footer: ''
+  confirmMultiple:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          本当に**{replace}人**のメンバーのミュートを解除してもよろしいですか？
+          :warning: この操作は取り消すことができません！
+        fields:
+          - name: ''
+            value: |-
+              一部のメンバーのミュートは解除できません。
+              詳細は「{global:viewDetail}」をタップしてください。
+          - name: メンバー
+            value: ''
+        footer: ''
+  helpMembers:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          一部のメンバーのミュートは解除できません。
+          以下に詳細な理由が掲載されています。
+        fields:
+          - name: これらのメンバーはすでにミュートが解除されています。
+            value: ''
+          - name: これらのユーザーは存在していないユーザーのためメンバーを解除できません。
+            value: ''
+        footer: ''
+  errorRole:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:name}'
+        description: |-
+          __**役職の取得または作成に失敗**__したためミュートを解除できません。
+          これらの権限の利用を許可してから再度実行してください。
+        fields:
+          - name: 必要な権限
+            value: ''
+        footer: ''

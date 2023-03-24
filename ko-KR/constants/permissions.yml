@@ -1,0 +1,44 @@
+---
+constants:
+  category_advanced: 고급 권한
+  administrator: 관리자
+  category_general: 서버 전반
+  view_audit_logs: 서버 로그보기
+  manage_server: 서버 관리
+  manage_channel: 채널 관리
+  manage_roles: 직책 구분 관리
+  manage_permissions: 권한 관리
+  manage_emotes: 이모티콘과 스티커 관리
+  manage_webhooks: Webhook 관리
+  view_guild_insights: 서버 통계보기
+  view_channel: 채널보기
+  category_membership: 회원
+  create_instant_invite: 초대 링크를 생성
+  nickname_change: 별명 변경
+  nickname_manage: 별명 관리
+  kick_members: 회원 킥
+  ban_members: 회원 Ban
+  category_text: 텍스트 채널
+  message_read: 메시지 표시
+  message_write: 메시지 보내기
+  message_tts: 음성 낭독 메시지 보내기
+  message_manage: 메시지 관리
+  message_embed_links: 임베디드 링크 보내기
+  message_attach_files: 파일 첨부
+  message_history: 메시지 내역보기
+  message_mention_everyone: 직책 · 모두 앞으로 멘션
+  message_ext_emoji: 외부 이모티콘 사용
+  message_add_reaction: 반응 추가
+  use_slash_commands: 응용 프로그램 명령 사용
+  category_voice: 음성 채널
+  voice_connect: 연결
+  voice_speak: 발언
+  voice_stream: 배달
+  voice_mute_others: 회원 음소거
+  voice_deaf_others: 회원의 스피커를 음소거
+  voice_move_others: 멤버 이동
+  voice_use_vad: 음성 검색을 사용
+  priority_speaker: 우선적 인 스피커
+  category_stage: 스테이지 채널
+  request_to_speak: 스피커 참여 요청
+components: { }

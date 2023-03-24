@@ -1,0 +1,19 @@
+---
+meta:
+  name: 음악 (미디어 큐)
+  description: 큐에 들어있는 미디어를 표시합니다.
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '목록{global:separator}{meta:name}'
+        description: '총 재생 시간: {replace:totalDuration}, 목록 수: {replace:queueSize}'
+        fields:
+          - name: 재생중인 미디어
+            value: ''
+          - name: 다음 미디어
+            value: ''
+        footer: ''

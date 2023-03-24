@@ -1,0 +1,137 @@
+---
+meta:
+  name: 静默
+  description: 将指定成员静音。
+constants:
+  action: 运行于
+  cancel: 取消
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label} <Member ID | Member Mention ...> [时间] [原因]`：
+          静音指定成员
+        fields:
+          - name: 提示
+            value: |-
+              ・可以通过混合id和mention来指定成员。
+              ・可以一次指定多个成员。
+        footer: ''
+  successSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '由于以下原因，我将 {replace} 静音：'
+        fields:
+          - name: 有效期至
+            value: ''
+          - name: 原因
+            value: ''
+        footer: ''
+  successMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '** {replace} 人 ** 成员已被静音，原因如下：'
+        fields:
+          - name: 成员
+            value: ''
+          - name: 有效期至
+            value: ''
+          - name: 原因
+            value: ''
+        footer: ''
+  cancelledSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '{replace} 取消静音。'
+        fields: [ ]
+        footer: ''
+  cancelledMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '已取消 ** {replace} 人 ** 成员的静音。'
+        fields:
+          - name: 成员
+            value: ''
+        footer: ''
+  confirmSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          由于以下原因，您确定要将 {replace} 静音吗？
+          :warning:这个操作是不可逆的！
+        fields:
+          - name: 有效期至
+            value: ''
+          - name: 原因
+            value: ''
+        footer: ''
+  confirmMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          出于以下原因，您确定要将 ** {replace} 人 ** 成员静音吗？
+          :warning:这个操作是不可逆的！
+        fields:
+          - name: ''
+            value: |-
+              某些成员无法静音。
+              点击“{global:viewDetail}”了解详情。
+          - name: 成员
+            value: ''
+          - name: 有效期至
+            value: ''
+          - name: 原因
+            value: ''
+        footer: ''
+  helpMembers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          某些成员无法静音。
+          详细原因如下。
+        fields:
+          - name: 您无法将这些成员静音，因为您没有权限。
+            value: ''
+          - name: 这些成员无法静音，因为机器人未获得授权。
+            value: ''
+          - name: 这些用户不能被静音，因为他们没有加入服务器或不存在。
+            value: ''
+        footer: ''
+  errorRole:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:name}'
+        description: |-
+          __ ** 无法静音，因为您未能获得或创建职位 ** __。
+          允许使用这些权限，然后重试。
+        fields:
+          - name: 所需权限
+            value: ''
+        footer: ''

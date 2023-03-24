@@ -1,0 +1,28 @@
+---
+meta:
+  name: 음악 (미디어 일시 중지)
+  description: 재생중인 미디어를 일시 중지합니다.
+constants: { }
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: '{global:success}{global:separator}{meta:name}'
+        description: |-
+          재생을 일시 중지했습니다.
+          재생을 재개하려면`{bot:prefix}resume` 실행하십시오.
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: |-
+          재생이 이미 일시 중지되어 있습니다.
+          재생을 재개하려면`{bot:prefix}resume` 실행하십시오.
+        fields: [ ]
+        footer: ''

@@ -1,0 +1,105 @@
+---
+meta:
+  name: Unwarn
+  description: Unwarning for the specified member
+constants:
+  action: Confirm
+  cancel: Cancel
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label} <MemberID | Member Mention ...>`: Unwarn specified member
+        fields:
+          - name: Hint
+            value: |-
+              ・Users can be specified by mixing IDs and Mentions.
+              ・Multiple users can be specified at once.
+        footer: ''
+  successSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: 'Sucessfully unwarned {replace}'
+        fields: [ ]
+        footer: ''
+  successMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: 'Successfully unwarned **{replace}** member(s)'
+        fields:
+          - name: Members
+            value: ''
+        footer: ''
+  cancelledSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 'Canceled unwarn {replace}'
+        fields: [ ]
+        footer: ''
+  cancelledMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 'Canceled unwarn **{replace}** member(s)'
+        fields:
+          - name: Members
+            value: ''
+        footer: ''
+  confirmSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: |-
+          Are you sure you want to remove the {replace} warning?
+          :warning: This operation cannot be undone!
+        fields: [ ]
+        footer: ''
+  confirmMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: |-
+          Are you sure you want to remove the **{replace}** member(s) warning?
+          :warning: This operation cannot be undone!
+        fields:
+          - name: ''
+            value: |-
+              Some member warnings cannot be removed.
+              Please tap "{global:viewDetail}" for details.
+          - name: Members
+            value: ''
+        footer: ''
+  helpMembers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          Some member warnings cannot be removed.
+          You can find the detailed reasons below.
+        fields:
+          - name: These members have already been unmuted
+            value: ''
+          - name: These users cannot be unwarned because they are non-existent user(s).
+            value: ''
+        footer: ''

@@ -1,0 +1,37 @@
+---
+constants:
+  name: 分页
+  sort: 选择排序方式
+components:
+  move:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{paginator:name}'
+        description: |-
+          您将被带到包含您输入的号码的页面。请从 1 ** {replace:pages} ** 输入。
+          要取消，请单击 :x: 附加到此消息。
+          * ** {replace:time} ** 秒后自动取消。
+        fields: [ ]
+        footer: ''
+  move_success:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{paginator:name}'
+        description: '** {replace} ** 转到页面。请稍等…'
+        fields: [ ]
+        footer: ''
+  move_error:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{paginator:name}'
+        description: |-
+          没有输入号码的页面。
+          转到您上次查看的页面。请稍等…
+        fields: [ ]
+        footer: ''

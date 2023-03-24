@@ -1,0 +1,365 @@
+---
+constants:
+  separator: ' - '
+  yes: 예
+  no: 아니오
+  enabled: 유효
+  disabled: 해제
+  current: 현재
+  unknown: 불명
+  none: 없음
+  help: 도움말
+  loading: 로드 중...
+  information: 정보
+  success: 성공
+  warning: 경고
+  error: 오류
+  botInvite: Bot을 도입
+  joinSupportServer: 지원 서버에 참여
+  dashboard: 대시 보드
+  viewDetail: 세부정보 보기
+  viewDocument: 문서 확인
+  cancel: 취소
+components:
+  exception:
+    content: ''
+    components:
+      sendReport: 오류 보고서 제출
+    embeds:
+      - author: ''
+        title: '예기치 않은 오류{global:separator}{global:error}'
+        description: |-
+          죄송합니다. __** 예기치 않은 오류가 발생 **__되었습니다.
+          아래 버튼을 눌러 오류 보고서를 보내 주시면 도움이됩니다.
+        fields: [ ]
+        footer: ''
+  commandNotFound:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '알 수 없는 명령{global:separator}{global:error}'
+        description: |-
+          실행하려고 했던 __** 명령을 찾을 수 없습니다 **__이었습니다.
+          `{bot:prefix}help` 에 명령이 있는지 확인하십시오.
+        fields:
+          - name: 혹시?
+            value: ''
+        footer: ''
+  argumentNotFound:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '알 수 없는 인수{global:separator}{global:error}'
+        description: |-
+          __** 인수가 잘못된 **__입니다. 다음 항목을 확인하십시오.
+          · **필요한 인수가 지정되었는지**
+          · **지정한 인수가 실행하려고 하는 커멘드로 서포트되고 있는지**
+
+          `{bot:prefix}help {command:label}` 또는 `{bot:prefix}{command:label}`로 명령 사용법을 확인하십시오.
+        fields: [ ]
+        footer: ''
+  commandDisabled:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '잘못된 명령 {global:separator}{global:error}'
+        description: |-
+          실행하려고 했던 __** 명령은 서버 관리자가 사용하지 않는 **__입니다.
+          서버 관리자에게 명령을 사용하도록 요청하십시오.
+        fields: [ ]
+        footer: ''
+  commandDenied:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '금지된 명령 {global:separator}{global:error}'
+        description: |-
+          실행하려고 했던 __** 명령은 서버 관리자가 실행을 금지**__합니다.
+          서버 관리자에게 명령을 사용하도록 요청하십시오.
+        fields: [ ]
+        footer: ''
+  commandChannelDenied:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '금지된 채널{global:separator}{global:error}'
+        description: |-
+          실행하려고 했던 __** 명령은 이 채널에서 실행이 금지되어 있습니다.
+          **다른 텍스트 채널로 이동**하거나 서버 관리자에게 설정 변경을 요청하세요.
+        fields: [ ]
+        footer: ''
+  commandRoleDenied:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '금지된 직책{global:separator}{global:error}'
+        description: |-
+          실행하려고 했던 __** 명령은 직위 설정에 따라 실행이 금지됩니다.
+          ** 부여된 직책 박탈**을 수행하거나 서버 관리자에게 설정 변경을 요청하세요.
+        fields: [ ]
+        footer: ''
+  channel:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '채널 제한{global:separator}{global:error}'
+        description: |-
+          이 기능은 __** 이 Bot에서는 실행할 수 없습니다 **__.
+          실행하려면 다른 Bot을 사용하십시오.
+        fields: [ ]
+        footer: ''
+  channelStable:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '채널 제한{global:separator}{global:error}'
+        description: |-
+          이 기능은 __** 이 Bot에서는 실행할 수 없습니다 **__.
+          실행하려면 다른 Bot을 사용하십시오.
+        fields: [ ]
+        footer: ''
+  channelBeta:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '채널 제한{global:separator}{global:error}'
+        description: |-
+          이 기능은 __** 이 Bot에서는 실행할 수 없습니다 **__.
+          실행하려면 다른 Bot을 사용하십시오.
+        fields: [ ]
+        footer: ''
+  channelDev:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '채널 제한{global:separator}{global:error}'
+        description: |-
+          이 기능은 __** 이 Bot에서는 실행할 수 없습니다 **__.
+          실행하려면 다른 Bot을 사용하십시오.
+        fields: [ ]
+        footer: ''
+  channelError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '채널 제한 오류{global:separator}{global:help}'
+        description: |-
+          이 오류는 실행하려는 기능이 이 Bot에서 실행할 수 없을 때 표시됩니다.
+          다른 채널의 Bot을 대상으로 다시 실행하십시오.
+
+          (제공된 경우) 이 오류에 대해 자세히 알아보려면,
+          문서를 확인하거나 지원 서버에 가입하여 문의하십시오.
+        fields: [ ]
+        footer: ''
+  permission:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '서버 권한 부족{global:separator}{global:error}'
+        description: |-
+          일부 __** 권한이 없습니다 **__.
+          누락된 권한의 사용을 허용한 다음 다시 실행하십시오.
+        fields: [ ]
+        footer: ''
+  permissionUser:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '서버 권한 부족{global:separator}{global:error}'
+        description: |-
+          일부 __** 권한이 없습니다.**__.
+          이러한 권한의 사용을 허용한 다음 다시 실행하십시오.
+        fields:
+          - name: ''
+            value: |-
+              굵게 표시된 권한은 채널 측에서 제한됩니다.
+              채널 설정에서 권한 사용을 허용합니다.
+        footer: ''
+  permissionBot:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '서버 권한 부족{global:separator}{global:error}'
+        description: |-
+          일부 __** 권한이 Bot에 없습니다 **__.
+          이러한 권한의 사용을 허용한 다음 다시 실행하십시오.
+        fields:
+          - name: ''
+            value: |-
+              굵게 표시된 권한은 채널 측에서 제한됩니다.
+              채널 설정에서 권한 사용을 허용합니다.
+        footer: ''
+  permissionUserAndBot:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '서버 권한 부족{global:separator}{global:error}'
+        description: |-
+          일부 __** 권한이 귀하와 Bot에 없습니다 **__.
+          이러한 권한의 사용을 허용한 다음 다시 실행하십시오.
+        fields:
+          - name: ''
+            value: |-
+              굵게 표시된 권한은 채널 측에서 제한됩니다.
+              채널 설정에서 권한 사용을 허용합니다.
+          - name: 추가할 필요가 있는 권한
+            value: ''
+          - name: Bot에 추가하는 데 필요한 권한
+            value: ''
+        footer: ''
+  permissionError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '서버 권한 오류{global:separator}{global:help}'
+        description: |-
+          이 오류는 서버 측에서 필요한 권한이 부여되지 않은 경우 표시됩니다.
+          누락된 권한을 사용할 수 있도록 서버 관리자에게 문의하십시오.
+
+          (제공된 경우) 이 오류에 대해 자세히 알아보려면,
+          문서를 확인하거나 지원 서버에 가입하여 문의하십시오.
+        fields: [ ]
+        footer: ''
+  botPermission:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '서비스 권한 부족{global:separator}{global:error}'
+        description: |-
+          일부 __** 권한이 없습니다.**__.
+          이용 약관을 도움말에서 확인하십시오.
+        fields: [ ]
+        footer: ''
+  botPermissionOwner:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '서비스 권한 부족{global:separator}{global:error}'
+        description: |-
+          일부 __** 권한이 없습니다.**__.
+          이용하려면 서비스의 소유자여야 합니다.
+        fields: [ ]
+        footer: ''
+  botPermissionSubOwner:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '서비스 권한 부족{global:separator}{global:error}'
+        description: |-
+          일부 __** 권한이 없습니다.**__.
+          사용하려면 서비스의 하위 소유자 이상이어야 합니다.
+        fields: [ ]
+        footer: ''
+  botPermissionAdmin:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '서비스 권한 부족{global:separator}{global:error}'
+        description: |-
+          일부 __** 권한이 없습니다.**__.
+          사용하려면 서비스 관리자 이상이어야 합니다.
+        fields: [ ]
+        footer: ''
+  botPermissionStaff:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '서비스 권한 부족{global:separator}{global:error}'
+        description: |-
+          일부 __** 권한이 없습니다.**__.
+          이용하려면 서비스 직원 이상이어야합니다.
+        fields: [ ]
+        footer: ''
+  botPermissionManager:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '서비스 권한 부족{global:separator}{global:error}'
+        description: |-
+          일부 __** 권한이 없습니다.**__.
+          이용하려면 서비스의 운영이어야 합니다.
+        fields: [ ]
+        footer: ''
+  botPermissionError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '서비스 권한 오류{global:separator}{global:help}'
+        description: |-
+          이 오류는 서비스에서 권한이 부여되지 않은 경우 표시됩니다.
+          서버 권한과는 별개이므로 할 수 있는 일은 없습니다.
+
+          (제공된 경우) 이 오류에 대해 자세히 알아보려면,
+          문서를 확인하거나 지원 서버에 가입하여 문의하십시오.
+        fields: [ ]
+        footer: ''
+  locationGuild:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '이용 제한{global:separator}{global:error}'
+        description: |-
+          실행하려고 하는 명령은 __** 여기에서는 실행할 수 없습니다.**__.
+          **서버의 텍스트 채널**로 이동한 후 다시 실행합니다.
+        fields: [ ]
+        footer: ''
+  locationChannel:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '이용 제한{global:separator}{global:error}'
+        description: |-
+          실행하려고 하는 명령은 __** 여기에서는 실행할 수 없습니다.**__.
+          **다른 텍스트 채널**로 이동한 다음 다시 실행하세요.
+        fields: [ ]
+        footer: ''
+  locationPrivate:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '이용 제한{global:separator}{global:error}'
+        description: |-
+          실행하려고 하는 명령은 __** 여기에서는 실행할 수 없습니다.**__.
+          **Bot과의 직접 메시지**로 이동한 후 다시 실행하세요.
+        fields: [ ]
+        footer: ''
+  locationError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '이용 제한 오류{global:separator}{global:help}'
+        description: |-
+          이 오류는 실행하려는 기능을 이 위치에서 실행할 수 없을 때 표시됩니다.
+          오류에 표시된 다른 위치로 이동한 다음 다시 실행하십시오.
+
+          (제공된 경우) 이 오류에 대해 자세히 알아보려면,
+          문서를 확인하거나 지원 서버에 가입하여 문의하십시오.
+        fields: [ ]
+        footer: ''

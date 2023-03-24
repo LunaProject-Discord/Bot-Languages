@@ -1,0 +1,26 @@
+---
+constants: { }
+components:
+  music_disconnect:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:information}{global:separator}音乐'
+        title: ''
+        description: |-
+          我停止播放，因为队列是空的并且与语音通道断开连接。
+          要播放媒体，请运行 `{bot:prefix}play <keyword | URL>`。
+        fields: [ ]
+        footer: ''
+  speak_disconnect:
+    content: ''
+    components:
+      start: 开始朗读
+    embeds:
+      - author: '{global:information}{global:separator} 大声朗读'
+        title: ''
+        description: |-
+          我停止阅读，因为没有参与者并与语音频道断开连接。
+          运行 `{bot:prefix} speak` 开始阅读。
+        fields: [ ]
+        footer: ''

@@ -1,0 +1,6 @@
+---
+meta:
+  name: 투표
+  description: 리액션을 사용한 간이적인 투표 수 있습니다.
+constants: { }
+components: { }

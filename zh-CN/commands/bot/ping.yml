@@ -1,0 +1,28 @@
+---
+meta:
+  name: 延迟
+  description: 显示 Discord 和 Bot 之间的通信状态。
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: 'Pong! :ping_pong:'
+        fields:
+          - name: Bot (Gateway)
+            value: ''
+          - name: WebSocket
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: 我有一个平。请稍等…
+        fields: [ ]
+        footer: ''

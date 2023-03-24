@@ -1,0 +1,64 @@
+---
+meta:
+  name: 채널 정보
+  description: 채널 정보를 표시합니다.
+constants:
+  role: 직책
+  member: 회원
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '{replace} 정보를 표시합니다.'
+        fields:
+          - name: 유효 기간
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              種類: {replace:type}
+              親カテゴリ: {replace:category}
+              作成日時: {replace:created_at}
+          - name: 텍스트 채널의 정보
+            value: |-
+              説明: {replace:topic}
+              年齢制限: {replace:age_restricted}
+              スローモード (秒): {replace:slowmode}
+          - name: 음성 채널의 정보
+            value: |-
+              地域: {replace:region}
+              ユーザー数 (上限): {replace:user_limit}
+              ビットレート (上限): {replace:bitrate}
+          - name: 주제
+            value: ''
+          - name: NSFW
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'データ取得中…{global:separator}{meta:name}'
+        title: ''
+        description: 데이터를 검색하고 있습니다. 잠시 기다려주십시오...
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 지정한 조건에 맞는 채널을 검색합니다. 잠시 기다려주십시오...
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 지정한 조건에 맞는 채널을 찾을 수 없습니다.
+        fields: [ ]
+        footer: ''

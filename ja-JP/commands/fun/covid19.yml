@@ -1,0 +1,70 @@
+meta:
+  name: 新型コロナウイルス
+  description: 新型コロナウイルスに関する情報を表示します。
+
+constants:
+  pcr: 検査実施数
+  positive: 陽性者数
+  hospitalize: 入院者数
+  severe: 重傷者数
+  symptom_confirming: 症状確認者数
+  discharge: 退院者数
+  death: 死亡者数
+
+  hokkaido: 北海道地方
+  tohoku: 東北地方
+  kanto: 関東地方
+  chubu: 中部地方
+  kinki: 近畿地方
+  chugoku: 中国地方
+  shikoku: 四国地方
+  kyusyu: 九州地方
+
+  percent: 人口の{replace}
+
+components:
+  about:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: 概要{global:separator}{meta:name}
+        description: '{replace} 日本国内のデータを表示しています。'
+        fields: []
+        footer: ''
+  detail:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '{replace} のデータを表示しています。'
+        fields: []
+        footer: ''
+  loading:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: データ取得中…{global:separator}{meta:name}
+        description: データを取得しています。しばらくお待ちください…
+        fields: []
+        footer: ''
+  searching:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: 検索中…{global:separator}{meta:name}
+        description: 指定した条件に合うデータを検索しています。しばらくお待ちください…
+        fields: []
+        footer: ''
+  error:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 指定した条件に合うデータが見つかりませんでした。
+        fields: []
+        footer: ''

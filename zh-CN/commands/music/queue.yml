@@ -1,0 +1,19 @@
+---
+meta:
+  name: 音乐（媒体队列）
+  description: 显示队列中的媒体。
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '队列{global:separator}{meta:name}'
+        description: '总播放时间：{replace:totalDuration}，队列数：{replace:queueSize}'
+        fields:
+          - name: 播放媒体
+            value: ''
+          - name: 下一个媒体
+            value: ''
+        footer: ''

@@ -1,0 +1,116 @@
+---
+meta:
+  name: 警句
+  description: 警告指定的成员。
+constants:
+  action: 运行于
+  cancel: 取消
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label} <会员 ID | 会员提及 ...> [原因]`：
+          警告指定成员
+        fields:
+          - name: 提示
+            value: |-
+              ・可以通过混合id和mention来指定成员。
+              ・可以一次指定多个成员。
+        footer: ''
+  successSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '我警告 {replace} 的原因如下：'
+        fields:
+          - name: 原因
+            value: ''
+        footer: ''
+  successMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '我们已警告 ** {replace} 人 ** 成员，原因如下：'
+        fields:
+          - name: 成员
+            value: ''
+          - name: 原因
+            value: ''
+        footer: ''
+  cancelledSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '取消了 {replace} 警告。'
+        fields: [ ]
+        footer: ''
+  cancelledMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '已取消对 ** {replace} 人 ** 成员的警告。'
+        fields:
+          - name: 成员
+            value: ''
+        footer: ''
+  confirmSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          您确定要出于以下原因警告 {replace} 吗？
+          :warning:这个操作是不可逆的！
+        fields:
+          - name: 原因
+            value: ''
+        footer: ''
+  confirmMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          您确定要出于以下原因警告 ** {replace} 人 ** 成员吗？
+          :warning:这个操作是不可逆的！
+        fields:
+          - name: ''
+            value: |-
+              有些成员不能警告。
+              点击“{global:viewDetail}”了解详情。
+          - name: 成员
+            value: ''
+          - name: 原因
+            value: ''
+        footer: ''
+  helpMembers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          有些成员不能警告。
+          详细原因如下。
+        fields:
+          - name: 我不能警告这些成员，因为你没有权限。
+            value: ''
+          - name: 由于该机器人未获得授权，因此无法警告这些成员。
+            value: ''
+          - name: 无法警告这些用户，因为他们未加入服务器或不存在。
+            value: ''
+        footer: ''

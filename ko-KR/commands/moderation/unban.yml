@@ -1,0 +1,106 @@
+---
+meta:
+  name: Ban 해제
+  description: 지정한 사용자의 반 Ban합니다.
+constants:
+  action: 실행
+  cancel: 취소
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label} 사용자 ID | 사용자 멘션 ... `:
+          　지정한 사용자의 Ban을 해제
+        fields:
+          - name: 힌트
+            value: |-
+              ・ID와 멘션을 혼합하여 사용자 지정 가능
+              ・사용자의 복수 지정 가능
+        footer: ''
+  successSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '{replace} 에서 Ban을 취소했습니다.'
+        fields: [ ]
+        footer: ''
+  successMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '**{replace}사람** 의 사용자가 Ban을 취소했습니다.'
+        fields:
+          - name: 사용자
+            value: ''
+        footer: ''
+  cancelledSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '{replace} 의 Ban 취소를 취소했습니다.'
+        fields: [ ]
+        footer: ''
+  cancelledMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '**{replace}사람** 사용자의 반제거를 취소했습니다.'
+        fields:
+          - name: 사용자
+            value: ''
+        footer: ''
+  confirmSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          정말 {replace}에서 Ban을 해제하시겠습니까?
+          :warning: 이 작업은 취소할 수 없습니다!
+        fields: [ ]
+        footer: ''
+  confirmMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          정말 **{replace}명**의 사용자를 반을 취소하시겠습니까?
+          :warning: 이 작업은 취소할 수 없습니다!
+        fields:
+          - name: ''
+            value: |-
+              일부 사용자의 반은 해제할 수 없습니다.
+              자세한 내용은 '{global:viewDetail}'을 탭하세요.
+          - name: 사용자
+            value: ''
+        footer: ''
+  helpMembers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          일부 사용자의 반은 해제할 수 없습니다.
+          아래에 자세한 이유가 게재되어 있습니다.
+        fields:
+          - name: 이 사용자는 이미 반이 해제되었습니다.
+            value: ''
+          - name: 이러한 사용자는 존재하지 않는 사용자를 위해 Ban을 해제할 수 없습니다.
+            value: ''
+        footer: ''

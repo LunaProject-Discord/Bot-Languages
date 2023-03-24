@@ -1,0 +1,108 @@
+---
+constants: { }
+components:
+  join:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Join VoiceChannel{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member} has joined {replace:channel}.'
+        fields:
+          - name: User Name
+            value: ''
+          - name: Channel Name
+            value: ''
+          - name: Category
+            value: ''
+          - name: Users (Limit)
+            value: ''
+          - name: Bitrate (Limit)
+            value: ''
+        footer: ''
+  leave:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Leave VoiceChannel{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member} has leaved {replace:channel}.'
+        fields:
+          - name: User Name
+            value: ''
+          - name: Channel Name
+            value: ''
+          - name: Category
+            value: ''
+          - name: Users (Limit)
+            value: ''
+          - name: Bitrate (Limit)
+            value: ''
+        footer: ''
+  move:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Move VoiceChannel{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member} moved from {replace:old_channel} to {replace:new_channel}.'
+        fields:
+          - name: User Name
+            value: ''
+          - name: Source channel
+            value: |-
+              Channel Name: {replace:channel}
+              Category: {replace:category}
+              Users (Limit): {replace:user_limit}
+              Bitrate (Limit): {replace:bitrate}
+          - name: Destination Channel
+            value: |-
+              Channel Name: {replace:channel}
+              Category: {replace:category}
+              Users (Limit): {replace:user_limit}
+              Bitrate (Limit): {replace:bitrate}
+        footer: ''
+  mute:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Mute Member{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} has been server muted.'
+        fields:
+          - name: User Name
+            value: ''
+        footer: ''
+  unmute:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'UnMute Member{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} has been server unmuted.'
+        fields:
+          - name: User Name
+            value: ''
+        footer: ''
+  deafen:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Deafen Member{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} has been server deafened'
+        fields:
+          - name: User Name
+            value: ''
+        footer: ''
+  undeafen:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'UnDeafen Member{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} has been server undeafened.'
+        fields:
+          - name: User Name
+            value: ''
+        footer: ''

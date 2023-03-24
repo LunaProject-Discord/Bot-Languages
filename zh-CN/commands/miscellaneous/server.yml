@@ -1,0 +1,66 @@
+---
+meta:
+  name: 服务器信息
+  description: 是否显示服务器信息。
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '显示{replace} 信息。'
+        fields:
+          - name: 基础信息
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              オーナー: {replace:owner_status} {replace:owner_tag} ({replace:owner_id})
+              作成日時: {replace:created_at}
+          - name: 服务信息
+            value: |-
+              フラグ: {replace:flags}
+              認証済み: {replace:verified}
+          - name: 服务器描述
+            value: ''
+          - name: 社区信息
+            value: |-
+              優先言語: {replace:language}
+              ルールチャンネル: {replace:rule_channel}
+              アナウンスチャンネル: {replace:announce_channel}
+          - name: 统计
+            value: |-
+              ブースト数: {replace:boost_tier} ({replace:boost_count})
+              チャンネル数: {replace:total_channels} ({replace:category}, {replace:text}, {replace:voice}, {replace:stage})
+              メンバー数: {replace:total_members} ({replace:user}, {replace:bot}) / {replace:max_members}
+              絵文字数: {replace:total_emotes} (通常: {replace:normal}, GIF: {replace:animated}) / {replace:max_emotes}
+          - name: 导向器({replace})
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'データ取得中…{global:separator}{meta:name}'
+        title: ''
+        description: 我正在获取数据。请稍等…
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 我们正在搜索满足指定条件的服务器。请稍等…
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 未找到符合指定条件的服务器。
+        fields: [ ]
+        footer: ''

@@ -1,0 +1,15 @@
+---
+meta:
+  name: Command name
+  description: Command descriptions
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: ''
+        description: ''
+        fields: [ ]
+        footer: ''

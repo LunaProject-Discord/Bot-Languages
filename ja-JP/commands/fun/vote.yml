@@ -1,0 +1,105 @@
+meta:
+  name: 投票
+  description: リアクションを使用した簡易的な投票ができます。
+
+constants:
+  in: '{replace:min}個以上{replace:max}個以下'
+  least: '{replace}個以上'
+  most: '{replace}個以下'
+  only: '{replace}個のみ'
+  indefinitely: 無期限
+
+components:
+  index:
+    content: ''
+    components:
+      clear_selected_choices: 選択を解除
+      close: 投票を締め切る
+    embeds:
+      - author: ''
+        title: ''
+        description: ''
+        fields:
+          - name: 回答の選択可能数
+            value: ''
+          - name: 投票期限
+            value: ''
+        footer: ''
+  result:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: ''
+        description: ''
+        fields:
+          - name: '{replace:rank}位 ({replace:count}票): {replace:label}'
+            value: ''
+        footer: ''
+  create:
+    content: ''
+    components:
+      add: 選択肢の追加
+      remove: 選択肢の削除
+      anonymous_enable: 匿名投票を有効にする
+      anonymous_disable: 匿名投票を無効にする
+      required_range_select: 回答の選択可能数の設定
+      import: インポート
+      export: エクスポート
+      start: 投票を開始
+    embeds:
+      - author: '投票の作成{global:separator}{meta:name}'
+        title: ''
+        description: ''
+        fields: 
+          - name: 回答の選択可能数
+            value: ''
+          - name: 投票期限
+            value: ''
+        footer: ''
+  choice_add:
+    content: ''
+    components:
+      label: ラベル
+      emoji: 絵文字
+    embeds:
+      - author: ''
+        title: '選択肢の追加 (投票の作成){global:separator}{meta:name}'
+        description: ''
+        fields: []
+        footer: ''
+  choice_remove:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '選択肢の削除 (投票の作成){global:separator}{meta:name}'
+        description: 投票から削除したい選択肢を下から選択するか、**【{replace} キャンセル】**を押してください。
+        fields: []
+        footer: ''
+  required_range_select:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '回答の選択可能数の設定 (投票の作成){global:separator}{meta:name}'
+        description: |-
+          メンバーが投票できる選択肢の数を下から選択するか、**【{replace} キャンセル】**を押してください。
+          数を1つのみ選択した場合は、その数**以上**か**以下**、**のみ**のいずれかを選択できます。
+          数を2つ選択した場合は、その範囲の数のみ投票できるようにします。
+        fields: []
+        footer: ''
+  required_option_select:
+    content: ''
+    components:
+      back: 戻る
+    embeds:
+      - author: ''
+        title: '回答の選択可能数の強制方法の設定 (投票の作成){global:separator}{meta:name}'
+        description: |-
+          メンバーが投票できる選択肢の数の強制方法を下から指定するか、**【{replace:cancel} キャンセル】**を押してください。
+          **【{replace:count}個以上】**{replace:count}個以上で選択して投票
+          **【{replace:count}個以下】**{replace:count}個以下で選択して投票
+          **【{replace:count}個のみ】**{replace:count}個だけ選択して投票
+        fields: []
+        footer: ''

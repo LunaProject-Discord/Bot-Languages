@@ -1,0 +1,67 @@
+---
+meta:
+  name: 新冠病毒
+  description: 显示有关新型冠状病毒(COVID-19) 的信息。
+constants:
+  pcr: 検査実施数
+  positive: 阳性数
+  hospitalize: 住院人数
+  severe: 重伤人数
+  symptom_confirming: 确认症状的人数
+  discharge: 出院次数
+  death: 死亡人数
+  hokkaido: 北海道地区
+  tohoku: 东北地区
+  kanto: 关东地区
+  chubu: 中部地区
+  kinki: 近畿地区
+  chugoku: 中国地区
+  shikoku: 四国地区
+  kyusyu: 九州地区
+  percent: 人口{replace}
+components:
+  about:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 概述{global:separator}{meta:name}
+        description: '{replace} 在日本显示数据。'
+        fields: [ ]
+        footer: ''
+  detail:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '显示{replace} 的数据。'
+        fields: [ ]
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 数据采集​​...{global:separator}{meta:name}
+        description: 我正在获取数据。请稍等…
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 正在搜索... {global:separator}{meta:name}
+        description: 我们正在搜索满足指定条件的数据。请稍等…
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 没有找到满足指定条件的数据。
+        fields: [ ]
+        footer: ''

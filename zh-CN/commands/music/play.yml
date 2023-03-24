@@ -1,0 +1,78 @@
+---
+meta:
+  name: 音乐（播放媒体）
+  description: 播放视频发布网站和上传的媒体。(YouTube, NicoNico)
+constants: { }
+components:
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: |-
+          论据无效。请指定关键字或网址。
+          示例：`{bot:prefix}{command:label} LastScore`,`{bot:prefix}{command:label} https://www.youtube.com/watch?v=zAWu9BK_V5M`
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 搜索符合指定条件的媒体。请稍等…
+        fields: [ ]
+        footer: ''
+  not_found:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: 未找到符合指定标准的介质。
+        fields: [ ]
+        footer: ''
+  loaded_track:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '将 **{replace:media_name}** ({replace:media_author} / {replace:media_duration}) 添加到队列中。'
+        fields: [ ]
+        footer: ''
+  loaded_playlist:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '将 **{replace:media_list_name}** ({replace:media_list_size} / {replace:media_list_duration}) 添加到队列中。'
+        fields: [ ]
+        footer: ''
+  search_result:
+    content: ''
+    components:
+      cancel: 取消
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          用{replace:keyword}搜索的结果是找到了{replace:size}个候选项。
+          从底部选择要播放的媒体或按取消。
+        fields:
+          - name: '{replace} YouTube 搜索建议'
+            value: ''
+          - name: '{replace} 搜索 Nico Nico Douga 的候选人'
+            value: ''
+        footer: ''
+  cancel:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 已取消.
+        fields: [ ]
+        footer: ''

@@ -1,0 +1,64 @@
+---
+meta:
+  name: Channel Information
+  description: Displays channel information.
+constants:
+  role: Role(s)
+  member: Member(s)
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: 'You are viewing information about {replace}.'
+        fields:
+          - name: Basic Information
+            value: |-
+              Name (ID): {replace:name} ({replace:id})
+              Type: {replace:type}
+              Category: {replace:category}
+              Created at: {replace:created_at}
+          - name: Text Channel Information
+            value: |-
+              Topic: {replace:topic}
+              NSFW?: {replace:age_restricted}
+              Slowmode (sec): {replace:slowmode}
+          - name: Voice Channel Information
+            value: |-
+              Region: {replace:region}
+              Bitrate: {replace:bitrate}
+              Users (Limit): {replace:users}
+          - name: Accessible Roles ({replace:roles}, {replace:members} persons)
+            value: ''
+          - name: Accessible Members ({replace})
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Data acquisition in progress...{global:separator}{meta:name}'
+        title: ''
+        description: We are retrieving data. Please wait a moment...
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Searching...{global:separator}{meta:name}'
+        title: ''
+        description: Searching for channels that match the specified criteria. Please wait a moment...
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: No channels were found that match the specified criteria.
+        fields: [ ]
+        footer: ''

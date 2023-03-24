@@ -1,0 +1,35 @@
+---
+meta:
+  name: 音楽 (メディアの繰り返し)
+  description: 再生中のメディアを繰り返します。
+constants:
+  all: すべて繰り返し
+  single: 一曲だけ繰り返し
+  none: 無効
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 繰り返しを{replace}に設定しました。
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: 引数が不正です。下記のオプションのどれかを指定してください。
+        fields:
+          - name: ''
+            value: |-
+              `{bot:prefix}{command:label} all`
+              　__キューに入っているメディアをすべて繰り返す__
+              `{bot:prefix}{command:label} single`
+              　__現在再生しているメディアを繰り返す__
+              `{bot:prefix}{command:label} none`
+              　__繰り返し再生を無効にする__
+        footer: ''

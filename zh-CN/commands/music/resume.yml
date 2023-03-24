@@ -1,0 +1,28 @@
+---
+meta:
+  name: 音乐（恢复媒体）
+  description: 恢复暂停的媒体。
+constants: { }
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: '{global:success}{global:separator}{meta:name}'
+        description: |-
+          播放已恢复。
+          运行 `{bot:prefix}pause` 来暂停播放。
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: |-
+          播放已恢复。
+          运行 `{bot:prefix}pause` 来暂停播放。
+        fields: [ ]
+        footer: ''

@@ -1,0 +1,365 @@
+---
+constants:
+  separator: ' - '
+  yes: 是
+  no: 不用了
+  enabled: 已启用
+  disabled: 永不
+  current: 当前
+  unknown: 未知
+  none: 从不
+  help: 求助
+  loading: 正在加载...
+  information: 信息
+  success: 成功
+  warning: 警告
+  error: 错误
+  botInvite: 介绍一下这个机器人
+  joinSupportServer: 加入我们的支持服务器
+  dashboard: 控制面板
+  viewDetail: 查看详情
+  viewDocument: 请核实该文档内容
+  cancel: 取消
+components:
+  exception:
+    content: ''
+    components:
+      sendReport: 发送错误报告
+    embeds:
+      - author: ''
+        title: '意外的错误{global:separator}{global:error}'
+        description: |-
+          抱歉。 __ ** 发生意外的错误 ** __。
+          如果您能通过按下下面的按钮向我们发送错误报告，我们将不胜感激。
+        fields: [ ]
+        footer: ''
+  commandNotFound:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '未知的命令{global:separator}{global:error}'
+        description: |-
+          未找到您尝试执行的 __ ** 命令 ** __。
+          检查是否有带有“{bot:prefix}help”的命令。
+        fields:
+          - name: 您指的是？
+            value: ''
+        footer: ''
+  argumentNotFound:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '未知参数{global:separator}{global:error}'
+        description: |-
+          __ ** 参数无效 ** __。检查以下项目。
+          -** 是否指定了所需的参数？**
+          -** 您尝试执行的命令是否支持指定的参数 **？
+
+          使用 `{bot:prefix}help {command:label}` 或 `{bot:prefix} {command:label}` 来查看如何使用该命令。
+        fields: [ ]
+        footer: ''
+  commandDisabled:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '无效命令{global:separator}{global:error}'
+        description: |-
+          服务器管理员尝试执行的 __ ** 命令无效 ** __。
+          请求服务器管理员激活该命令。
+        fields: [ ]
+        footer: ''
+  commandDenied:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '禁止命令{global:separator}{global:error}'
+        description: |-
+          您尝试执行的 __ ** 命令被服务器管理员 ** __ 禁止。
+          请求服务器管理员激活该命令。
+        fields: [ ]
+        footer: ''
+  commandChannelDenied:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '禁止频道{global:separator}{global:error}'
+        description: |-
+          您尝试执行的 __ ** 命令被禁止在此通道上执行 ** __。
+          ** 移至另一个文本频道 ** 或要求您的服务器管理员更改设置。
+        fields: [ ]
+        footer: ''
+  commandRoleDenied:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '被禁止的职位{global:separator}{global:error}'
+        description: |-
+          您尝试执行的 __ ** 命令被职位设置禁止 **。
+          **剥夺分配的职位**或要求服务器管理员更改设置。
+        fields: [ ]
+        footer: ''
+  channel:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '通道限制{global:separator}{global:error}'
+        description: |-
+          此功能 __ ** 无法在此机器人 ** __ 上执行。
+          使用另一个机器人来运行它。
+        fields: [ ]
+        footer: ''
+  channelStable:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '通道限制{global:separator}{global:error}'
+        description: |-
+          此功能 __ ** 无法在此机器人 ** __ 上执行。
+          使用另一个机器人来运行它。
+        fields: [ ]
+        footer: ''
+  channelBeta:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '通道限制{global:separator}{global:error}'
+        description: |-
+          此功能 __ ** 无法在此机器人 ** __ 上执行。
+          使用另一个机器人来运行它。
+        fields: [ ]
+        footer: ''
+  channelDev:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '通道限制{global:separator}{global:error}'
+        description: |-
+          此功能 __ ** 无法在此机器人 ** __ 上执行。
+          使用另一个机器人来运行它。
+        fields: [ ]
+        footer: ''
+  channelError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '通道限制错误{global:separator}{global:help}'
+        description: |-
+          当您尝试执行的功能无法在此机器人上执行时，会显示此错误。
+          将其他频道上的机器人作为目标，然后重试。
+
+          如果您想了解有关此错误的更多信息（如果提供），
+          请查看文档或加入支持服务器与我们联系。
+        fields: [ ]
+        footer: ''
+  permission:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '服务器权限不足{global:separator}{global:error}'
+        description: |-
+          有些 __** 我没有权限 ** __。
+          允许使用不足的权限，然后重试。
+        fields: [ ]
+        footer: ''
+  permissionUser:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '服务器权限不足{global:separator}{global:error}'
+        description: |-
+          您没有 __ ** 权限 ** __。
+          允许使用这些权限并重试。
+        fields:
+          - name: ''
+            value: |-
+              粗体权限在通道端受到限制。
+              请允许从通道设置的使用权限。
+        footer: ''
+  permissionBot:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '服务器权限不足{global:separator}{global:error}'
+        description: |-
+          机器人 ** __ 上缺少一些 __ ** 权限。
+          允许使用这些权限并重试。
+        fields:
+          - name: ''
+            value: |-
+              粗体权限在通道端受到限制。
+              请允许从通道设置的使用权限。
+        footer: ''
+  permissionUserAndBot:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '服务器权限不足{global:separator}{global:error}'
+        description: |-
+          您和您的机器人 ** __ 缺少一些 __** 权限。
+          允许使用这些权限并重试。
+        fields:
+          - name: ''
+            value: |-
+              粗体权限在通道端受到限制。
+              请允许从通道设置的使用权限。
+          - name: 您需要的其他权限
+            value: ''
+          - name: 机器人所需的其他权限
+            value: ''
+        footer: ''
+  permissionError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '服务器权限错误{global:separator}{global:help}'
+        description: |-
+          当服务器没有所需的权限时会显示此错误。
+          尝试联系服务器管理员以利用缺少的权限。
+
+          如果您想了解有关此错误的更多信息（如果提供），
+          请查看文档或加入支持服务器与我们联系。
+        fields: [ ]
+        footer: ''
+  botPermission:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '服务权限不足{global:separator}{global:error}'
+        description: |-
+          您没有 __ ** 权限 ** __。
+          请从帮助中查看使用条款。
+        fields: [ ]
+        footer: ''
+  botPermissionOwner:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '服务权限不足{global:separator}{global:error}'
+        description: |-
+          您没有 __ ** 权限 ** __。
+          您必须是服务的所有者才能使用它。
+        fields: [ ]
+        footer: ''
+  botPermissionSubOwner:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '服务权限不足{global:separator}{global:error}'
+        description: |-
+          您没有 __ ** 权限 ** __。
+          您必须至少是服务的子所有者才能使用它。
+        fields: [ ]
+        footer: ''
+  botPermissionAdmin:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '服务权限不足{global:separator}{global:error}'
+        description: |-
+          您没有 __ ** 权限 ** __。
+          您必须至少是该服务的管理员才能使用它。
+        fields: [ ]
+        footer: ''
+  botPermissionStaff:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '服务权限不足{global:separator}{global:error}'
+        description: |-
+          您没有 __ ** 权限 ** __。
+          您必须至少是服务人员才能使用它。
+        fields: [ ]
+        footer: ''
+  botPermissionManager:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '服务权限不足{global:separator}{global:error}'
+        description: |-
+          您没有 __ ** 权限 ** __。
+          要使用它，您需要运行该服务。
+        fields: [ ]
+        footer: ''
+  botPermissionError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '服务权限错误{global:separator}{global:help}'
+        description: |-
+          未授予此服务的权限时会显示此错误。
+          您无能为力，因为它与服务器权限分开。
+
+          如果您想了解有关此错误的更多信息（如果提供），
+          请查看文档或加入支持服务器与我们联系。
+        fields: [ ]
+        footer: ''
+  locationGuild:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '使用限制{global:separator}{global:error}'
+        description: |-
+          您尝试执行的命令是 __ ** 无法在此处执行 ** __。
+          转到**服务器文本频道**并重试。
+        fields: [ ]
+        footer: ''
+  locationChannel:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '使用限制{global:separator}{global:error}'
+        description: |-
+          您尝试执行的命令是 __ ** 无法在此处执行 ** __。
+          请移至 ** 另一个文本频道 ** 并重试。
+        fields: [ ]
+        footer: ''
+  locationPrivate:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '使用限制{global:separator}{global:error}'
+        description: |-
+          您尝试执行的命令是 __ ** 无法在此处执行 ** __。
+          转到 ** 与 Bot 的直接消息 ** 并重试。
+        fields: [ ]
+        footer: ''
+  locationError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '使用限制错误{global:separator}{global:help}'
+        description: |-
+          当您尝试执行的功能无法在此位置执行时，会显示此错误。
+          请移至错误中显示的其他位置，然后重试。
+
+          如果您想了解有关此错误的更多信息（如果提供），
+          请查看文档或加入支持服务器与我们联系。
+        fields: [ ]
+        footer: ''

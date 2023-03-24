@@ -1,0 +1,28 @@
+---
+meta:
+  name: Ping
+  description: Discord 및 Bot의 통신 상태를 표시합니다.
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: 'Pong! :ping_pong:'
+        fields:
+          - name: Bot (Gateway)
+            value: ''
+          - name: WebSocket
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: Ping을 확인하고 있습니다. 잠시 기다려주십시오...
+        fields: [ ]
+        footer: ''

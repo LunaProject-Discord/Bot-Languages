@@ -1,0 +1,70 @@
+meta:
+  name: 役職情報
+  description: 役職情報を表示します。
+
+constants: {}
+
+components:
+  index:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '{replace} の情報を表示しています。'
+        fields:
+          - name: 基本情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              カラーコード: {replace:color}
+              メンション可能: {replace:mentionable}
+              別表示: {replace:hoisted}
+              作成日時: {replace:created_at}
+          - name: Botの情報
+            value: |-
+              名前 (ID): {replace:tag} ({replace:id})
+              ステータス: {replace:status}
+              Bot: {replace:bot}
+              フラグ: {replace:flags}
+              作成日時: {replace:created_at}
+          - name: メンバー ({replace})
+            value: ''
+          - name: 権限 ({replace})
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: {}
+    embeds:
+      - author: 'データ取得中…{global:separator}{meta:name}'
+        title: ''
+        description: データを取得しています。しばらくお待ちください…
+        fields: []
+        footer: ''
+  searching:
+    content: ''
+    components: {}
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合う役職を検索しています。しばらくお待ちください…
+        fields: []
+        footer: ''
+  error:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合う役職が見つかりませんでした。
+        fields: []
+        footer: ''
+  empty:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: 役職が付与されていないため表示できませんでした。
+        fields: []
+        footer: ''

@@ -1,0 +1,58 @@
+---
+meta:
+  name: Translate
+  description: Translate text into the specified language.
+constants:
+  auto_detection: Auto Detection
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: ''
+        fields:
+          - name: Language Information
+            value: 'Source: {replace:source} → Target: {replace:target}'
+          - name: Hint
+            value: |-
+              You can also specify the source language for translation.
+              For example: `{bot:prefix}{command:label} en ja Hello!`
+        footer: ''
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:help}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          `{bot:prefix}{command:label} [language of source] <language of target> <text>`:
+          　__Specify the source language or auto-detect the language and translate__.
+        fields:
+          - name: Languages
+            value: 'See [here]({replace}).'
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: Translation in progress...{global:separator}{meta:name}
+        description: The text is being translated. Please wait a moment...
+        fields: [ ]
+        footer: ''
+  select:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: Select language{global:separator}{meta:name}
+        description: |-
+          There are multiple languages in {replace:country}.
+          Please select the language you want to translate to within **{replace:time} seconds**.
+          If you want to cancel, select {replace:cancel} on this message.
+        fields:
+          - name: Hint
+            value: If you set a default language, you can automatically translate to the set language when you select a emoji of flag from that country.
+        footer: ''

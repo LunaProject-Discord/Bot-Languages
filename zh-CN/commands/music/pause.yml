@@ -1,0 +1,28 @@
+---
+meta:
+  name: 音乐（暂停媒体）
+  description: 暂停播放媒体。
+constants: { }
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: '{global:success}{global:separator}{meta:name}'
+        description: |-
+          播放已暂停。
+          运行 `{bot:prefix}resume` 以恢复播放。
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: |-
+          播放已暂停。
+          运行 `{bot:prefix}resume` 以恢复播放。
+        fields: [ ]
+        footer: ''

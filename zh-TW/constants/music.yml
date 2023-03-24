@@ -1,0 +1,56 @@
+---
+constants:
+  all: すべて繰り返し
+  single: 一曲だけ繰り返し
+  none: 無効
+components:
+  not_connected:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}音楽'
+        title: ''
+        description: |-
+          ボイスチャンネルに参加していないため実行できません。
+          ボイスチャンネルに参加してから再度実行してください。
+        fields: [ ]
+        footer: ''
+  not_playing:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}音楽'
+        title: ''
+        description: |-
+          何も再生していないため実行できません。
+          `{bot:prefix}play <キーワード | URL>` で再生をすることができます。
+        fields: [ ]
+        footer: ''
+  using_tts:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}音楽'
+        title: ''
+        description: |-
+          読み上げ機能を利用しているため実行できません。
+          `{bot:prefix}bye` で読み上げ機能を終了してからもう一度実行してください。
+        fields: [ ]
+        footer: ''
+  control_panel:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'コントロールパネル{global:separator}音楽'
+        description: ''
+        fields:
+          - name: 投稿者
+            value: ''
+          - name: 追加ユーザー
+            value: ''
+          - name: 繰り返し
+            value: ''
+          - name: 次のメディア
+            value: ''
+        footer: ''

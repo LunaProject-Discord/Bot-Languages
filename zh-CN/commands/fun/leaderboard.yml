@@ -1,0 +1,35 @@
+---
+meta:
+  name: 排行榜
+  description: 没有找到满足指定条件的数据。
+constants:
+  here: 这里
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: ''
+        fields:
+          - name: 网页版排行榜
+            value: |-
+              在网页版排行榜上，您可以看到服务器上所有用户级别的发言。
+              有关详细信息，请参阅 [此处]({replace})。 （要求登录）
+          - name: 層次
+            value: ''
+          - name: 经验(最大)
+            value: ''
+          - name: 暂定排名
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 数据采集​​...{global:separator}{meta:name}
+        description: 我正在获取数据。请稍等…
+        fields: [ ]
+        footer: ''

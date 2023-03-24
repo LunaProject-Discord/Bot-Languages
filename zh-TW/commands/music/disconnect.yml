@@ -1,0 +1,35 @@
+---
+meta:
+  name: 音楽 (ボイスチャンネルから退出)
+  description: ボイスチャンネルから退出します。
+constants: { }
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 'ボイスチャンネルから切断しました。 :wave:'
+        fields: [ ]
+        footer: ''
+  success_and_stop:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '再生を停止し、ボイスチャンネルから切断しました。 :wave:'
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          すでにボイスチャンネルから切断されています。
+          メディアを再生するには `{bot:prefix}play <キーワード | URL>` と実行してください。
+        fields: [ ]
+        footer: ''

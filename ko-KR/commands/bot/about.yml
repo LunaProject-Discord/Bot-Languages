@@ -1,0 +1,27 @@
+---
+meta:
+  name: 개요
+  description: Bot 개요보기.
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: 이 Bot의 개요를 표시하고있다.
+        fields:
+          - name: 버전
+            value: '**{bot:version}** ({bot:channel}, Build {bot:build})'
+          - name: 서버 수
+            value: ''
+          - name: 채널 수
+            value: '{replace} ({replace:category}, {replace:text}, {replace:voice}, {replace:stage})'
+          - name: 사용자 수
+            value: '{replace} ({replace:user}, {replace:bot})'
+          - name: Bot을 도입
+            value: ''
+          - name: 지원 서버에 참여
+            value: ''
+        footer: ''

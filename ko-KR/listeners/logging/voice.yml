@@ -1,0 +1,108 @@
+---
+constants: { }
+components:
+  join:
+    content: ''
+    components: { }
+    embeds:
+      - author: '음성 채널 참여{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member}님이 {replace:channel}에 가입했습니다.'
+        fields:
+          - name: 사용자 이름
+            value: ''
+          - name: 채널명
+            value: ''
+          - name: 카테고리
+            value: ''
+          - name: 사용자 수 (최대)
+            value: ''
+          - name: 비트레이트(상한)
+            value: ''
+        footer: ''
+  leave:
+    content: ''
+    components: { }
+    embeds:
+      - author: '음성 채널에서 나가기 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member}이 {replace:channel}에서 나왔습니다.'
+        fields:
+          - name: 사용자 이름
+            value: ''
+          - name: 채널명
+            value: ''
+          - name: 카테고리
+            value: ''
+          - name: 사용자 수 (최대)
+            value: ''
+          - name: 비트레이트(상한)
+            value: ''
+        footer: ''
+  move:
+    content: ''
+    components: { }
+    embeds:
+      - author: '음성 채널 이동 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace:member}이 {replace:old_channel}에서 {replace:new_channel}로 이동했습니다.'
+        fields:
+          - name: 사용자 이름
+            value: ''
+          - name: 이동 소스 채널
+            value: |-
+              채널 이름: {replace:channel}
+              카테고리: {replace:category}
+              최대 사용자 수: {replace:user_limit}
+              비트 전송률(상한): {replace:bitrate}
+          - name: 이동 대상 채널
+            value: |-
+              채널 이름: {replace:channel}
+              카테고리: {replace:category}
+              최대 사용자 수: {replace:user_limit}
+              비트 전송률(상한): {replace:bitrate}
+        footer: ''
+  mute:
+    content: ''
+    components: { }
+    embeds:
+      - author: '멤버 음소거 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 의 서버 음소거가 설정되었습니다.'
+        fields:
+          - name: 사용자 이름
+            value: ''
+        footer: ''
+  unmute:
+    content: ''
+    components: { }
+    embeds:
+      - author: '멤버 음소거 해제 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 의 서버 음소거가 해제되었습니다.'
+        fields:
+          - name: 사용자 이름
+            value: ''
+        footer: ''
+  deafen:
+    content: ''
+    components: { }
+    embeds:
+      - author: '멤버의 스피커 음소거 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 의 서버 스피커 음소거가 설정되었습니다.'
+        fields:
+          - name: 사용자 이름
+            value: ''
+        footer: ''
+  undeafen:
+    content: ''
+    components: { }
+    embeds:
+      - author: '멤버의 스피커 음소거 해제 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 의 서버 스피커 음소거가 해제되었습니다.'
+        fields:
+          - name: 사용자 이름
+            value: ''
+        footer: ''

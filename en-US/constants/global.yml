@@ -1,0 +1,365 @@
+---
+constants:
+  separator: ' - '
+  yes: "Yes"
+  no: "No"
+  enabled: Enabled
+  disabled: Disabled
+  current: Current
+  unknown: Unknown
+  none: None
+  help: Help
+  loading: Loading...
+  information: Information
+  success: Success
+  warning: Warning
+  error: Error
+  botInvite: Invite Bot
+  joinSupportServer: Join the support server
+  dashboard: Dashboard
+  viewDetail: Check the details
+  viewDocument: Check the docs
+  cancel: Cancel
+components:
+  exception:
+    content: ''
+    components:
+      sendReport: Send an error report.
+    embeds:
+      - author: ''
+        title: 'Unexpected Error{global:separator}{global:error}'
+        description: |-
+          I'm sorry. __**An unexpected error occurred**__.
+          It would be helpful if you could send us an error report by clicking the button below.
+        fields: [ ]
+        footer: ''
+  commandNotFound:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Unknown command{global:separator}{global:error}'
+        description: |-
+          The __**command you tried to run was not found**__.
+          Please check `{bot:prefix}help` to see if the command is there.
+        fields:
+          - name: Did you mean?
+            value: ''
+        footer: ''
+  argumentNotFound:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Unknown argument{global:separator}{global:error}'
+        description: |-
+          The __** argument is invalid**__. Please check the following items.
+          ・**Are the necessary arguments specified?**
+          ・**Is the specified argument supported by the command you are trying to execute?**
+
+          Check the usage of the command with `{bot:prefix}help {command:label}` or `{bot:prefix}{command:label}`.
+        fields: [ ]
+        footer: ''
+  commandDisabled:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Disabled command{global:separator}{global:error}'
+        description: |-
+          The __**command you are trying to execute has been disabled by your server administrator**__.
+          Please ask your server administrator to enable the command.
+        fields: [ ]
+        footer: ''
+  commandDenied:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Prohibited command{global:separator}{global:error}'
+        description: |-
+          The __**command you are trying to execute has been disabled by your server administrator**__.
+          Please ask your server administrator to enable the command.
+        fields: [ ]
+        footer: ''
+  commandChannelDenied:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Prohibited channel{global:separator}{global:error}'
+        description: |-
+          The __**command you are trying to execute is not allowed to be executed in this channel**__.
+          **Please move it to another text channel** or ask your server administrator to change the setting.
+        fields: [ ]
+        footer: ''
+  commandRoleDenied:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Prohibited role{global:separator}{global:error}'
+        description: |-
+          The __**command you are trying to execute is prohibited by your role settings**__.
+          **Please revoke the assigned role** or ask your server administrator to change the setting.
+        fields: [ ]
+        footer: ''
+  channel:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Channel restrictions{global:separator}{global:error}'
+        description: |-
+          This function __**cannot be performed by this bot**__.
+          Please use another Bot to perform this function.
+        fields: [ ]
+        footer: ''
+  channelStable:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Channel restrictions{global:separator}{global:error}'
+        description: |-
+          This function __**cannot be performed by this bot**__.
+          Please use **Stable version of Bot** to perform this function.
+        fields: [ ]
+        footer: ''
+  channelBeta:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Channel restrictions{global:separator}{global:error}'
+        description: |-
+          This function __**cannot be performed by this bot**__.
+          Please use the **Beta version of the Bot** to run it.
+        fields: [ ]
+        footer: ''
+  channelDev:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Channel restrictions{global:separator}{global:error}'
+        description: |-
+          This function __**cannot be performed by this bot**__.
+          Please use the **Development version of Bot** to run it.
+        fields: [ ]
+        footer: ''
+  channelError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Channel restriction error{global:separator}{global:help}'
+        description: |-
+          This error is displayed when the function you are trying to perform cannot be performed by this bot.
+          Please try again with a bot from another channel.
+
+          If you want to know more about this error (if provided),
+          please check the documentation or join the support server and contact us.
+        fields: [ ]
+        footer: ''
+  permission:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Lack of server permissions{global:separator}{global:error}'
+        description: |-
+          Some __** permissions are missing**__.
+          Please allow the use of the missing permissions and run it again.
+        fields: [ ]
+        footer: ''
+  permissionUser:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Lack of server permissions{global:separator}{global:error}'
+        description: |-
+          Some permissions are not available to you.
+          Please allow the use of these permissions and run it again.
+        fields:
+          - name: ''
+            value: |-
+              Permissions in bold are restricted by the channel.
+              Please allow the use of these permissions in the channel settings.
+        footer: ''
+  permissionBot:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Lack of server permissions{global:separator}{global:error}'
+        description: |-
+          Some permissions are missing from the bot.
+          Please allow the Bot to use these permissions and then run it again.
+        fields:
+          - name: ''
+            value: |-
+              Permissions in bold are restricted by the channel.
+              Please allow the use of these permissions in the channel settings.
+        footer: ''
+  permissionUserAndBot:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Lack of server permissions{global:separator}{global:error}'
+        description: |-
+          Some permissions are not available to you and the bot.
+          Please allow the Bot to use these permissions and then run it again.
+        fields:
+          - name: ''
+            value: |-
+              Permissions in bold are restricted by the channel.
+              Please allow the use of these permissions in the channel settings.
+          - name: Additional permissions required for you
+            value: ''
+          - name: Additional permissions required for the bot
+            value: ''
+        footer: ''
+  permissionError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Server permission error{global:separator}{global:help}'
+        description: |-
+          This error is displayed when the necessary permissions are not granted by the server.
+          Please contact your server administrator to make the missing permissions available.
+
+          (if it is provided) If you want to know more about this error,
+          please check the documentation or join our support server and contact us.
+        fields: [ ]
+        footer: ''
+  botPermission:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Lack of service permissions{global:separator}{global:error}'
+        description: |-
+          Some __**permissions are not available**__ of you.
+          Please check the Terms of Use from Help.
+        fields: [ ]
+        footer: ''
+  botPermissionOwner:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Lack of service permissions{global:separator}{global:error}'
+        description: |-
+          You do not have permissions.
+          You need to be the owner of the service to use it.
+        fields: [ ]
+        footer: ''
+  botPermissionSubOwner:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Lack of service permissions{global:separator}{global:error}'
+        description: |-
+          You do not have permissions.
+          You need to be a sub-owner or above of the service to use it.
+        fields: [ ]
+        footer: ''
+  botPermissionAdmin:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Lack of service permissions{global:separator}{global:error}'
+        description: |-
+          You do not have permissions.
+          You must be the administrator of the service or higher to use it.
+        fields: [ ]
+        footer: ''
+  botPermissionStaff:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Lack of service permissions{global:separator}{global:error}'
+        description: |-
+          You do not have permissions.
+          You must be a staff member of the service or higher to use it.
+        fields: [ ]
+        footer: ''
+  botPermissionManager:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Lack of service permissions{global:separator}{global:error}'
+        description: |-
+          Some __**permissions are missing**__.
+          This can perform only Service Manager.
+        fields: [ ]
+        footer: ''
+  botPermissionError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Service permission error{global:separator}{global:help}'
+        description: |-
+          This error appears when you have not been granted permissions on this service.
+          There is nothing you can do about it, as it is separate from your server permissions.
+
+          (if it is provided) If you want to know more about this error,
+          please check the documentation or join our support server and contact us.
+        fields: [ ]
+        footer: ''
+  locationGuild:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Restrictions on Use{global:separator}{global:error}'
+        description: |-
+          The command you are trying to execute is __**Not available here**__.
+          Please go to the **server's text channel** and run it again.
+        fields: [ ]
+        footer: ''
+  locationChannel:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Restrictions on Use{global:separator}{global:error}'
+        description: |-
+          The command you are trying to execute is __**Not available here**__.
+          Please move to **another text channel** and try again.
+        fields: [ ]
+        footer: ''
+  locationPrivate:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Restrictions on Use{global:separator}{global:error}'
+        description: |-
+          The command you tried to execute is __**Not available here**__.
+          Please go to **Direct Message with Bot** and run it again.
+        fields: [ ]
+        footer: ''
+  locationError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Usage restriction error{global:separator}{global:help}'
+        description: |-
+          This error is displayed when the function you are trying to perform cannot be performed in this location.
+          Please navigate to the other location indicated by the error and try again.
+
+          If you want to know more about this error (if provided),
+          please check the documentation or join our support server and contact us.
+        fields: [ ]
+        footer: ''

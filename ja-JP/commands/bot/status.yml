@@ -1,0 +1,7 @@
+meta:
+  name: ステータス
+  description: Botの詳しい情報を表示します。
+
+constants: {}
+
+components: {}

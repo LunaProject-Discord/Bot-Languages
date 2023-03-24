@@ -1,0 +1,78 @@
+---
+meta:
+  name: Music (Media Played)
+  description: Play video posting sites and uploaded media.
+constants: { }
+components:
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          Invalid argument. Please specify a keyword or URL.
+          Example: `{bot:prefix}{command:label} ラストスコア`, `{bot:prefix}{command:label} https://www.youtube.com/watch?v=zAWu9BK_V5M`.
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: ''
+        description: Searching for media who match the specified criteria. Please wait a moment...
+        fields: [ ]
+        footer: ''
+  not_found:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: Not media matching the specified criteria were found
+        fields: [ ]
+        footer: ''
+  loaded_track:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 'Added **{replace:media_name}** ({replace:media_author} / {replace:media_duration}) to the queue.'
+        fields: [ ]
+        footer: ''
+  loaded_playlist:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 'Added **{replace:media_list_name}** ({replace:media_list_size} / {replace:media_list_duration}) to the queue.'
+        fields: [ ]
+        footer: ''
+  search_result:
+    content: ''
+    components:
+      cancel: Cancel
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          Your search for {replace:keyword} found {replace:size} candidates.
+          Please select the media you wish to play from below or press cancel.
+        fields:
+          - name: '{replace} YouTube search suggestions'
+            value: ''
+          - name: '{replace} Search suggestions for NicoNico'
+            value: ''
+        footer: ''
+  cancel:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: Canceled.
+        fields: [ ]
+        footer: ''

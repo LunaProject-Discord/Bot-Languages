@@ -1,0 +1,37 @@
+---
+constants:
+  name: ページネーション
+  sort: 並び替える方法を選択
+components:
+  move:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{paginator:name}'
+        description: |-
+          入力した番号のページに移動します。1から**{replace:pages}**の中で入力してください。
+          キャンセルする場合はこのメッセージについている :x: をクリックしてください。
+          ※**{replace:time}**秒で自動キャンセルされます。
+        fields: [ ]
+        footer: ''
+  move_success:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{paginator:name}'
+        description: '**{replace}**ページに移動します。しばらくお待ちください…'
+        fields: [ ]
+        footer: ''
+  move_error:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{paginator:name}'
+        description: |-
+          入力された番号のページがありませんでした。
+          前回表示していたページに移動します。しばらくお待ちください…
+        fields: [ ]
+        footer: ''

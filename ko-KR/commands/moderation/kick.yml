@@ -1,0 +1,116 @@
+---
+meta:
+  name: 강퇴
+  description: 선택한 멤버를 강퇴시킵니다.
+constants:
+  action: 실행
+  cancel: 취소
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          {bot:prefix}{command:label} <회원 ID | 회원 멘션 ...> [사유]`:
+          지정한 멤버를 강퇴합니다
+        fields:
+          - name: 힌트
+            value: |-
+              ・ID와 멘션을 혼합하여 멤버 지정 가능
+              ・멤버의 복수 지정 가능
+        footer: ''
+  successSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '{replace} 를 다음과 같은 사유로 강퇴했습니다.'
+        fields:
+          - name: 사유
+            value: ''
+        footer: ''
+  successMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '**{replace}명**의 멤버를 다음과 같은 이유로 킥했습니다.'
+        fields:
+          - name: 회원
+            value: ''
+          - name: 사유
+            value: ''
+        footer: ''
+  cancelledSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '{replace} 킥을 취소했습니다.'
+        fields: [ ]
+        footer: ''
+  cancelledMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '**{replace}명** 회원의 킥을 취소했습니다.'
+        fields:
+          - name: 회원
+            value: ''
+        footer: ''
+  confirmSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          실제로 {replace} 를 다음과 같은 이유로 킥 하시겠습니까?
+          :warning: 이 작업은 취소할 수 없습니다!
+        fields:
+          - name: 이유
+            value: ''
+        footer: ''
+  confirmMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          정말로 **{replace}사람**의 회원을 다음과 같은 이유로 승격하시겠습니까?
+          :warning: 이 작업은 취소할 수 없습니다!
+        fields:
+          - name: ''
+            value: |-
+              일부 회원은 킥할 수 없습니다.
+              자세한 내용은 '{global:viewDetail}'을 탭하세요.
+          - name: 회원
+            value: ''
+          - name: 사유
+            value: ''
+        footer: ''
+  helpMembers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          일부 회원은 킥할 수 없습니다.
+          아래에 자세한 이유가 게재되어 있습니다.
+        fields:
+          - name: 귀하에게 권한이 없기 때문에 이 멤버를 킥할 수 없습니다.
+            value: ''
+          - name: Bot에 권한이 없으므로 이 멤버를 킥할 수 없습니다.
+            value: ''
+          - name: 이 멤버는 서버에 가입하지 않았거나 존재하지 않는 사용자를 위해 킥할 수 없습니다.
+            value: ''
+        footer: ''

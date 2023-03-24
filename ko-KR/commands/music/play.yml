@@ -1,0 +1,78 @@
+---
+meta:
+  name: 음악 (미디어 재생)
+  description: 동영상 투고 사이트 나 업로드 된 미디어를 재생합니다.
+constants: { }
+components:
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: |-
+          인수가 잘못되었습니다. 키워드나 Url을 지정하세요.
+          예: `{bot:prefix}{command:label} 마지막 점수`, `{bot:prefix}{command:label} https://www.youtube.com/watch?v=zAWu9BK_V5M`
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 지정한 조건에 맞는 미디어를 검색하고 있습니다. 잠시 기다려주십시오...
+        fields: [ ]
+        footer: ''
+  not_found:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: 지정한 조건에 맞는 미디어를 찾을 수 없습니다.
+        fields: [ ]
+        footer: ''
+  loaded_track:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '**{replace:media_name}** ({replace:media_author} / {replace:media_duration}) 를 대기열에 추가했습니다.'
+        fields: [ ]
+        footer: ''
+  loaded_playlist:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '**{replace:media_list_name}** ({replace:media_list_size} / {replace:media_list_duration}) 를 대기열에 추가했습니다.'
+        fields: [ ]
+        footer: ''
+  search_result:
+    content: ''
+    components:
+      cancel: 취소
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          {replace:keyword}에서 검색한 결과 {replace:size}개의 후보자를 찾았습니다.
+          재생할 미디어를 아래에서 선택하거나 취소를 누릅니다.
+        fields:
+          - name: '{replace} YouTube 검색 추천'
+            value: ''
+          - name: '{replace} 니코니코 동영상 검색 후보'
+            value: ''
+        footer: ''
+  cancel:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 취소했습니다.
+        fields: [ ]
+        footer: ''

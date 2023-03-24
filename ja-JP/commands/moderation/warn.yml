@@ -1,0 +1,117 @@
+meta:
+  name: 警句
+  description: 指定したメンバーを警告します。
+
+constants:
+  action: 実行
+  cancel: キャンセル
+
+components:
+  help:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label} <メンバー ID | メンバー メンション ...> [理由]`:
+          　指定したメンバーを警告
+        fields:
+          - name: ヒント
+            value: |-
+              ・IDとメンションを混合してメンバーの指定が可能
+              ・複数のメンバーをまとめて指定することが可能
+        footer: ''
+  successSingle:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '{replace} を下記の理由で警告しました。'
+        fields:
+          - name: 理由
+            value: ''
+        footer: ''
+  successMultiple:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '**{replace}人**のメンバーを下記の理由で警告しました。'
+        fields:
+          - name: メンバー
+            value: ''
+          - name: 理由
+            value: ''
+        footer: ''
+  cancelledSingle:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '{replace} の警告をキャンセルしました。'
+        fields: []
+        footer: ''
+  cancelledMultiple:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '**{replace}人**のメンバーの警告をキャンセルしました。'
+        fields:
+          - name: メンバー
+            value: ''
+        footer: ''
+  confirmSingle:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          本当に {replace} を下記の理由で警告してもよろしいですか？
+          :warning: この操作は取り消すことができません！
+        fields:
+          - name: 理由
+            value: ''
+        footer: ''
+  confirmMultiple:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          本当に**{replace}人**のメンバーを下記の理由で警告してもよろしいですか？
+          :warning: この操作は取り消すことができません！
+        fields:
+          - name: ''
+            value: |-
+              一部のメンバーは警告できません。
+              詳細は「{global:viewDetail}」をタップしてください。
+          - name: メンバー
+            value: ''
+          - name: 理由
+            value: ''
+        footer: ''
+  helpMembers:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          一部のメンバーは警告できません。
+          以下に詳細な理由が掲載されています。
+        fields:
+          - name: あなたに権限がないためこれらのメンバーを警告することができません。
+            value: ''
+          - name: Botに権限がないためこれらのメンバーを警告することができません。
+            value: ''
+          - name: これらのユーザーはサーバーに参加していないか、存在していないユーザーのため警告できません。
+            value: ''
+        footer: ''

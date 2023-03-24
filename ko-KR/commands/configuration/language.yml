@@ -1,0 +1,67 @@
+---
+meta:
+  name: 언어 변경
+  description: 표시 언어를 변경합니다.
+constants:
+  user: 사용자
+  guild: 서버
+  cancel: 취소
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:help}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          '{bot:prefix}{command:label} <ja-JP | en-US>':
+           선택한 언어로 표시언어를 변경합니다.
+        fields: [ ]
+        footer: ''
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '표시언어를 {replace} 로 변경하였습니다.'
+        fields: [ ]
+        footer: ''
+  success_user:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '사용자의 표시언어를 {replace} 로 변경하였습니다.'
+        fields: [ ]
+        footer: ''
+  success_guild:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '서버의 표시언어를 {replace} 로 변경하였습니다.'
+        fields: [ ]
+        footer: ''
+  cancelled:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: ''
+        description: '{replace} 의 변경을 취소했습니다.'
+        fields: [ ]
+        footer: ''
+  confirm:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:warning}{global:separator}{meta:name}'
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          표시언어를 {replace} 로 변경하려고 합니다.
+          언어변경의 대상을 선택해주세요.
+        fields: [ ]
+        footer: ''

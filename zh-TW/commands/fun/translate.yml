@@ -1,0 +1,58 @@
+---
+meta:
+  name: 翻訳
+  description: テキストを指定した言語に翻訳します。
+constants:
+  auto_detection: 自動検出
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: ''
+        fields:
+          - name: 言語情報
+            value: '翻訳元: {replace:source} → 翻訳先: {replace:target}'
+          - name: ヒント
+            value: |-
+              翻訳元の言語を指定して翻訳することもできます。
+              例: `{bot:prefix}{command:label} ja en こんにちは！`
+        footer: ''
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:help}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          `{bot:prefix}{command:label} [翻訳元の言語] <翻訳先の言語> <テキスト>`:
+          　__翻訳元の言語を指定するか、言語を自動検出して翻訳__
+        fields:
+          - name: 言語リスト
+            value: '[こちら]({replace})を参照してください。'
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 翻訳中…{global:separator}{meta:name}
+        description: テキストを翻訳しています。しばらくお待ちください…
+        fields: [ ]
+        footer: ''
+  select:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 言語の選択{global:separator}{meta:name}
+        description: |-
+          {replace:country} には複数の言語があります。
+          翻訳先に指定したい言語を**{replace:time}秒**以内に選択してください。
+          また、キャンセルする場合はこのメッセージについている {replace:cancel} を選択してください。
+        fields:
+          - name: ヒント
+            value: 既定の言語を設定すると、その国の絵文字を選択した場合は設定された言語へ自動で翻訳することができます。
+        footer: ''

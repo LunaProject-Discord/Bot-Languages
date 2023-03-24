@@ -1,0 +1,90 @@
+---
+meta:
+  name: Delete Messages
+  description: Deletes the specified number of messages.
+constants:
+  action: Confirm
+  cancel: Cancel
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label} <Number to be delete> [Member ID | Mention ...]`:
+          　Deletes the specified number of messages.
+        fields:
+          - name: Hint
+            value: |-
+              ・Delete only unpinned messages.
+              ・Delete messages sent within two weeks.
+
+              ・You can specify members by mixing IDs and Mentions.
+              ・Multiple members can be specified.
+        footer: ''
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: 'Deleted **{replace}** message(s).'
+        fields: [ ]
+        footer: This message will delete after 5 second.
+  successWithUsers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: 'Deleted **{replace:count} message(s)** sent by **{replace:users}** member(s).'
+        fields:
+          - name: Users
+            value: ''
+        footer: This message will delete after 5 second.
+  cancelled:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 'Cancelled deleting **{replace}** message(s).'
+        fields: [ ]
+        footer: ''
+  cancelledWithUsers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 'Cancelled deleting **{replace:count}** message(s) sent by **{replace:users}** member(s).'
+        fields:
+          - name: Users
+            value: ''
+        footer: ''
+  confirm:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          Are you sure you want to delete **{replace}** message(s)?
+          :warning: This operation cannot be undone!
+        fields: [ ]
+        footer: ''
+  confirmWithUsers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          Are you sure you want to delete **{replace:count}** messages sent by **{replace:users} member(s)?
+          :warning: This operation cannot be undone!
+        fields:
+          - name: Users
+            value: ''
+        footer: ''

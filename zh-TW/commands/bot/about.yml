@@ -1,0 +1,27 @@
+---
+meta:
+  name: 概要
+  description: Botの概要を表示します。
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: このBotの概要を表示しています。
+        fields:
+          - name: バージョン
+            value: '**{bot:version}** ({bot:channel}, Build {bot:build})'
+          - name: サーバー数
+            value: ''
+          - name: チャンネル数
+            value: '{replace} ({replace:category}, {replace:text}, {replace:voice}, {replace:stage})'
+          - name: ユーザー数
+            value: '{replace} ({replace:user}, {replace:bot})'
+          - name: Botを導入
+            value: ''
+          - name: サポートサーバーに参加
+            value: ''
+        footer: ''

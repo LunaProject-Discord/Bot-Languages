@@ -1,0 +1,91 @@
+---
+meta:
+  name: 刪除信息
+  description: 删除指定数量的消息。
+constants:
+  action: 运行于
+  cancel: 取消
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label} <您要删除的号码> [会员 ID | 会员提及...]`:
+          删除指定数量的消息
+          上下文请求
+        fields:
+          - name: 提示
+            value: |-
+              ・只删除未固定的消息
+              ・删除两周内发送的消息
+
+              ・可以通过混合 ID 和提及来指定成员。
+              ・可以指定多个成员
+        footer: ''
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '** {replace} ** 消息已被删除。'
+        fields: [ ]
+        footer: 此消息将在 5 秒后删除。
+  successWithUsers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '已删除 ** {replace:count} ** ** {replace:users} 人发送的 ** 消息**。'
+        fields:
+          - name: 用户
+            value: ''
+        footer: 此消息将在 5 秒后删除。
+  cancelled:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '取消删除 ** {replace} ** 消息。'
+        fields: [ ]
+        footer: ''
+  cancelledWithUsers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '取消删除 ** {replace:count} ** 发送的 ** {replace:users} 人 ** 消息。'
+        fields:
+          - name: 用户
+            value: ''
+        footer: ''
+  confirm:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          您确定要删除 ** {replace} ** 消息吗？
+          :warning:这个操作是不可逆的！
+        fields: [ ]
+        footer: ''
+  confirmWithUsers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          您确定要删除由 ** {replace:users} 人 ** 发送的 ** {replace:count} ** 消息吗？
+          :warning:这个操作是不可逆的！
+        fields:
+          - name: 用户
+            value: ''
+        footer: ''

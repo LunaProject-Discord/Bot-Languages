@@ -1,0 +1,68 @@
+meta:
+  name: Change Time Zone
+  description: Change the time zone.
+
+constants:
+  user: User
+  guild: Guild
+  cancel: Cancel
+
+components:
+  help:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:help}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          `{bot:prefix}{command:label} <ID>`:
+          　Change time zone to the given ID
+        fields: []
+        footer: ''
+  success:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 'Changed time zone to {replace}.'
+        fields: []
+        footer: ''
+  success_user:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 'Changed the user time zone to {replace}.'
+        fields: []
+        footer: ''
+  success_guild:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 'Changed the server time zone to {replace}.'
+        fields: []
+        footer: ''
+  cancelled:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: ''
+        description: 'Canceled change to {replace}.'
+        fields: []
+        footer: ''
+  confirm:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:warning}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          You are about to change your time zone to {replace}.
+          Please select the target time zone to change.
+        fields: []
+        footer: ''

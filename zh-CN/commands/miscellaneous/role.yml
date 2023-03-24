@@ -1,0 +1,69 @@
+---
+meta:
+  name: 官员信息
+  description: 显示职位信息。
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '显示{replace} 信息。'
+        fields:
+          - name: 失效日期
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              カラーコード: {replace:color}
+              メンション可能: {replace:mentionable}
+              別表示: {replace:hoisted}
+              作成日時: {replace:created_at}
+          - name: Bot情報
+            value: |-
+              名前 (ID): {replace:tag} ({replace:id})
+              ステータス: {replace:status}
+              Bot: {replace:bot}
+              フラグ: {replace:flags}
+              作成日時: {replace:created_at}
+          - name: 值得一提
+            value: ''
+          - name: 单独显示
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'データ取得中…{global:separator}{meta:name}'
+        title: ''
+        description: 我正在获取数据。请稍等…
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 我们正在寻找符合指定条件的职位。请稍等…
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 未找到符合指定条件的职位。
+        fields: [ ]
+        footer: ''
+  empty:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 由于尚未分配职位，因此无法显示。
+        fields: [ ]
+        footer: ''

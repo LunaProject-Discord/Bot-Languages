@@ -1,0 +1,35 @@
+---
+meta:
+  name: 리더 보드
+  description: 리더 보드를 표시합니다.
+constants:
+  here: 여기
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: ''
+        fields:
+          - name: Web 판 리더 보드
+            value: |-
+              Web 판의 리더 보드에서는 서버에서 발언 한 모든 사용자 수준을 확인 할 수 있습니다.
+              자세한 내용은 [여기] ({replace})를 확인하십시오. (로그인 필수)
+          - name: 레벨
+            value: ''
+          - name: 경험치 (최대)
+            value: ''
+          - name: 중간에서 순위
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 데이터 가져 오는 중...{global:separator}{meta:name}
+        description: 데이터를 검색하고 있습니다. 잠시 기다려주십시오...
+        fields: [ ]
+        footer: ''

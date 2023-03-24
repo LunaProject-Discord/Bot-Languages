@@ -1,0 +1,83 @@
+---
+constants:
+  category: 类别
+  channel: 频道
+  text: 文字频道
+  voice: 语音频道
+  stage: 舞台频道
+  name: 名称
+  position: 位置
+  color: 颜色
+  mentionable: 值得一提
+  hoist: 单独显示
+  permission: 权限
+components:
+  create:
+    content: ''
+    components: { }
+    embeds:
+      - author: '职位名称创建{global:separator}{replace:title}'
+        title: ''
+        description: 在服务器上创建了一个 {replace}。
+        fields:
+          - name: 基础信息
+            value: |-
+              名称 (ID):{replace:name} ({replace:id})
+              颜色代码:{replace:color}
+              可提及:{replace:mentionable}
+              单独视图:{replace:hoisted}
+              创建:{replace:created_at}
+          - name: Bot情報
+            value: |-
+              名称 (ID): {replace:tag} ({replace:id})
+              状态: {replace:status}
+              机器人: {replace:bot}
+              标志: {replace:flags}
+              创建: {replace:created_at}
+          - name: 成员 ({replace})
+            value: ''
+          - name: 权威 ({replace})
+            value: ''
+        footer: ''
+  delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: '职位名称删除{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 已从服务器中删除。'
+        fields:
+          - name: 基础信息
+            value: |-
+              名称 (ID):{replace:name} ({replace:id})
+              颜色代码:{replace:color}
+              可提及:{replace:mentionable}
+              单独视图:{replace:hoisted}
+              创建:{replace:created_at}
+          - name: Bot情報
+            value: |-
+              名称 (ID): {replace:tag} ({replace:id})
+              状态: {replace:status}
+              机器人: {replace:bot}
+              标志: {replace:flags}
+              创建: {replace:created_at}
+          - name: 成员 ({replace})
+            value: ''
+          - name: 权威 ({replace})
+            value: ''
+        footer: ''
+  update:
+    content: ''
+    components: { }
+    embeds:
+      - author: '职称变更{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:role} 的{replace:property} 已更改。'
+        fields:
+          - name: 职位名称
+            value: ''
+          - name: '{replace} 更改前'
+            value: ''
+          - name: 更改后的{replace}
+            value: ''
+        footer: ''

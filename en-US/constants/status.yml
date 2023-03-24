@@ -1,0 +1,23 @@
+constants:
+  online: Online
+  idle: Idle
+  do_not_disturb: Do Not Disturb
+  offline: Offline
+  invisible: Offline
+
+  web: Web
+  desktop: Desktop
+  mobile: Mobile
+
+  category: Category
+  channel: Channel
+  text: Text Channel
+  voice: Voice Channel
+  news: Announce Channel
+  stage: Stage Channel
+  forum: Forum Channel
+  thread: Thread
+  group: Group
+  private: Private
+
+components: {}

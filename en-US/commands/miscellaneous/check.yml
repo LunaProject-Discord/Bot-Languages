@@ -1,0 +1,52 @@
+---
+meta:
+  name: Punishment Information
+  description: Displays the punishment information.
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: 'You are viewing information about {replace}.'
+        fields:
+          - name: Mute
+            value: ''
+          - name: Warning
+            value: ''
+          - name: Kick
+            value: ''
+          - name: Local Ban
+            value: ''
+          - name: Global Ban
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Data acquisition in progress...{global:separator}{meta:name}'
+        title: ''
+        description: We are retrieving data. Please wait a moment...
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Searching...{global:separator}{meta:name}'
+        title: ''
+        description: Searching for punishment that matches the criteria you specified. Please wait a moment...
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: No punishment information matching the specified criteria was found.
+        fields: [ ]
+        footer: ''

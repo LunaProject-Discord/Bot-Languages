@@ -1,0 +1,36 @@
+meta:
+  name: リーダーボード
+  description: リーダーボードを表示します。
+
+constants: 
+  here: こちら
+
+components:
+  index:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: ''
+        fields:
+          - name: Web版リーダーボード
+            value: |-
+              Web版のリーダボードではサーバーで発言したすべてのユーザーレベルが確認できます。
+              詳細は[こちら]({replace})を確認してください。 (ログイン必須)
+          - name: レベル
+            value: ''
+          - name: 経験値 (最大)
+            value: ''
+          - name: 暫定順位
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: データ取得中…{global:separator}{meta:name}
+        description: データを取得しています。しばらくお待ちください…
+        fields: []
+        footer: ''

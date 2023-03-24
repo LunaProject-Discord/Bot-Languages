@@ -1,0 +1,125 @@
+constants:
+  name: 名前
+  description: 説明
+  icon: アイコン
+  splash: スプラッシュ
+  banner: バナー
+  region: 地域
+  system_channel: システムチャンネル
+  owner: オーナー
+  locale: 優先言語
+  features: 機能
+  boost_count: ブースト数
+  boost_tier: ブーストレベル
+  mfa_level: 2要素認証
+  max_members: 最大メンバー数
+  max_presences: 最大プレセンス数
+  vanity_code: カスタム招待リンク
+
+  afk_channel: AFKチャンネル
+  afk_timeout: AFKタイムアウト
+  afk_timeout-seconds_60: 1分
+  afk_timeout-seconds_300: 5分
+  afk_timeout-seconds_900: 15分
+  afk_timeout-seconds_1800: 30分
+  afk_timeout-seconds_3600: 1時間
+
+  notification_level: メッセージの通知レベル
+  notification_level-all_messages: すべて通知
+  notification_level-mentions_only: メンションのみ
+
+  verification_level: 認証レベル
+  verification_level-none: 無効
+  verification_level-low: 低 (メール認証)
+  verification_level-medium: 中 (登録して5分以上経過)
+  verification_level-high: 高 (参加して10分以上経過)
+  verification_level-very_high: 最高 (電話認証)
+
+  explicit_content_filter: 不適切なコンテンツフィルターレベル
+  explicit_content_filter-off: スキャンしない
+  explicit_content_filter-no_role: 役職がないユーザーのみ
+  explicit_content_filter-all: すべてスキャン
+
+components:
+  update:
+    content: ''
+    components: {}
+    embeds:
+      - author: 'サーバー設定の変更{global:separator}{replace:title}'
+        title: ''
+        description: 'サーバーの {replace} が変更されました。'
+        fields:
+          - name: 変更前の{replace}
+            value: ''
+          - name: 変更後の{replace}
+            value: ''
+        footer: ''
+  kick:
+    content: ''
+    components: {}
+    embeds:
+      - author: 'キック{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} がサーバーからキックされました。'
+        fields: 
+          - name: ユーザー名
+            value: ''
+          - name: 処罰理由
+            value: ''
+          - name: 参加日時
+            value: ''
+          - name: 作成日時
+            value: ''
+          - name: Bot
+            value: ''
+          - name: 評価値
+            value: ''
+          - name: 認証済み (Bot上)
+            value: ''
+          - name: 権限 (Bot上)
+            value: ''
+        footer: ''
+  ban:
+    content: ''
+    components: {}
+    embeds:
+      - author: 'Ban{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} がサーバーからBanされました。'
+        fields: 
+          - name: ユーザー名
+            value: ''
+          - name: 処罰理由
+            value: ''
+          - name: 作成日時
+            value: ''
+          - name: Bot
+            value: ''
+          - name: 評価値
+            value: ''
+          - name: 認証済み (Bot上)
+            value: ''
+          - name: 権限 (Bot上)
+            value: ''
+        footer: ''
+  unban:
+    content: ''
+    components: {}
+    embeds:
+      - author: 'Ban解除{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} のBanが解除されました。'
+        fields: 
+          - name: ユーザー名
+            value: ''
+          - name: 作成日時
+            value: ''
+          - name: Bot
+            value: ''
+          - name: 評価値
+            value: ''
+          - name: 認証済み (Bot上)
+            value: ''
+          - name: 権限 (Bot上)
+            value: ''
+        footer: ''

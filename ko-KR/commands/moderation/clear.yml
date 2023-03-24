@@ -1,0 +1,90 @@
+---
+meta:
+  name: 메시지 삭제
+  description: 선택한 수만큼 메시지를 삭제합니다.
+constants:
+  action: 실행
+  cancel: 취소
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          {bot:prefix}{command:label} <삭제하려는 수> [회원 ID | 회원 멘션 ...]`:
+          선택한 수의 메시지 삭제합니다.
+        fields:
+          - name: 힌트
+            value: |-
+              ・핀 고정되지 않은 메시지만 삭제
+              ・2주 이내에 보낸 메시지 삭제
+
+              ・ID와 멘션을 혼합하여 멤버 지정 가능
+              ・멤버의 복수 지정 가능
+        footer: ''
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '**{replace}개** 메시지를 삭제했습니다.'
+        fields: [ ]
+        footer: 이 메시지는 5초 후에 삭제됩니다.
+  successWithUsers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '**{replace:users}명**이 보낸 **{replace:count}개** 메시지를 삭제했습니다.'
+        fields:
+          - name: 사용자
+            value: ''
+        footer: 이 메시지는 5초 후에 삭제됩니다.
+  cancelled:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '**{replace}개** 메시지 삭제를 취소했습니다.'
+        fields: [ ]
+        footer: ''
+  cancelledWithUsers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '**{replace:users}명**이 보낸 **{replace:count}개**의 메시지 삭제를 취소했습니다.'
+        fields:
+          - name: 사용자
+            value: ''
+        footer: ''
+  confirm:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          정말로**{replace}개**의 메시지를 삭제할까요?
+          :warning: 이 행동은 되돌릴 수 없습니다!
+        fields: [ ]
+        footer: ''
+  confirmWithUsers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          정말로**{replace:users}명**이 보낸 **{replace:count}개**의 메시지를 삭제할까요?
+          :warning: 이 행동은 되돌릴 수 없습니다!
+        fields:
+          - name: 사용자
+            value: ''
+        footer: ''

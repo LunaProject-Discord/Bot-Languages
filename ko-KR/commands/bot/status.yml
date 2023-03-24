@@ -1,0 +1,6 @@
+---
+meta:
+  name: 상태
+  description: Bot에 대한 자세한 정보를 표시합니다.
+constants: { }
+components: { }

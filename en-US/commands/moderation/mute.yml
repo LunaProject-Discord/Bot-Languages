@@ -1,0 +1,137 @@
+---
+meta:
+  name: Mute
+  description: Mute a specified member.
+constants:
+  action: Confirm
+  cancel: Cancel
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label} <Member ID | Mention ...> [Time] [Reason]`:
+          　Mute a specified member.
+        fields:
+          - name: Hint
+            value: |-
+              ・Users can be specified by mixing IDs and Mentions.
+              ・Multiple users can be specified at once.
+        footer: ''
+  successSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '{replace} was muted for the following reasons.'
+        fields:
+          - name: Expired at
+            value: ''
+          - name: Reason
+            value: ''
+        footer: ''
+  successMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '{replace} members were muted for the following reasons.'
+        fields:
+          - name: Members
+            value: ''
+          - name: Expired at
+            value: ''
+          - name: Reason
+            value: ''
+        footer: ''
+  cancelledSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '{replace} has been unmuted.'
+        fields: [ ]
+        footer: ''
+  cancelledMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '{replace} members have been unmuted.'
+        fields:
+          - name: Members
+            value: ''
+        footer: ''
+  confirmSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: |-
+          Are you sure you want to mute {replace} for the following reasons?
+          :warning: This operation cannot be undone!
+        fields:
+          - name: Expired at
+            value: ''
+          - name: Reason
+            value: ''
+        footer: ''
+  confirmMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: |-
+          Are you sure you want to mute {replace} members for the following reasons?
+          :warning: This operation cannot be undone!
+        fields:
+          - name: ''
+            value: |-
+              These members cannot be muted.
+              Please tap {global:viewDetail} for more details.
+          - name: Members
+            value: ''
+          - name: Expired at
+            value: ''
+          - name: Reason
+            value: ''
+        footer: ''
+  helpMembers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          These members cannot be muted.
+          For more details please look below.
+        fields:
+          - name: You do not have permission to mute these members.
+            value: ''
+          - name: The bot does not have permission to mute these members.
+            value: ''
+          - name: You cannot mute these members due to them not being in the server, or they do not exist.
+            value: ''
+        footer: ''
+  errorRole:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:name}'
+        description: |-
+          Cannot mute because __**Failed to get or create role**__.
+          Please allow the use of these permissions and try again.
+        fields:
+          - name: Required Permissions
+            value: ''
+        footer: ''

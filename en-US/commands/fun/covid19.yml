@@ -1,0 +1,67 @@
+---
+meta:
+  name: Covid-19
+  description: View information about the new coronavirus.
+constants:
+  pcr: Tests conducted
+  positive: Positives
+  hospitalize: Inpatients
+  severe: Seriously injured
+  symptom_confirming: Confirmed symptoms
+  discharge: Discharged patients
+  death: Deaths
+  hokkaido: Hokkaido region
+  tohoku: Touhoku region
+  kanto: Kantou region
+  chubu: Chubu region
+  kinki: Kinki region
+  chugoku: Chugoku region
+  shikoku: Shikoku region
+  kyusyu: Kyushu region
+  percent: '{replace} of the population'
+components:
+  about:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: Summary{global:separator}{meta:name}
+        description: '{replace} Displaying data for Japan.'
+        fields: [ ]
+        footer: ''
+  detail:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: 'You are viewing data from {replace}.'
+        fields: [ ]
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: Data acquisition in progress...{global:separator}{meta:name}
+        description: We are retrieving data. Please wait a moment...
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: Searching...{global:separator}{meta:name}
+        description: Searching for data who match the specified criteria. Please wait a moment...
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:name}'
+        description: No data matching the specified criteria was found.
+        fields: [ ]
+        footer: ''

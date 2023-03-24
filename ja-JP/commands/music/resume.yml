@@ -1,0 +1,29 @@
+meta:
+  name: 音楽 (メディアの再開)
+  description: 一時停止中のメディアを再開します。
+
+constants: {}
+
+components:
+  success:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          再生を再開しました。
+          再生を一時停止するには `{bot:prefix}pause` と実行してください。
+        fields: []
+        footer: ''
+  error:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          再生がすでに再開されています。
+          再生を一時停止するには `{bot:prefix}pause` と実行してください。
+        fields: []
+        footer: ''

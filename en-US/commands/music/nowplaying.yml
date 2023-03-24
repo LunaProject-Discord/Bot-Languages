@@ -1,0 +1,17 @@
+---
+meta:
+  name: Music (Playing)
+  description: Displaying the media information
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: ''
+        fields:
+          - name: Next Media
+            value: ''
+        footer: ''

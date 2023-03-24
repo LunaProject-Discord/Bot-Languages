@@ -1,0 +1,64 @@
+---
+meta:
+  name: チャンネル情報
+  description: チャンネル情報を表示します。
+constants:
+  role: 役職
+  member: メンバー
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '{replace} の情報を表示しています。'
+        fields:
+          - name: 基本情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              種類: {replace:type}
+              親カテゴリ: {replace:category}
+              作成日時: {replace:created_at}
+          - name: テキストチャンネルの情報
+            value: |-
+              説明: {replace:topic}
+              年齢制限: {replace:age_restricted}
+              スローモード (秒): {replace:slowmode}
+          - name: ボイスチャンネルの情報
+            value: |-
+              地域: {replace:region}
+              ユーザー数 (上限): {replace:user_limit}
+              ビットレート (上限): {replace:bitrate}
+          - name: アクセス可能な役職 ({replace:roles}, {replace:members}人)
+            value: ''
+          - name: アクセス可能なメンバー ({replace})
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'データ取得中…{global:separator}{meta:name}'
+        title: ''
+        description: データを取得しています。しばらくお待ちください…
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合うチャンネルを検索しています。しばらくお待ちください…
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合うチャンネルが見つかりませんでした。
+        fields: [ ]
+        footer: ''

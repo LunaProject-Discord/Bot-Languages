@@ -1,0 +1,48 @@
+---
+meta:
+  name: 等级信息
+  description: 显示级别信息。
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '显示{replace} 信息。'
+        fields:
+          - name: 層次
+            value: ''
+          - name: 经验(最大)
+            value: ''
+          - name: 暂定排名
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'データ取得中…{global:separator}{meta:name}'
+        title: ''
+        description: 我正在获取数据。请稍等…
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 我们正在搜索满足指定条件的数据。请稍等…
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 没有找到满足指定条件的数据。
+        fields: [ ]
+        footer: ''

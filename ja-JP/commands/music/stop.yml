@@ -1,0 +1,48 @@
+meta:
+  name: 音楽 (メディアの停止)
+  description: 再生を停止します。
+
+constants: {}
+
+components:
+  success:
+    content: ''
+    components:
+      disconnect: ボイスチャンネルから退出
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          再生を停止しました。
+          ボイスチャンネルから退出するには `{bot:prefix}disconnect` と実行してください。
+        fields: []
+        footer: ''
+  vote_success:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '投票しました。(投票数: {replace:count} / {replace:max_count})'
+        fields: []
+        footer: ''
+  vote_error:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: 'あなたはすでに投票しています。(投票数: {replace:count} / {replace:max_count})'
+        fields: []
+        footer: ''
+  not_playing:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          再生がすでに停止されています。
+          メディアを再生するには `{bot:prefix}play <キーワード | URL>` と実行してください。
+        fields: []
+        footer: ''

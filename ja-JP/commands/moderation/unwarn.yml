@@ -1,0 +1,107 @@
+meta:
+  name: 警告の解除
+  description: 指定したメンバーの警告を解除します。
+
+constants:
+  action: 実行
+  cancel: キャンセル
+
+components:
+  help:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label} <メンバー ID | メンバー メンション ...>`:
+          　指定したメンバーの警告を解除
+        fields:
+          - name: ヒント
+            value: |-
+              ・IDとメンションを混合してメンバーの指定が可能
+              ・複数のメンバーをまとめて指定することが可能
+        footer: ''
+  successSingle:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '{replace} の警告を解除しました。'
+        fields: []
+        footer: ''
+  successMultiple:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '**{replace}人**のメンバーの警告を解除しました。'
+        fields:
+          - name: メンバー
+            value: ''
+        footer: ''
+  cancelledSingle:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '{replace} の警告解除をキャンセルしました。'
+        fields: []
+        footer: ''
+  cancelledMultiple:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '**{replace}人**のメンバーの警告解除をキャンセルしました。'
+        fields:
+          - name: メンバー
+            value: ''
+        footer: ''
+  confirmSingle:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          本当に {replace} の警告を解除してもよろしいですか？
+          :warning: この操作は取り消すことができません！
+        fields: []
+        footer: ''
+  confirmMultiple:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          本当に**{replace}人**のメンバーの警告を解除してもよろしいですか？
+          :warning: この操作は取り消すことができません！
+        fields:
+          - name: ''
+            value: |-
+              一部のメンバーの警告は解除できません。
+              詳細は「{global:viewDetail}」をタップしてください。
+          - name: メンバー
+            value: ''
+        footer: ''
+  helpMembers:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          一部のメンバーの警告は解除できません。
+          以下に詳細な理由が掲載されています。
+        fields:
+          - name: これらのメンバーはすでに警告が解除されています。
+            value: ''
+          - name: これらのユーザーは存在していないユーザーのため警告を解除できません。
+            value: ''
+        footer: ''

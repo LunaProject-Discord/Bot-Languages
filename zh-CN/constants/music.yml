@@ -1,0 +1,56 @@
+---
+constants:
+  all: 全部重复
+  single: 只重复一首歌
+  none: 永不
+components:
+  not_connected:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}音乐'
+        title: ''
+        description: |-
+          无法运行，因为您没有订阅语音频道。
+          加入语音频道并重试。
+        fields: [ ]
+        footer: ''
+  not_playing:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}音乐'
+        title: ''
+        description: |-
+          它无法执行，因为没有任何东西在播放。
+          您可以使用 `{bot:prefix}play <keyword | URL>`。
+        fields: [ ]
+        footer: ''
+  using_tts:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}音乐'
+        title: ''
+        description: |-
+          无法执行，因为它使用了读取功能。
+          使用 `{bot:prefix}bye` 退出阅读功能，然后重试。
+        fields: [ ]
+        footer: ''
+  control_panel:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '控制面板{global:separator}音乐'
+        description: ''
+        fields:
+          - name: 作者
+            value: ''
+          - name: 附加用户
+            value: ''
+          - name: 恢复
+            value: ''
+          - name: 下一个媒体
+            value: ''
+        footer: ''

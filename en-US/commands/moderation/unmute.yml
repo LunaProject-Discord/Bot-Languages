@@ -1,0 +1,119 @@
+---
+meta:
+  name: Unmute
+  description: Member has been unmuted
+constants:
+  action: Confirm
+  cancel: Cancel
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label} <Member ID | Mention ...> [Time] [Reason]`:
+          　Unmute specified member
+        fields:
+          - name: Hint
+            value: |-
+              ・Users can be specified by mixing IDs and Mentions.
+              ・Multiple users can be specified at once.
+        footer: ''
+  successSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '{replace} has been unmuted.'
+        fields: [ ]
+        footer: ''
+  successMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '{replace} members have been unmuted.'
+        fields:
+          - name: Members
+            value: ''
+        footer: ''
+  cancelledSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '{replace} will remain muted.'
+        fields: [ ]
+        footer: ''
+  cancelledMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '{replace} members will remain muted.'
+        fields:
+          - name: Members
+            value: ''
+        footer: ''
+  confirmSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: |-
+          Are you sure you want to unmute {replace}?
+          :warning: This cannot be undone!
+        fields: [ ]
+        footer: ''
+  confirmMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: |-
+          Are you sure you want to unmute {replace} members?
+          :warning: This cannot be undone!
+        fields:
+          - name: ''
+            value: |-
+              These members cannot be unmuted.
+              Please tap {global:viewDetail} for more details.
+          - name: Members
+            value: ''
+        footer: ''
+  helpMembers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          These members cannot be unmuted.
+          Please see below for more details.
+        fields:
+          - name: These members have already been unmuted.
+            value: ''
+          - name: These users cannot be unmuted because they are not in the server, or do not exist.
+            value: ''
+        footer: ''
+  errorRole:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:name}'
+        description: |-
+          Cannot mute because __**Failed to get or create role**__.
+          Please allow the use of these permissions and try again.
+        fields:
+          - name: Required Permissions
+            value: ''
+        footer: ''

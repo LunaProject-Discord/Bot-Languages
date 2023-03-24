@@ -1,0 +1,48 @@
+---
+constants:
+  nolimit: 无限制
+components:
+  create:
+    content: ''
+    components: { }
+    embeds:
+      - author: '创建邀请{global:separator}{replace:title}'
+        title: ''
+        description: 在服务器上创建了一个 {replace}。
+        fields:
+          - name: 基础信息
+            value: |-
+              代码: {replace:code}
+              最大使用量: {replace:max_uses}
+              到期日期: {replace:expired_at} 
+              临时访问: {replace:temporary} 
+              创建: {replace:created_at}
+          - name: 频道信息
+            value: |-
+              名称 (ID): {replace:name} ({replace:id})
+              类型: {replace:type}
+              父类别: {replace:category}
+              创建: {replace:created_at}
+        footer: ''
+  delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: '删除邀请 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 已从服务器中删除。'
+        fields:
+          - name: 基础信息
+            value: |-
+              代码: {replace:code}
+              使用次数 (上限):{replace:uses} / {replace:max_uses}
+              到期日期: {replace:expired_at} 
+              临时访问: {replace:temporary} 
+              创建: {replace:created_at}
+          - name: 频道信息
+            value: |-
+              名称 (ID): {replace:name} ({replace:id})
+              类型: {replace:type}
+              父类别: {replace:category}
+              创建: {replace:created_at}
+        footer: ''

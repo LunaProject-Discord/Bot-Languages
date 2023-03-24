@@ -1,0 +1,121 @@
+---
+constants:
+  name: 이름
+  description: 설명
+  icon: 아이콘
+  splash: 뿌리기
+  banner: 배너
+  region: 지역
+  system_channel: 시스템 채널
+  owner: 소유자
+  locale: 선호하는 언어
+  features: 기능
+  boost_count: 부스트 수
+  boost_tier: 부스트 레벨
+  mfa_level: 2단계 인증
+  max_members: 최대 멤버 수
+  max_presences: 최대 프레센스 수
+  vanity_code: 맞춤 초대 링크
+  afk_channel: 잠수 채널
+  afk_timeout: 잠수 제한시간
+  afk_timeout-seconds_60: 1 분
+  afk_timeout-seconds_300: 5분
+  afk_timeout-seconds_900: 15분
+  afk_timeout-seconds_1800: 30분
+  afk_timeout-seconds_3600: 1시간
+  notification_level: 메시지 알림 수준
+  notification_level-all_messages: 모두 알림
+  notification_level-mentions_only: 언급만 알림
+  verification_level: 보안 수준
+  verification_level-none: 해제
+  verification_level-low: 낮음(메일 인증)
+  verification_level-medium: 중(등록 후 5분 이상 경과)
+  verification_level-high: 높 (참가 후 10분 이상 경과)
+  verification_level-very_high: 최고 (전화 인증)
+  explicit_content_filter: 부적절한 콘텐츠 필터 수준
+  explicit_content_filter-off: 검사 안 함
+  explicit_content_filter-no_role: 직책이 없는 사용자만
+  explicit_content_filter-all: 모두 스캔
+components:
+  update:
+    content: ''
+    components: { }
+    embeds:
+      - author: '서버 설정 변경 {global:separator}{replace:title}'
+        title: ''
+        description: '서버의 {replace} 이 변경되었습니다.'
+        fields:
+          - name: 변경 전의 {replace}
+            value: ''
+          - name: 변경 후 {replace}
+            value: ''
+        footer: ''
+  kick:
+    content: ''
+    components: { }
+    embeds:
+      - author: '킥 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 이 서버에서 킥되었습니다.'
+        fields:
+          - name: 사용자 이름
+            value: ''
+          - name: 처벌 이유
+            value: ''
+          - name: 참여시간
+            value: ''
+          - name: 작성일시
+            value: ''
+          - name: Bot
+            value: ''
+          - name: 평가 값
+            value: ''
+          - name: 인증 된 (Bot에)
+            value: ''
+          - name: 권한 (Bot에)
+            value: ''
+        footer: ''
+  ban:
+    content: ''
+    components: { }
+    embeds:
+      - author: '금지{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 이 서버에서 Ban되었습니다.'
+        fields:
+          - name: 사용자 이름
+            value: ''
+          - name: 처벌 이유
+            value: ''
+          - name: 작성일시
+            value: ''
+          - name: Bot
+            value: ''
+          - name: 평가 값
+            value: ''
+          - name: 인증 된 (Bot에)
+            value: ''
+          - name: 권한 (Bot에)
+            value: ''
+        footer: ''
+  unban:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Ban 해제{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 의 Ban이 해제되었습니다.'
+        fields:
+          - name: 사용자 이름
+            value: ''
+          - name: 작성일시
+            value: ''
+          - name: Bot
+            value: ''
+          - name: 평가 값
+            value: ''
+          - name: 인증 된 (Bot에)
+            value: ''
+          - name: 권한 (Bot에)
+            value: ''
+        footer: ''

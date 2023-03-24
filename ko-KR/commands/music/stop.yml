@@ -1,0 +1,46 @@
+---
+meta:
+  name: 음악 (미디어 중지)
+  description: 재생을 중지합니다.
+constants: { }
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: '{global:success}{global:separator}{meta:name}'
+        description: |-
+          재생을 중지했습니다.
+          음성 채널에서 퇴출하려면 `{bot:prefix}disconnect` 실행하십시오.
+        fields: [ ]
+        footer: ''
+  vote_success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '투표했습니다. (투표 수: {replace:count} / {replace:max_count})'
+        fields: [ ]
+        footer: ''
+  vote_error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: '당신은 이미 투표하고 있습니다. (투표 수: {replace:count} / {replace:max_count})'
+        fields: [ ]
+        footer: ''
+  not_playing:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          재생이 이미 정지되어 있습니다.
+          미디어를 재생하려면 `{bot:prefix}play <키워드 | URL>`실행하십시오.
+        fields: [ ]
+        footer: ''

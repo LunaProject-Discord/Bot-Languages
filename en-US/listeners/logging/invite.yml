@@ -1,0 +1,48 @@
+---
+constants:
+  nolimit: Unlimited
+components:
+  create:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Create Invitation{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} was created on the server.'
+        fields:
+          - name: Basic Information
+            value: |-
+              Code: {replace:code}
+              Max Uses: {replace:max_uses}
+              Expiration Date: {replace:expired_at}
+              Temporary Access: {replace:temporary}
+              Creation Date & Time: {replace:created_at}
+          - name: Channel Information
+            value: |-
+              Name (ID): {replace:name} ({replace:id})
+              Type: {replace:type}
+              Parent Category: {replace:category}
+              Creation Date & Time: {replace:created_at}
+        footer: ''
+  delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Delete Invitiation{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} was deleted on the server'
+        fields:
+          - name: Basic Information
+            value: |-
+              Code: {replace:code}
+              Times Used (Upper Limit): {replace:uses} / {replace:max_uses}
+              Expiration Date: {replace:expired_at}
+              Temporary Access: {replace:temporary}
+              Creation Date & Time: {replace:created_at}
+          - name: Channel Information
+            value: |-
+              Name (ID): {replace:name} ({replace:id})
+              Type: {replace:type}
+              Parent Category: {replace:category}
+              Creation Date & Time: {replace:created_at}
+        footer: ''

@@ -1,0 +1,113 @@
+---
+meta:
+  name: 글로벌 채팅
+  description: 글로벌 채팅을 관리 할 수 ​​있습니다.
+constants:
+  unknownGuild: 알 수없는 서버 ({replace})
+  unknownChannel: 알 수없는 채널 ({replace})
+  unknownUser: 알 수없는 사용자 ({replace})
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:title}'
+        description: |-
+          > __ ** 글로벌 채팅에 연결 ** __
+          `{bot: prefix} {command: label} connect [ID]``{bot: prefix} {command: label} join [ID]`
+          > __ ** 글로벌 채팅에서 절단 ** __
+          `{bot: prefix} {command: label} disconnect``{bot: prefix} {command: label} leave`
+          > __ ** 연결된 채널을 표시 ** __
+          `{bot: prefix} {command: label} list`
+          > __ ** 전송 된 메시지를 확인 ** __
+          `{bot: prefix} {command: label} <ID>`
+        fields: [ ]
+        footer: ''
+  connectSuccess:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:title}'
+        description: |-
+          글로벌 채팅에 연결했습니다.
+          끊으려면`{bot: prefix} {command: label} disconnect` 실행하십시오.
+        fields:
+          - name: 모드
+            value: ''
+          - name: 그룹
+            value: ''
+        footer: ''
+  connectError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:title}'
+        description: |-
+          이 채널은 이미 글로벌 채팅에 연결되어 있습니다.
+          `{bot: prefix} {command: label} disconnect`에서 절단을 한 후 다시 실행하십시오.
+        fields: [ ]
+        footer: ''
+  disconnectSuccess:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:title}'
+        description: |-
+          글로벌 채팅에서 절단했습니다.
+          다시 연결하려면`{bot: prefix} {command: label} connect` 실행하십시오.
+        fields: [ ]
+        footer: ''
+  disconnectError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:title}'
+        description: |-
+          이 채널은 글로벌 채팅에 연결되어 있지 않습니다.
+          연결하려면`{bot: prefix} {command: label} connect` 실행하십시오.
+        fields: [ ]
+        footer: ''
+  listSuccess:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:title}'
+        description: '{replace: count} 개의 채널이 {replace: category}에 연결되어 있습니다.'
+        fields: [ ]
+        footer: ''
+  listError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:title}'
+        description: |-
+          이 채널은 글로벌 채팅에 연결되어 있지 않습니다.
+          연결하려면`{bot:prefix} {command:label} connect` 실행하십시오.
+        fields: [ ]
+        footer: ''
+  information:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:title}'
+        description: '{replace} 가 보낸 메시지를 표시합니다.'
+        fields:
+          - name: 콘텐츠
+            value: ''
+          - name: 서버
+            value: ''
+          - name: 채널
+            value: ''
+          - name: 사용자
+            value: ''
+          - name: 보낸 날짜
+            value: ''
+        footer: ''

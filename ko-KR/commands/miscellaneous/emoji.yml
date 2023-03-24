@@ -1,0 +1,52 @@
+---
+meta:
+  name: 이모티콘 정보
+  description: 이모티콘 정보를 표시합니다.
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '{replace} 정보를 표시합니다.'
+        fields:
+          - name: 유효 기간
+            value: |-
+              이름 (ID): {replace:name} ({replace:id})
+              애니메이션: {replace:animated}
+              작성일시: {replace:created_at}
+          - name: 서버 정보
+            value: |-
+              이름 (ID): {replace:name} ({replace:id})
+              소유자: {replace:owner_status} {replace:owner_tag} ({replace:owner_id})
+              작성일시: {replace:created_at}
+          - name: 사용자 정보
+            value: |-
+              이름 (ID): {replace:tag} ({replace:id})
+              스테이터스: {replace:status}
+              Bot: {replace:bot}
+              Flags: {replace:flags}
+              작성일시: {replace:created_at}
+          - name: 액세스 가능한 직책 ({replace:roles}, {replace:members} 명)
+            value: ''
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 지정한 조건에 맞는 이모티콘을 검색합니다. 잠시 기다려주십시오...
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 지정한 조건에 맞는 이모티콘을 찾을 수 없습니다.
+        fields: [ ]
+        footer: ''

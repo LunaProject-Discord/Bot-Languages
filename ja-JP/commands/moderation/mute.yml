@@ -1,0 +1,138 @@
+meta:
+  name: ミュート
+  description: 指定したメンバーをミュートします。
+
+constants:
+  action: 実行
+  cancel: キャンセル
+
+components:
+  help:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label} <メンバー ID | メンバー メンション ...> [時間] [理由]`:
+          　指定したメンバーをミュート
+        fields:
+          - name: ヒント
+            value: |-
+              ・IDとメンションを混合してメンバーの指定が可能
+              ・複数のメンバーをまとめて指定することが可能
+        footer: ''
+  successSingle:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '{replace} を下記の理由でミュートしました。'
+        fields:
+          - name: 期限
+            value: ''
+          - name: 理由
+            value: ''
+        footer: ''
+  successMultiple:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '**{replace}人**のメンバーを下記の理由でミュートしました。'
+        fields:
+          - name: メンバー
+            value: ''
+          - name: 期限
+            value: ''
+          - name: 理由
+            value: ''
+        footer: ''
+  cancelledSingle:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '{replace} のミュートをキャンセルしました。'
+        fields: []
+        footer: ''
+  cancelledMultiple:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '**{replace}人**のメンバーのミュートをキャンセルしました。'
+        fields:
+          - name: メンバー
+            value: ''
+        footer: ''
+  confirmSingle:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          本当に {replace} を下記の理由でミュートしてもよろしいですか？
+          :warning: この操作は取り消すことができません！
+        fields:
+          - name: 期限
+            value: ''
+          - name: 理由
+            value: ''
+        footer: ''
+  confirmMultiple:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          本当に**{replace}人**のメンバーを下記の理由でミュートしてもよろしいですか？
+          :warning: この操作は取り消すことができません！
+        fields:
+          - name: ''
+            value: |-
+              一部のメンバーはミュートできません。
+              詳細は「{global:viewDetail}」をタップしてください。
+          - name: メンバー
+            value: ''
+          - name: 期限
+            value: ''
+          - name: 理由
+            value: ''
+        footer: ''
+  helpMembers:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          一部のメンバーはミュートできません。
+          以下に詳細な理由が掲載されています。
+        fields:
+          - name: あなたに権限がないためこれらのメンバーをミュートすることができません。
+            value: ''
+          - name: Botに権限がないためこれらのメンバーはミュートすることができません。
+            value: ''
+          - name: これらのユーザーはサーバーに参加していないか、存在していないユーザーのためミュートできません。
+            value: ''
+        footer: ''
+  errorRole:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:name}'
+        description: |-
+          __**役職の取得または作成に失敗**__したためミュートできません。
+          これらの権限の利用を許可してから再度実行してください。
+        fields:
+          - name: 必要な権限
+            value: ''
+        footer: ''

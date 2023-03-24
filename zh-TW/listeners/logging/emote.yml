@@ -1,0 +1,59 @@
+---
+constants:
+  name: 名前
+  roles: 役職
+components:
+  add:
+    content: ''
+    components: { }
+    embeds:
+      - author: '絵文字の追加{global:separator}{replace:title}'
+        title: ''
+        description: サーバーに {replace} が追加されました。
+        fields:
+          - name: 基本情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              アニメーション: {replace:animated}
+              作成日時: {replace:created_at}
+          - name: ユーザー情報
+            value: |-
+              名前 (ID): {replace:tag} ({replace:id})
+              ステータス: {replace:status}
+              Bot: {replace:bot}
+              フラグ: {replace:flags}
+              作成日時: {replace:created_at}
+          - name: 利用可能な役職 ({replace:roles}, {replace:members}人)
+            value: ''
+        footer: ''
+  remove:
+    content: ''
+    components: { }
+    embeds:
+      - author: '絵文字の削除{global:separator}{replace:title}'
+        title: ''
+        description: サーバーから {replace} が削除されました。
+        fields:
+          - name: 基本情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              アニメーション: {replace:animated}
+              作成日時: {replace:created_at}
+          - name: 利用可能な役職 ({replace:roles}, {replace:members}人)
+            value: ''
+        footer: ''
+  update:
+    content: ''
+    components: { }
+    embeds:
+      - author: '絵文字の変更{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:emote} の {replace:property} が変更されました。'
+        fields:
+          - name: 絵文字名
+            value: ''
+          - name: 変更前の{replace}
+            value: ''
+          - name: 変更後の{replace}
+            value: ''
+        footer: ''

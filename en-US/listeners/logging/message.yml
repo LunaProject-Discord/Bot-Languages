@@ -1,0 +1,125 @@
+---
+constants: { }
+components:
+  delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Delete Message{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:user} message deleted from {replace:channel}.'
+        fields:
+          - name: Contents
+            value: ''
+          - name: Attachment
+            value: ''
+          - name: Reaction
+            value: ''
+          - name: ID
+            value: ''
+          - name: Channel Information
+            value: |-
+              Name (ID): {replace:name} ({replace:id})
+              Type: {replace:type}
+              Parent: {replace:category}
+              Created At: {replace:created_at}
+          - name: User Information
+            value: |-
+              Name (ID): {replace:tag} ({replace:id})
+              Status: {replace:status}
+              Bot?: {replace:bot}
+              Flags: {replace:flags}
+              Created at: {replace:created_at}
+        footer: ''
+  update:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Edit Message{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} ban has been edited.'
+        fields:
+          - name: Content before editing
+            value: ''
+          - name: Content after editing
+            value: ''
+          - name: Attachment
+            value: ''
+          - name: Reaction
+            value: ''
+          - name: ID
+            value: ''
+          - name: Channel Information
+            value: |-
+              Name (ID): {replace:name} ({replace:id})
+              Type: {replace:type}
+              Category: {replace:category}
+              Created at: {replace:created_at}
+          - name: User Information
+            value: |-
+              Name (ID): {replace:tag} ({replace:id})
+              Status: {replace:status}
+              Bot?: {replace:bot}
+              Flags: {replace:flags}
+              Created at: {replace:created_at}
+        footer: ''
+  pin:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Pin Message{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} ban has been pinned.'
+        fields:
+          - name: Content
+            value: ''
+          - name: Attachment
+            value: ''
+          - name: Reaction
+            value: ''
+          - name: ID
+            value: ''
+          - name: Channel Information
+            value: |-
+              Name (ID): {replace:name} ({replace:id})
+              Type: {replace:type}
+              Category: {replace:category}
+              Created at: {replace:created_at}
+          - name: User Information
+            value: |-
+              Name (ID): {replace:tag} ({replace:id})
+              Status: {replace:status}
+              Bot?: {replace:bot}
+              Flags: {replace:flags}
+              Created at: {replace:created_at}
+        footer: ''
+  unpin:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'UnPin Message{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} ban has been unpinned.'
+        fields:
+          - name: Content
+            value: ''
+          - name: Attachment
+            value: ''
+          - name: Reaction
+            value: ''
+          - name: ID
+            value: ''
+          - name: Channel Information
+            value: |-
+              Name (ID): {replace:name} ({replace:id})
+              Type: {replace:type}
+              Category: {replace:category}
+              Created at: {replace:created_at}
+          - name: User Information
+            value: |-
+              Name (ID): {replace:tag} ({replace:id})
+              Status: {replace:status}
+              Bot?: {replace:bot}
+              Flags: {replace:flags}
+              Created at: {replace:created_at}
+        footer: ''

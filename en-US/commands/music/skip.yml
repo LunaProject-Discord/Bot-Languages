@@ -1,0 +1,53 @@
+---
+meta:
+  name: Music (Skip)
+  description: Play the next (previous) media in the queue.
+constants: { }
+components:
+  success_previous:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: Skipped to the previous media.
+        fields: [ ]
+        footer: ''
+  success_next:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: Skipped the next media
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          You cannot skip any further.
+          To add media to the queue, run `{bot:prefix}play <keyword | URL>`.
+        fields: [ ]
+        footer: ''
+  vote_success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 'Voted (Vote count: {replace:count} / {replace:max_count})'
+        fields: [ ]
+        footer: ''
+  vote_error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: 'You have already voted (Vote count: {replace:count} / {replace:max_count})'
+        fields: [ ]
+        footer: ''

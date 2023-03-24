@@ -1,0 +1,28 @@
+---
+meta:
+  name: 음악 (미디어 재개)
+  description: 일시 중지 된 미디어
+constants: { }
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: '{global:success}{global:separator}{meta:name}'
+        description: |-
+          재생을 재개했습니다.
+          재생을 일시 정지하려면`{bot:prefix}pause` 실행하십시오.
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: |-
+          재생이 이미 재개되어 있습니다.
+          재생을 일시 정지하려면 `{bot:prefix}pause` 실행하십시오.
+        fields: [ ]
+        footer: ''

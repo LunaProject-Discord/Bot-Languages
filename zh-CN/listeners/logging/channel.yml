@@ -1,0 +1,134 @@
+---
+constants:
+  category: 类别
+  channel: 频道
+  text: 文字频道
+  voice: 语音频道
+  stage: 舞台频道
+  role: 官职
+  member: 成员
+  name: 名称
+  position: 位置
+  parent: 主目录
+  topic: 描述
+  nsfw: 年龄分级
+  slowmode: 慢速模式
+  news: 通知
+  region: 地区
+  user_limit: 用户数
+  bitrate: 比特率
+components:
+  create:
+    content: ''
+    components: { }
+    embeds:
+      - author: '创建 {replace}{global:separator}{replace:title}'
+        title: ''
+        description: 在服务器上创建了一个 {replace}。
+        fields:
+          - name: 基础信息
+            value: |-
+              名称 (ID): {replace:name} ({replace:id})
+              类型: {replace:type}
+              父类别: {replace:category}
+              创建: {replace:created_at}
+          - name: 文字频道信息
+            value: |-
+              说明: {replace:topic}
+              年龄限制: {replace:age_restricted}
+              慢速模式 (秒): {replace:slowmode}
+          - name: 语音频道信息
+            value: |-
+              地区: {replace:region}
+              用户数 (上限): {replace:user_limit}
+              比特率 (上限): {replace:bitrate}
+          - name: 无障碍职位 ({replace:roles}, {replace:members}人)
+            value: ''
+          - name: 无障碍会员 ({replace})
+            value: ''
+        footer: ''
+  delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: '移除{replace}{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 已从服务器中删除。'
+        fields:
+          - name: 基础信息
+            value: |-
+              名称 (ID): {replace:name} ({replace:id})
+              类型: {replace:type}
+              父类别: {replace:category}
+              创建: {replace:created_at}
+          - name: 文字频道信息
+            value: |-
+              说明: {replace:topic}
+              年龄限制: {replace:age_restricted}
+              慢速模式 (秒): {replace:slowmode}
+          - name: 语音频道信息
+            value: |-
+              地区: {replace:region}
+              用户数 (上限): {replace:user_limit}
+              比特率 (上限): {replace:bitrate}
+          - name: 无障碍职位 ({replace:roles}, {replace:members}人)
+            value: ''
+          - name: 无障碍会员 ({replace})
+            value: ''
+        footer: ''
+  update:
+    content: ''
+    components: { }
+    embeds:
+      - author: '更改{replace}{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:channel} 的{replace:property} 已更改。'
+        fields:
+          - name: '{replace}名称'
+            value: ''
+          - name: '{replace} 更改前'
+            value: ''
+          - name: 更改后的{replace}
+            value: ''
+        footer: ''
+  permission_create:
+    content: ''
+    components: { }
+    embeds:
+      - author: '创建 {replace} 权限设置{global:separator}{replace:title}'
+        title: ''
+        description: '已在 {replace:channel}中为 {replace:property} 创建权限设置。'
+        fields:
+          - name: '{replace}名称'
+            value: ''
+          - name: 目标{replace}
+            value: ''
+        footer: ''
+  permission_delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: '移除 {replace} 权限设置 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace:property} 的权限设置已从 {replace:channel} 中删除。'
+        fields:
+          - name: '{replace}名称'
+            value: ''
+          - name: 目标{replace}
+            value: ''
+        footer: ''
+  permission_update:
+    content: ''
+    components: { }
+    embeds:
+      - author: '更改 {replace} 权限设置 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace:channel} 中 {replace:property} 的权限设置已更改。'
+        fields:
+          - name: '{replace}名称'
+            value: ''
+          - name: 目标{replace}
+            value: ''
+          - name: 更改的权限
+            value: ''
+        footer: ''

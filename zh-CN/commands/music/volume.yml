@@ -1,0 +1,50 @@
+---
+meta:
+  name: 音乐（改变音量）
+  description: 改变音量。
+constants:
+  action: 运行于
+  cancel: 取消
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: '{global:success}{global:separator}{meta:name}'
+        description: 将音量更改为 **{replace}**。
+        fields: [ ]
+        footer: ''
+  cancel:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 已取消.
+        fields: [ ]
+        footer: ''
+  confirm:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:warning}{global:separator}{meta:name}'
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          您是否一直增加音量直到超过推荐水平？如果您继续以更高的音量收听声音，您的听力可能会受损。
+          此外，对于使用此功能的用户的任何身体影响，我们概不负责。
+
+          在{replace:time} 秒内点击{replace:check} 将音量更改为**{replace:volume}**。
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: |-
+          论据无效。用**半角数字** 指定参数。
+          示例: `{bot:prefix} {command:label} 50`
+        fields: [ ]
+        footer: ''

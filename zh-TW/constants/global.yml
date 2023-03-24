@@ -1,0 +1,364 @@
+---
+constants:
+  separator: ' - '
+  yes: はい
+  no: いいえ
+  enabled: 有効
+  disabled: 無効
+  current: 現在
+  unknown: 不明
+  none: なし
+  help: ヘルプ
+  loading: 読み込み中…
+  information: 情報
+  success: 成功
+  warning: 警告
+  error: エラー
+  botInvite: Botを導入
+  joinSupportServer: サポートサーバーに参加
+  dashboard: ダッシュボード
+  viewDetail: 詳細を確認する
+  viewDocument: ドキュメントを確認する
+components:
+  exception:
+    content: ''
+    components:
+      sendReport: エラーレポートを送信する
+    embeds:
+      - author: ''
+        title: '予期しないエラー{global:separator}{global:error}'
+        description: |-
+          申し訳ありません。__**予期しないエラーが発生**__しました。
+          下のボタンを押してエラーレポートを送信していただければ助かります。
+        fields: [ ]
+        footer: ''
+  commandNotFound:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '不明なコマンド{global:separator}{global:error}'
+        description: |-
+          実行しようとした__**コマンドが見つかりません**__でした。
+          `{bot:prefix}help` でコマンドがあるかを確認してください。
+        fields:
+          - name: もしかして？
+            value: ''
+        footer: ''
+  argumentNotFound:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '不明な引数{global:separator}{global:error}'
+        description: |-
+          __**引数が不正**__です。以下の項目を確認してください。
+          ・**必要な引数が指定されているか**
+          ・**指定した引数が実行しようとしたコマンドでサポートされているか**
+
+          `{bot:prefix}help {command:label}` か `{bot:prefix}{command:label}` でコマンドの使い方を確認してください。
+        fields: [ ]
+        footer: ''
+  commandDisabled:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '無効なコマンド{global:separator}{global:error}'
+        description: |-
+          実行しようとした__**コマンドはサーバー管理者によって無効**__になっています。
+          サーバー管理者にコマンドの有効化を依頼してください。
+        fields: [ ]
+        footer: ''
+  commandDenied:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '禁止されているコマンド{global:separator}{global:error}'
+        description: |-
+          実行しようとした__**コマンドはサーバー管理者によって実行が禁止**__されています。
+          サーバー管理者にコマンドの有効化を依頼してください。
+        fields: [ ]
+        footer: ''
+  commandChannelDenied:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '禁止されているチャンネル{global:separator}{global:error}'
+        description: |-
+          実行しようとした__**コマンドはこのチャンネルでの実行が禁止**__されています。
+          **ほかのテキストチャンネルに移動**するか、サーバー管理者に設定の変更を依頼してください。
+        fields: [ ]
+        footer: ''
+  commandRoleDenied:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '禁止されている役職{global:separator}{global:error}'
+        description: |-
+          実行しようとした__**コマンドは役職の設定によって実行が禁止**__されています。
+          **付与されている役職の剥奪**を行うか、サーバー管理者に設定の変更を依頼してください。
+        fields: [ ]
+        footer: ''
+  channel:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'チャンネルの制限{global:separator}{global:error}'
+        description: |-
+          この機能は__**このBotでは実行できません**__。
+          実行するにはほかのBotを使用してください。
+        fields: [ ]
+        footer: ''
+  channelStable:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'チャンネルの制限{global:separator}{global:error}'
+        description: |-
+          この機能は__**このBotでは実行できません**__。
+          実行するには**安定版のBot**を使用してください。
+        fields: [ ]
+        footer: ''
+  channelBeta:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'チャンネルの制限{global:separator}{global:error}'
+        description: |-
+          この機能は__**このBotでは実行できません**__。
+          実行するには**ベータ版のBot**を使用してください。
+        fields: [ ]
+        footer: ''
+  channelDev:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'チャンネルの制限{global:separator}{global:error}'
+        description: |-
+          この機能は__**このBotでは実行できません**__。
+          実行するには**開発版のBot**を使用してください。
+        fields: [ ]
+        footer: ''
+  channelError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'チャンネル制限エラー{global:separator}{global:help}'
+        description: |-
+          このエラーは、実行しようとした機能がこのBotで実行できないときに表示されます。
+          ほかのチャンネルのBotを対象にして再度実行してください。
+
+          （提供されている場合）このエラーについてさらに詳しいことを確認する場合は、
+          ドキュメントを確認するか、サポートサーバーに参加してお問い合わせを行ってください。
+        fields: [ ]
+        footer: ''
+  permission:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'サーバーの権限不足{global:separator}{global:error}'
+        description: |-
+          いくつかの__**権限がありません**__。
+          不足している権限の利用を許可してから再度実行してください。
+        fields: [ ]
+        footer: ''
+  permissionUser:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'サーバーの権限不足{global:separator}{global:error}'
+        description: |-
+          いくつかの__**権限があなたにありません**__。
+          これらの権限の利用を許可してから再度実行してください。
+        fields:
+          - name: ''
+            value: |-
+              太字の権限はチャンネル側で制限されています。
+              チャンネル設定から権限の利用を許可してください。
+        footer: ''
+  permissionBot:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'サーバーの権限不足{global:separator}{global:error}'
+        description: |-
+          いくつかの__**権限がBotにありません**__。
+          これらの権限の利用を許可してから再度実行してください。
+        fields:
+          - name: ''
+            value: |-
+              太字の権限はチャンネル側で制限されています。
+              チャンネル設定から権限の利用を許可してください。
+        footer: ''
+  permissionUserAndBot:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'サーバーの権限不足{global:separator}{global:error}'
+        description: |-
+          いくつかの__**権限があなたとBotにありません**__。
+          これらの権限の利用を許可してから再度実行してください。
+        fields:
+          - name: ''
+            value: |-
+              太字の権限はチャンネル側で制限されています。
+              チャンネル設定から権限の利用を許可してください。
+          - name: あなたに追加で必要な権限
+            value: ''
+          - name: Botに追加で必要な権限
+            value: ''
+        footer: ''
+  permissionError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'サーバー権限エラー{global:separator}{global:help}'
+        description: |-
+          このエラーは、サーバー側で必要な権限が付与されていないときに表示されます。
+          不足している権限を利用できるようにサーバーの管理者に連絡してみてください。
+
+          （提供されている場合）このエラーについてさらに詳しいことを確認する場合は、
+          ドキュメントを確認するか、サポートサーバーに参加してお問い合わせを行ってください。
+        fields: [ ]
+        footer: ''
+  botPermission:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'サービスの権限不足{global:separator}{global:error}'
+        description: |-
+          いくつかの__**権限があなたにありません**__。
+          利用条件をヘルプから確認してください。
+        fields: [ ]
+        footer: ''
+  botPermissionOwner:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'サービスの権限不足{global:separator}{global:error}'
+        description: |-
+          いくつかの__**権限があなたにありません**__。
+          利用するにはサービスのオーナーである必要があります。
+        fields: [ ]
+        footer: ''
+  botPermissionSubOwner:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'サービスの権限不足{global:separator}{global:error}'
+        description: |-
+          いくつかの__**権限があなたにありません**__。
+          利用するにはサービスのサブオーナー以上である必要があります。
+        fields: [ ]
+        footer: ''
+  botPermissionAdmin:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'サービスの権限不足{global:separator}{global:error}'
+        description: |-
+          いくつかの__**権限があなたにありません**__。
+          利用するにはサービスの管理者以上である必要があります。
+        fields: [ ]
+        footer: ''
+  botPermissionStaff:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'サービスの権限不足{global:separator}{global:error}'
+        description: |-
+          いくつかの__**権限があなたにありません**__。
+          利用するにはサービスのスタッフ以上である必要があります。
+        fields: [ ]
+        footer: ''
+  botPermissionManager:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'サービスの権限不足{global:separator}{global:error}'
+        description: |-
+          いくつかの__**権限があなたにありません**__。
+          利用するにはサービスの運営である必要があります。
+        fields: [ ]
+        footer: ''
+  botPermissionError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'サービス権限エラー{global:separator}{global:help}'
+        description: |-
+          このエラーは、本サービス上での権限が付与されていないときに表示されます。
+          サーバーの権限とは別のものであるため、あなたにできることはありません。
+
+          （提供されている場合）このエラーについてさらに詳しいことを確認する場合は、
+          ドキュメントを確認するか、サポートサーバーに参加してお問い合わせを行ってください。
+        fields: [ ]
+        footer: ''
+  locationGuild:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '利用の制限{global:separator}{global:error}'
+        description: |-
+          実行しようとしたコマンドは__**ここでは実行できません**__。
+          **サーバーのテキストチャンネル**に移動してから再度実行してください。
+        fields: [ ]
+        footer: ''
+  locationChannel:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '利用の制限{global:separator}{global:error}'
+        description: |-
+          実行しようとしたコマンドは__**ここでは実行できません**__。
+          **ほかのテキストチャンネル**に移動してから再度実行してください。
+        fields: [ ]
+        footer: ''
+  locationPrivate:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '利用の制限{global:separator}{global:error}'
+        description: |-
+          実行しようとしたコマンドは__**ここでは実行できません**__。
+          **Botとのダイレクトメッセージ**に移動してから再度実行してください。
+        fields: [ ]
+        footer: ''
+  locationError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '利用制限エラー{global:separator}{global:help}'
+        description: |-
+          このエラーは、実行しようとした機能がこの場所で実行できないときに表示されます。
+          エラーに表示されているほかの場所に移動してから再度実行してください。
+
+          （提供されている場合）このエラーについてさらに詳しいことを確認する場合は、
+          ドキュメントを確認するか、サポートサーバーに参加してお問い合わせを行ってください。
+        fields: [ ]
+        footer: ''

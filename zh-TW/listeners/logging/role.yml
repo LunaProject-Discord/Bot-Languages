@@ -1,0 +1,83 @@
+---
+constants:
+  category: カテゴリ
+  channel: チャンネル
+  text: テキストチャンネル
+  voice: ボイスチャンネル
+  stage: ステージチャンネル
+  name: 名前
+  position: 位置
+  color: 色
+  mentionable: メンション可能
+  hoist: 別表示
+  permission: 権限
+components:
+  create:
+    content: ''
+    components: { }
+    embeds:
+      - author: '役職の作成{global:separator}{replace:title}'
+        title: ''
+        description: サーバーに {replace} が作成されました。
+        fields:
+          - name: 基本情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              カラーコード: {replace:color}
+              メンション可能: {replace:mentionable}
+              別表示: {replace:hoisted}
+              作成日時: {replace:created_at}
+          - name: Botの情報
+            value: |-
+              名前 (ID): {replace:tag} ({replace:id})
+              ステータス: {replace:status}
+              Bot: {replace:bot}
+              フラグ: {replace:flags}
+              作成日時: {replace:created_at}
+          - name: メンバー ({replace})
+            value: ''
+          - name: 権限 ({replace})
+            value: ''
+        footer: ''
+  delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: '役職の削除{global:separator}{replace:title}'
+        title: ''
+        description: サーバーから {replace} が削除されました。
+        fields:
+          - name: 基本情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              カラーコード: {replace:color}
+              メンション可能: {replace:mentionable}
+              別表示: {replace:hoisted}
+              作成日時: {replace:created_at}
+          - name: Botの情報
+            value: |-
+              名前 (ID): {replace:tag} ({replace:id})
+              ステータス: {replace:status}
+              Bot: {replace:bot}
+              フラグ: {replace:flags}
+              作成日時: {replace:created_at}
+          - name: メンバー ({replace})
+            value: ''
+          - name: 権限 ({replace})
+            value: ''
+        footer: ''
+  update:
+    content: ''
+    components: { }
+    embeds:
+      - author: '役職の変更{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:role} の {replace:property} が変更されました。'
+        fields:
+          - name: 役職名
+            value: ''
+          - name: 変更前の{replace}
+            value: ''
+          - name: 変更後の{replace}
+            value: ''
+        footer: ''

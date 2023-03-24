@@ -1,0 +1,15 @@
+---
+meta:
+  name: 关注
+  description: 通知你的频道有来自机器人的公告。
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 我们已经使服务公告被发送到这个频道。
+        fields: [ ]
+        footer: ''

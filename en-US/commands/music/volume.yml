@@ -1,0 +1,50 @@
+---
+meta:
+  name: Music (volume)
+  description: Change the volume
+constants:
+  action: Confirm
+  cancel: Cancel
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: '{global:success}{global:separator}{meta:name}'
+        description: Volume changed to **{replace}**
+        fields: [ ]
+        footer: ''
+  cancel:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: Canceled.
+        fields: [ ]
+        footer: ''
+  confirm:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:warning}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          Do you want to keep turning up the volume until it exceeds the recommended level? Continuing to listen to sound at a higher volume may damage your hearing.
+          In addition, we cannot be held responsible for any physical effects that may occur to the user using this function.
+
+          If you want to change the volume to **{replace:volume}**, please click {replace:check} within {replace:time} seconds.
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          Invalid argument. Arguments should be specified with **binary digits**.
+          Example: `{bot:prefix}{command:label} 50`.
+        fields: [ ]
+        footer: ''

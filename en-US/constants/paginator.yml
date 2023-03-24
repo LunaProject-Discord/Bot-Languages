@@ -1,0 +1,36 @@
+constants:
+  name: Pagination
+  sort: Select a sorting method
+
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:information}{global:separator}{paginator:name}'
+        title: ''
+        description: |-
+          Enter the page number in **{replace:pages}** from 1 or press cancel.
+          The page will be automatically canceled in **{replace:time}** seconds.
+        fields: [ ]
+        footer: ''
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{paginator:name}'
+        title: ''
+        description: 'You will be redirected to **{replace}** page. Please wait a moment...'
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{paginator:name}'
+        title: ''
+        description: |-
+          There was no page with the number you entered.
+          You will be redirected to the page that was displayed last time. Please wait a moment...
+        fields: [ ]
+        footer: ''

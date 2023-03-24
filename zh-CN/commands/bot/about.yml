@@ -1,0 +1,27 @@
+---
+meta:
+  name: 描述
+  description: 显示机器人概述。
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: 显示这个机器人的概述。
+        fields:
+          - name: 版本
+            value: '**{bot:version}** ({bot:channel}, Build {bot:build})'
+          - name: 服务器数量
+            value: ''
+          - name: 通道数
+            value: '{replace} ({replace:category}, {replace:text}, {replace:voice}, {replace:stage})'
+          - name: 用户数
+            value: '{replace} ({replace:user}, {replace:bot})'
+          - name: 介绍一下这个机器人
+            value: ''
+          - name: 加入我们的支持服务器
+            value: ''
+        footer: ''

@@ -1,0 +1,52 @@
+---
+meta:
+  name: 处罚信息
+  description: 显示惩罚信息。
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '显示{replace} 信息。'
+        fields:
+          - name: 静默
+            value: ''
+          - name: 警告
+            value: ''
+          - name: 移除
+            value: ''
+          - name: 当地禁令
+            value: ''
+          - name: 全球禁令
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'データ取得中…{global:separator}{meta:name}'
+        title: ''
+        description: 我正在获取数据。请稍等…
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 我们正在搜索符合指定条件的惩罚信息。请稍等…
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 未发现符合规定条件的处罚信息。
+        fields: [ ]
+        footer: ''

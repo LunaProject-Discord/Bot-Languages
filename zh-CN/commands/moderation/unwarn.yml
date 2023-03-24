@@ -1,0 +1,106 @@
+---
+meta:
+  name: 取消警告
+  description: 清除指定成员的警告。
+constants:
+  action: 运行于
+  cancel: 取消
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label} <Member ID | Member Mention ...>`：
+          取消指定成员的警告
+        fields:
+          - name: 提示
+            value: |-
+              ・可以通过混合id和mention来指定成员。
+              ・可以一次指定多个成员。
+        footer: ''
+  successSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '{replace} 警告已被删除。'
+        fields: [ ]
+        footer: ''
+  successMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '** {replace} people ** 成员的警告已被删除。'
+        fields:
+          - name: 成员
+            value: ''
+        footer: ''
+  cancelledSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '取消了 {replace} 的警告取消。'
+        fields: [ ]
+        footer: ''
+  cancelledMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '已取消 ** {replace} 人 ** 成员的警告取消。'
+        fields:
+          - name: 成员
+            value: ''
+        footer: ''
+  confirmSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          您确定要清除 {replace} 警告吗？
+          :warning:这个操作是不可逆的！
+        fields: [ ]
+        footer: ''
+  confirmMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          您确定要清除针对 ** {replace} 人 ** 成员的警告吗？
+          :warning:这个操作是不可逆的！
+        fields:
+          - name: ''
+            value: |-
+              某些成员的警告无法清除。
+              点击“{global:viewDetail}”了解详情。
+          - name: 成员
+            value: ''
+        footer: ''
+  helpMembers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          某些成员的警告无法清除。
+          详细原因如下。
+        fields:
+          - name: 这些成员已经被清除。
+            value: ''
+          - name: 这些用户无法清除警告，因为他们不存在。
+            value: ''
+        footer: ''

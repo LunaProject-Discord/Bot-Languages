@@ -1,0 +1,68 @@
+meta:
+  name: 言語の変更
+  description: 表示言語を変更します。
+
+constants:
+  user: ユーザー
+  guild: サーバー
+  cancel: キャンセル
+
+components:
+  help:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:help}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          `{bot:prefix}{command:label} <ja-JP | en-US>`:
+          　指定した言語に表示言語を変更
+        fields: []
+        footer: ''
+  success:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '表示言語を {replace} に変更しました。'
+        fields: []
+        footer: ''
+  success_user:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 'ユーザーの表示言語を {replace} に変更しました。'
+        fields: []
+        footer: ''
+  success_guild:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 'サーバーの表示言語を {replace} に変更しました。'
+        fields: []
+        footer: ''
+  cancelled:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: ''
+        description: '{replace} への変更をキャンセルしました。'
+        fields: []
+        footer: ''
+  confirm:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:warning}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          表示言語を {replace} に変更しようとしています。
+          言語を変更する対象を選択してください。
+        fields: []
+        footer: ''

@@ -1,0 +1,113 @@
+---
+meta:
+  name: Global chat
+  description: You can manage the global chat.
+constants:
+  unknownGuild: Unknown server ({replace})
+  unknownChannel: Unknown channel ({replace})
+  unknownUser: Unknown user ({replace})
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:title}'
+        description: |-
+          > __**Connect to global chat**__
+          　`{bot:prefix}{command:label} connect [ID]`, `{bot:prefix}{command:label} join [ID]`
+          > __**Disconnect from global chat**__
+          　`{bot:prefix}{command:label} disconnect`, `{bot:prefix}{command:label} leave`
+          > __**Displays the list of connected channels**__
+          　`{bot:prefix}{command:label} list`
+          > __**Displays the sent messages.**__
+          　`{bot:prefix}{command:label} <ID>`
+        fields: [ ]
+        footer: ''
+  connectSuccess:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:title}'
+        description: |-
+          This channel has been connected to global chat.
+          Please run `{bot:prefix}{command:label} disconnect` if you want to disconnect.
+        fields:
+          - name: Mode
+            value: ''
+          - name: Group
+            value: ''
+        footer: ''
+  connectError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:title}'
+        description: |-
+          This channel is already connected to global chat.
+          Please run again after disconnecting by `{bot:prefix}{command:label} disconnect`.
+        fields: [ ]
+        footer: ''
+  disconnectSuccess:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:title}'
+        description: |-
+          Disconnected from global chat.
+          Please run `{bot:prefix}{command:label} connect` if you want to connect again.
+        fields: [ ]
+        footer: ''
+  disconnectError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:title}'
+        description: |-
+          This channel is not connected to global chat.
+          Please run `{bot:prefix}{command:label} connect` if you want to connect.
+        fields: [ ]
+        footer: ''
+  listSuccess:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:title}'
+        description: '{replace:count} channels are connected to {replace:category}.'
+        fields: [ ]
+        footer: ''
+  listError:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:error}{global:separator}{meta:title}'
+        description: |-
+          This channel is not connected to global chat.
+          Please run `{bot:prefix}{command:label} connect` if you want to connect.
+        fields: [ ]
+        footer: ''
+  information:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:title}'
+        description: You are displaying the messages sent from {replace}.
+        fields:
+          - name: Content
+            value: ''
+          - name: Server
+            value: ''
+          - name: Channel
+            value: ''
+          - name: User
+            value: ''
+          - name: Send at
+            value: ''
+        footer: ''

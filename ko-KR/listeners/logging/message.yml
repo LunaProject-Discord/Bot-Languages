@@ -1,0 +1,125 @@
+---
+constants: { }
+components:
+  delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: '메시지 삭제 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace:channel}에서 {replace:user} 메시지가 삭제되었습니다.'
+        fields:
+          - name: 콘텐츠
+            value: ''
+          - name: 부착
+            value: ''
+          - name: 리액션
+            value: ''
+          - name: ID
+            value: ''
+          - name: 채널 정보
+            value: |-
+              이름(ID): {replace:name} ({replace:id})
+              유형: {replace:type}
+              상위 카테고리: {replace:category}
+              작성 날짜: {replace:created_at}
+          - name: 사용자 정보
+            value: |-
+              이름 (ID): {replace:tag} ({replace:id})
+              스테이터스: {replace:status}
+              Bot: {replace:bot}
+              Flags: {replace:flags}
+              작성일시: {replace:created_at}
+        footer: ''
+  update:
+    content: ''
+    components: { }
+    embeds:
+      - author: '메시지 수정{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 메시지가 편집되었습니다.'
+        fields:
+          - name: 편집 전 콘텐츠
+            value: ''
+          - name: 편집 후 콘텐츠
+            value: ''
+          - name: 부착
+            value: ''
+          - name: 리액션
+            value: ''
+          - name: ID
+            value: ''
+          - name: 채널 정보
+            value: |-
+              이름(ID): {replace:name} ({replace:id})
+              유형: {replace:type}
+              상위 카테고리: {replace:category}
+              작성 날짜: {replace:created_at}
+          - name: 사용자 정보
+            value: |-
+              이름 (ID): {replace:tag} ({replace:id})
+              스테이터스: {replace:status}
+              Bot: {replace:bot}
+              Flags: {replace:flags}
+              작성일시: {replace:created_at}
+        footer: ''
+  pin:
+    content: ''
+    components: { }
+    embeds:
+      - author: '메시지 고정 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 의 메시지가 고정되었습니다.'
+        fields:
+          - name: 콘텐츠
+            value: ''
+          - name: 부착
+            value: ''
+          - name: 리액션
+            value: ''
+          - name: ID
+            value: ''
+          - name: 채널 정보
+            value: |-
+              이름(ID): {replace:name} ({replace:id})
+              유형: {replace:type}
+              상위 카테고리: {replace:category}
+              작성 날짜: {replace:created_at}
+          - name: 사용자 정보
+            value: |-
+              이름 (ID): {replace:tag} ({replace:id})
+              스테이터스: {replace:status}
+              Bot: {replace:bot}
+              Flags: {replace:flags}
+              작성일시: {replace:created_at}
+        footer: ''
+  unpin:
+    content: ''
+    components: { }
+    embeds:
+      - author: '메시지 고정 해제 {global:separator}{replace:title}'
+        title: ''
+        description: '{replace} 의 메시지가 고정 해제되었습니다.'
+        fields:
+          - name: 콘텐츠
+            value: ''
+          - name: 부착
+            value: ''
+          - name: 리액션
+            value: ''
+          - name: ID
+            value: ''
+          - name: 채널 정보
+            value: |-
+              이름(ID): {replace:name} ({replace:id})
+              유형: {replace:type}
+              상위 카테고리: {replace:category}
+              작성 날짜: {replace:created_at}
+          - name: 사용자 정보
+            value: |-
+              이름 (ID): {replace:tag} ({replace:id})
+              스테이터스: {replace:status}
+              Bot: {replace:bot}
+              Flags: {replace:flags}
+              작성일시: {replace:created_at}
+        footer: ''

@@ -1,0 +1,15 @@
+---
+meta:
+  name: 팔로우
+  description: Bot의 뉴스 채널 추가.
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 이 채널에서 Bot 알림을받을 수 있도록 설정했습니다.
+        fields: [ ]
+        footer: ''

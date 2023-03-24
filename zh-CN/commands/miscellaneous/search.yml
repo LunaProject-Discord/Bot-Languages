@@ -1,0 +1,50 @@
+---
+meta:
+  name: 智能搜索
+  description: 一次搜索服务器中的所有对象。
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '概述{global:separator}{meta:name}'
+        description: '**{replace}** 找到符合指定条件的对象。'
+        fields:
+          - name: 品类渠道
+            value: ''
+          - name: 官职
+            value: ''
+          - name: 成员
+            value: ''
+          - name: 表情符号
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'データ取得中…{global:separator}{meta:name}'
+        title: ''
+        description: 我正在获取数据。请稍等…
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: '{global:information}{global:separator}{meta:name}'
+        description: 搜索满足指定条件的对象。请稍等…
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: '{global:error}{global:separator}{meta:name}'
+        description: 未找到满足指定条件的对象。
+        fields: [ ]
+        footer: ''

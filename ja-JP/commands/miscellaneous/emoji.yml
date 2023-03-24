@@ -1,0 +1,53 @@
+meta:
+  name: 絵文字情報
+  description: 絵文字情報を表示します。
+
+constants: {}
+
+components:
+  index:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '{replace} の情報を表示しています。'
+        fields:
+          - name: 基本情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              アニメーション: {replace:animated}
+              作成日時: {replace:created_at}
+          - name: サーバー情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              オーナー: {replace:owner_status} {replace:owner_tag} ({replace:owner_id})
+              作成日時: {replace:created_at}
+          - name: ユーザー情報
+            value: |-
+              名前 (ID): {replace:tag} ({replace:id})
+              ステータス: {replace:status}
+              Bot: {replace:bot}
+              フラグ: {replace:flags}
+              作成日時: {replace:created_at}
+          - name: 利用可能な役職 ({replace:roles}, {replace:members}人)
+            value: ''
+        footer: ''
+  searching:
+    content: ''
+    components: {}
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合う絵文字を検索しています。しばらくお待ちください…
+        fields: []
+        footer: ''
+  error:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合う絵文字が見つかりませんでした。
+        fields: []
+        footer: ''

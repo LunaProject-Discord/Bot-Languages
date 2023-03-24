@@ -1,0 +1,48 @@
+---
+meta:
+  name: Level Information
+  description: Displays the level information.
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: 'You are viewing information about {replace}.'
+        fields:
+          - name: Level
+            value: ''
+          - name: Experience (Max)
+            value: ''
+          - name: Provisional ranking
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Data acquisition in progress...{global:separator}{meta:name}'
+        title: ''
+        description: We are retrieving data. Please wait a moment...
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Searching...{global:separator}{meta:name}'
+        title: ''
+        description: Searching for users who match the specified criteria. Please wait a moment...
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: No users matching the specified criteria were found.
+        fields: [ ]
+        footer: ''

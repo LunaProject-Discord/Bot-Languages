@@ -1,0 +1,125 @@
+---
+constants: { }
+components:
+  delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'メッセージの削除{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:channel} から {replace:user} のメッセージが削除されました。'
+        fields:
+          - name: コンテンツ
+            value: ''
+          - name: 添付ファイル
+            value: ''
+          - name: リアクション
+            value: ''
+          - name: ID
+            value: ''
+          - name: チャンネル情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              種類: {replace:type}
+              親カテゴリ: {replace:category}
+              作成日時: {replace:created_at}
+          - name: ユーザー情報
+            value: |-
+              名前 (ID): {replace:tag} ({replace:id})
+              ステータス: {replace:status}
+              Bot: {replace:bot}
+              フラグ: {replace:flags}
+              作成日時: {replace:created_at}
+        footer: ''
+  update:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'メッセージの編集{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} のメッセージが編集されました。'
+        fields:
+          - name: 編集前のコンテンツ
+            value: ''
+          - name: 編集後のコンテンツ
+            value: ''
+          - name: 添付ファイル
+            value: ''
+          - name: リアクション
+            value: ''
+          - name: ID
+            value: ''
+          - name: チャンネル情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              種類: {replace:type}
+              親カテゴリ: {replace:category}
+              作成日時: {replace:created_at}
+          - name: ユーザー情報
+            value: |-
+              名前 (ID): {replace:tag} ({replace:id})
+              ステータス: {replace:status}
+              Bot: {replace:bot}
+              フラグ: {replace:flags}
+              作成日時: {replace:created_at}
+        footer: ''
+  pin:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'メッセージのピン留め{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} のメッセージがピン留めされました。'
+        fields:
+          - name: コンテンツ
+            value: ''
+          - name: 添付ファイル
+            value: ''
+          - name: リアクション
+            value: ''
+          - name: ID
+            value: ''
+          - name: チャンネル情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              種類: {replace:type}
+              親カテゴリ: {replace:category}
+              作成日時: {replace:created_at}
+          - name: ユーザー情報
+            value: |-
+              名前 (ID): {replace:tag} ({replace:id})
+              ステータス: {replace:status}
+              Bot: {replace:bot}
+              フラグ: {replace:flags}
+              作成日時: {replace:created_at}
+        footer: ''
+  unpin:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'メッセージのピン留め解除{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} のメッセージがピン留め解除されました。'
+        fields:
+          - name: コンテンツ
+            value: ''
+          - name: 添付ファイル
+            value: ''
+          - name: リアクション
+            value: ''
+          - name: ID
+            value: ''
+          - name: チャンネル情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              種類: {replace:type}
+              親カテゴリ: {replace:category}
+              作成日時: {replace:created_at}
+          - name: ユーザー情報
+            value: |-
+              名前 (ID): {replace:tag} ({replace:id})
+              ステータス: {replace:status}
+              Bot: {replace:bot}
+              フラグ: {replace:flags}
+              作成日時: {replace:created_at}
+        footer: ''

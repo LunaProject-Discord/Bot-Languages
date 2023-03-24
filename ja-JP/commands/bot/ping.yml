@@ -1,0 +1,29 @@
+meta:
+  name: Ping
+  description: DiscordとBotの通信状況を表示します。
+
+constants: {}
+
+components:
+  index:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: 'Pong! :ping_pong:'
+        fields: 
+          - name: Bot (Gateway)
+            value: ''
+          - name: WebSocket
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: Pingを取得しています。しばらくお待ちください…
+        fields: []
+        footer: ''

@@ -1,0 +1,50 @@
+---
+meta:
+  name: Intelligent Search
+  description: Searches all objects in the server at once.
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: 'Summary{global:separator}{meta:name}'
+        description: Found **{replace}** objects that match the specified criteria.
+        fields:
+          - name: Category & Channel
+            value: ''
+          - name: Roles
+            value: ''
+          - name: Members
+            value: ''
+          - name: Emojis
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Data acquisition in progress...{global:separator}{meta:name}'
+        title: ''
+        description: We are retrieving data. Please wait a moment...
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Searching...{global:separator}{meta:name}'
+        title: ''
+        description: Searching for objects that match the specified criteria. Please wait a moment...
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: No objects were found that match the specified criteria.
+        fields: [ ]
+        footer: ''

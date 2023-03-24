@@ -1,0 +1,124 @@
+---
+meta:
+  name: 밴
+  description: 선택한 사용자를 Ban합니다.
+constants:
+  action: 실행
+  cancel: 취소
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label}<사용자 ID | 사용자 멘션 ...> [시간] [사유]`:
+          　선택한 사용자를 밴합니다.
+        fields:
+          - name: 힌트
+            value: |-
+              ・ID와 멘션을 혼합하여 사용자 지정 가능
+              ・사용자의 복수 지정 가능
+        footer: ''
+  successSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '{replace} 를 다음과 같은 사유로 밴했습니다.'
+        fields:
+          - name: 기한
+            value: ''
+          - name: 사유
+            value: ''
+        footer: ''
+  successMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '**{replace}명**의 사용자를 다음과 같은 사유로 밴했습니다.'
+        fields:
+          - name: 사용자
+            value: ''
+          - name: 기한
+            value: ''
+          - name: 사유
+            value: ''
+        footer: ''
+  cancelledSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '{replace} 의 밴을 취소했습니다.'
+        fields: [ ]
+        footer: ''
+  cancelledMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '**{replace}명** 사용자의 밴을 취소했습니다.'
+        fields:
+          - name: 사용자
+            value: ''
+        footer: ''
+  confirmSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          정말로 {replace} 을 다음과 같은 사유로 밴할까요?
+          :warning: 이 행동은 되돌릴 수 없습니다!
+        fields:
+          - name: 기한
+            value: ''
+          - name: 사유
+            value: ''
+        footer: ''
+  confirmMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          정말로 **{replace}명**의 사용자를 다음과 같은 사유로 밴할까요?
+          :warning: 이 행동은 되돌릴 수 없습니다!
+        fields:
+          - name: ''
+            value: |-
+              일부 사용자는 밴할 수 없습니다.
+              자세한 내용은 '{global:viewDetail}'을 참고해주세요.
+          - name: 사용자
+            value: ''
+          - name: 기한
+            value: ''
+          - name: 사유
+            value: ''
+        footer: ''
+  helpMembers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          일부 사용자는 밴할 수 없습니다.
+          아래에 상세한 이유가 기재되어 있습니다.
+        fields:
+          - name: 당신에게 권한이 없으므로 그 사용자를 밴할 수 없습니다.
+            value: ''
+          - name: Bot에게 권한이 없으므로 그 사용자를 밴할 수 없습니다.
+            value: ''
+          - name: 그 사용자는 서버에 참여하지 않았거나 존재하지 않는 사용자이기 때문에 밴할 수 없습니다.
+            value: ''
+        footer: ''

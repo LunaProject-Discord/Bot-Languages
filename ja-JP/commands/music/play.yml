@@ -1,0 +1,79 @@
+meta:
+  name: 音楽 (メディアの再生)
+  description: 動画投稿サイトやアップロードされたメディアを再生します。
+
+constants: {}
+
+components:
+  error:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          引数が不正です。キーワードかURLを指定してください。
+          例: `{bot:prefix}{command:label} ラストスコア`, `{bot:prefix}{command:label} https://www.youtube.com/watch?v=zAWu9BK_V5M`
+        fields: []
+        footer: ''
+  searching:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合うメディアを検索しています。しばらくお待ちください…
+        fields: []
+        footer: ''
+  not_found:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合うメディアが見つかりませんでした。
+        fields: []
+        footer: ''
+  loaded_track:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '**{replace:media_name}** ({replace:media_author} / {replace:media_duration}) をキューに追加しました。'
+        fields: []
+        footer: ''
+  loaded_playlist:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '**{replace:media_list_name}** ({replace:media_list_size} / {replace:media_list_duration}) をキューに追加しました。'
+        fields: []
+        footer: ''
+  search_result:
+    content: ''
+    components:
+      cancel: キャンセル
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          {replace:keyword} で検索した結果、{replace:size} 件の候補が見つかりました。
+          再生したいメディアを下から選択するか、キャンセルを押してください。
+        fields:
+          - name: '{replace} YouTube の検索候補'
+            value: ''
+          - name: '{replace} ニコニコ動画 の検索候補'
+            value: ''
+        footer: ''
+  cancel:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: ''
+        description: キャンセルしました。
+        fields: []
+        footer: ''

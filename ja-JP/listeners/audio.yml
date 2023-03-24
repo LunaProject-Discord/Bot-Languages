@@ -1,0 +1,27 @@
+constants: {}
+
+components:
+  music_disconnect:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:information}{global:separator}音楽'
+        title: ''
+        description: |-
+          キューが空になったため再生を停止し、ボイスチャンネルから切断しました。
+          メディアを再生するには `{bot:prefix}play <キーワード | URL>` と実行してください。
+        fields: []
+        footer: ''
+  speak_disconnect:
+    content: ''
+    components:
+      start: 読み上げを開始
+    embeds:
+      - author: '{global:information}{global:separator}読み上げ'
+        title: ''
+        description: |-
+          参加者がいないため読み上げを停止し、ボイスチャンネルから切断しました。
+          読み上げを開始するには `{bot:prefix}speak` と実行してください。
+        fields: []
+        footer: ''
+  

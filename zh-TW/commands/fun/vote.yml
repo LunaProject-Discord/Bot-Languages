@@ -1,0 +1,6 @@
+---
+meta:
+  name: 投票
+  description: リアクションを使用した簡易的な投票ができます。
+constants: { }
+components: { }

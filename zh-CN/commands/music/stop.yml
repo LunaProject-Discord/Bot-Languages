@@ -1,0 +1,46 @@
+---
+meta:
+  name: 音乐（停止媒体）
+  description: 播放已停止。
+constants: { }
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: '{global:success}{global:separator}{meta:name}'
+        description: |-
+          播放已停止。
+          运行`{bot:prefix}disconnect`退出语音通道。
+        fields: [ ]
+        footer: ''
+  vote_success:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '我投了票。(投票数: {replace:count} / {replace:max_count})'
+        fields: [ ]
+        footer: ''
+  vote_error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: '你已经投过票。(投票数: {replace:count} / {replace:max_count})'
+        fields: [ ]
+        footer: ''
+  not_playing:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          播放已停止。
+          要播放媒体，请运行`{bot:prefix}play <keyword | URL>`。
+        fields: [ ]
+        footer: ''

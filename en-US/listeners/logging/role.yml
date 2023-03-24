@@ -1,0 +1,83 @@
+---
+constants:
+  category: Category
+  channel: Channel
+  text: Text Channel
+  voice: Voice Channel
+  stage: Stage Channel
+  name: Name
+  position: Position
+  color: Color
+  mentionable: Mentionable?
+  hoist: Hoisted?
+  permission: Permission
+components:
+  create:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Create Role{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} was created on the server.'
+        fields:
+          - name: Basic Information
+            value: |-
+              Name (ID): {replace:name} ({replace:id})
+              Color: {replace:color}
+              Mentionable?: {replace:mentionable}
+              Hoisted?: {replace:hoisted}
+              Created at: {replace:created_at}
+          - name: Bot Information
+            value: |-
+              Name (ID): {replace:tag} ({replace:id})
+              Status: {replace:status}
+              Bot?: {replace:bot}
+              Flags: {replace:flags}
+              Created at: {replace:created_at}
+          - name: Members ({replace})
+            value: ''
+          - name: Permissions ({replace})
+            value: ''
+        footer: ''
+  delete:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Delete Role{global:separator}{replace:title}'
+        title: ''
+        description: '{replace} was deleted on the server.'
+        fields:
+          - name: Basic Information
+            value: |-
+              Name (ID): {replace:name} ({replace:id})
+              Color: {replace:color}
+              Mentionable?: {replace:mentionable}
+              Hoisted?: {replace:hoisted}
+              Created at: {replace:created_at}
+          - name: Bot Information
+            value: |-
+              Name (ID): {replace:tag} ({replace:id})
+              Status: {replace:status}
+              Bot?: {replace:bot}
+              Flags: {replace:flags}
+              Created at: {replace:created_at}
+          - name: Members ({replace})
+            value: ''
+          - name: Permissions ({replace})
+            value: ''
+        footer: ''
+  update:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'Edit Role{global:separator}{replace:title}'
+        title: ''
+        description: '{replace:property} of {replace:role} has been changed.'
+        fields:
+          - name: Role Name
+            value: ''
+          - name: '{replace} before change'
+            value: ''
+          - name: '{replace} after change'
+            value: ''
+        footer: ''

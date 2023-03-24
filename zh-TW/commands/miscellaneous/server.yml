@@ -1,0 +1,66 @@
+---
+meta:
+  name: サーバー情報
+  description: サーバー情報を表示します。
+constants: { }
+components:
+  index:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{meta:name}'
+        description: '{replace} の情報を表示しています。'
+        fields:
+          - name: 基本情報
+            value: |-
+              名前 (ID): {replace:name} ({replace:id})
+              オーナー: {replace:owner_status} {replace:owner_tag} ({replace:owner_id})
+              作成日時: {replace:created_at}
+          - name: サービスでの情報
+            value: |-
+              フラグ: {replace:flags}
+              認証済み: {replace:verified}
+          - name: サーバーの説明
+            value: ''
+          - name: コミュニティ情報
+            value: |-
+              優先言語: {replace:language}
+              ルールチャンネル: {replace:rule_channel}
+              アナウンスチャンネル: {replace:announce_channel}
+          - name: 統計情報
+            value: |-
+              ブースト数: {replace:boost_tier} ({replace:boost_count})
+              チャンネル数: {replace:total_channels} ({replace:category}, {replace:text}, {replace:voice}, {replace:stage})
+              メンバー数: {replace:total_members} ({replace:user}, {replace:bot}) / {replace:max_members}
+              絵文字数: {replace:total_emotes} (通常: {replace:normal}, GIF: {replace:animated}) / {replace:max_emotes}
+          - name: 役職 ({replace})
+            value: ''
+        footer: ''
+  loading:
+    content: ''
+    components: { }
+    embeds:
+      - author: 'データ取得中…{global:separator}{meta:name}'
+        title: ''
+        description: データを取得しています。しばらくお待ちください…
+        fields: [ ]
+        footer: ''
+  searching:
+    content: ''
+    components: { }
+    embeds:
+      - author: '検索中…{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合うサーバーを検索しています。しばらくお待ちください…
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: 指定した条件に合うサーバーが見つかりませんでした。
+        fields: [ ]
+        footer: ''

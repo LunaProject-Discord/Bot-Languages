@@ -1,0 +1,106 @@
+---
+meta:
+  name: Banの解除
+  description: 指定したユーザーのBanを解除します。
+constants:
+  action: 実行
+  cancel: キャンセル
+components:
+  help:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          `{bot:prefix}{command:label} <ユーザー ID | ユーザー メンション ...>`:
+          　指定したユーザーのBanを解除
+        fields:
+          - name: ヒント
+            value: |-
+              ・IDとメンションを混合してユーザーの指定が可能
+              ・複数のユーザーをまとめて指定することが可能
+        footer: ''
+  successSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '{replace} のBanを解除しました。'
+        fields: [ ]
+        footer: ''
+  successMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:success}{global:separator}{meta:name}'
+        description: '**{replace}人**のユーザーのBanを解除しました。'
+        fields:
+          - name: ユーザー
+            value: ''
+        footer: ''
+  cancelledSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '{replace} のBan解除をキャンセルしました。'
+        fields: [ ]
+        footer: ''
+  cancelledMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:information}{global:separator}{meta:name}'
+        description: '**{replace}人**のユーザーのBan解除をキャンセルしました。'
+        fields:
+          - name: ユーザー
+            value: ''
+        footer: ''
+  confirmSingle:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          本当に {replace} のBanを解除してもよろしいですか？
+          :warning: この操作は取り消すことができません！
+        fields: [ ]
+        footer: ''
+  confirmMultiple:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:warning}{global:separator}{meta:name}'
+        description: |-
+          本当に**{replace}人**のユーザーのBanを解除してもよろしいですか？
+          :warning: この操作は取り消すことができません！
+        fields:
+          - name: ''
+            value: |-
+              一部のユーザーのBanは解除できません。
+              詳細は「{global:viewDetail}」をタップしてください。
+          - name: ユーザー
+            value: ''
+        footer: ''
+  helpMembers:
+    content: ''
+    components: { }
+    embeds:
+      - author: ''
+        title: '{global:help}{global:separator}{meta:name}'
+        description: |-
+          一部のユーザーのBanは解除できません。
+          以下に詳細な理由が掲載されています。
+        fields:
+          - name: これらのユーザーはすでにBanが解除されています。
+            value: ''
+          - name: これらのユーザーは存在していないユーザーのためBanを解除できません。
+            value: ''
+        footer: ''

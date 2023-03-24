@@ -1,0 +1,16 @@
+meta:
+  name: フォロー
+  description: Botからのお知らせをチャンネルに通知するようにします。
+
+constants: {}
+
+components:
+  index:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: このチャンネルにサービスからのお知らせが送信されるようにしました。
+        fields: []
+        footer: ''

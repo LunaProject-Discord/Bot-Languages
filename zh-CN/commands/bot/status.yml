@@ -1,0 +1,6 @@
+---
+meta:
+  name: 状态
+  description: 显示有关机器人的详细信息。
+constants: { }
+components: { }
