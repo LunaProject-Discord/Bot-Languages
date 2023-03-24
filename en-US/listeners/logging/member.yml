@@ -5,6 +5,7 @@ constants:
   nick: Nickname
   boost_time: Boost Duration
   pending: Pending status
+  timeout_time: Time Out Duration
 
 components:
   join:

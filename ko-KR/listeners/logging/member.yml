@@ -1,9 +1,12 @@
----
 constants:
   nolimit: 무제한
-  boost_time: 부스트 시간
+  
+  avatar: 아바타
   nick: 별명
+  boost_time: 부스트 시간
   pending: 보류 중 상태
+  timeout_time: 시간 초과
+
 components:
   join:
     content: ''

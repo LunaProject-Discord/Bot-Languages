@@ -1,9 +1,12 @@
----
 constants:
   nolimit: 无限制
-  boost_time: 提升时间
+
+  avatar: 阿凡达
   nick: 昵称
+  boost_time: 提升时间
   pending: 提升时间
+  timeout_time: 暂停营业时间
+
 components:
   join:
     content: ''

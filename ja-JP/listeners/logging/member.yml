@@ -5,6 +5,7 @@ constants:
   nick: ニックネーム
   boost_time: ブースト時間
   pending: 保留中ステータス
+  timeout_time: タイムアウト時間
 
 components:
   join:

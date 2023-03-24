@@ -1,9 +1,12 @@
----
 constants:
   nolimit: 無制限
-  boost_time: ブースト時間
+  
+  avatar: アバター
   nick: ニックネーム
+  boost_time: ブースト時間
   pending: 保留中ステータス
+  timeout_time: タイムアウト
+
 components:
   join:
     content: ''
