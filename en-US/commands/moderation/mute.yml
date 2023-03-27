@@ -122,16 +122,3 @@ components:
           - name: You cannot mute these members due to them not being in the server, or they do not exist.
             value: ''
         footer: ''
-  errorRole:
-    content: ''
-    components: { }
-    embeds:
-      - author: ''
-        title: '{global:error}{global:separator}{meta:name}'
-        description: |-
-          Cannot mute because __**Failed to get or create role**__.
-          Please allow the use of these permissions and try again.
-        fields:
-          - name: Required Permissions
-            value: ''
-        footer: ''

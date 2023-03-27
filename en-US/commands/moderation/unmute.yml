@@ -104,16 +104,3 @@ components:
           - name: These users cannot be unmuted because they are not in the server, or do not exist.
             value: ''
         footer: ''
-  errorRole:
-    content: ''
-    components: { }
-    embeds:
-      - author: ''
-        title: '{global:error}{global:separator}{meta:name}'
-        description: |-
-          Cannot mute because __**Failed to get or create role**__.
-          Please allow the use of these permissions and try again.
-        fields:
-          - name: Required Permissions
-            value: ''
-        footer: ''

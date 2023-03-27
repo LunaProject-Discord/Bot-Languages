@@ -122,16 +122,3 @@ components:
           - name: これらのユーザーはサーバーに参加していないか、存在していないユーザーのためミュートできません。
             value: ''
         footer: ''
-  errorRole:
-    content: ''
-    components: { }
-    embeds:
-      - author: ''
-        title: '{global:error}{global:separator}{meta:name}'
-        description: |-
-          __**役職の取得または作成に失敗**__したためミュートできません。
-          これらの権限の利用を許可してから再度実行してください。
-        fields:
-          - name: 必要な権限
-            value: ''
-        footer: ''

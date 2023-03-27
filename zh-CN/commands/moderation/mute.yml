@@ -122,16 +122,3 @@ components:
           - name: 这些用户不能被静音，因为他们没有加入服务器或不存在。
             value: ''
         footer: ''
-  errorRole:
-    content: ''
-    components: { }
-    embeds:
-      - author: ''
-        title: '{global:error}{global:separator}{meta:name}'
-        description: |-
-          __ ** 无法静音，因为您未能获得或创建职位 ** __。
-          允许使用这些权限，然后重试。
-        fields:
-          - name: 所需权限
-            value: ''
-        footer: ''

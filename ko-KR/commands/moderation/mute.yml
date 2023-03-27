@@ -122,16 +122,3 @@ components:
           - name: 이러한 사용자는 서버에 가입하지 않았거나 존재하지 않는 사용자로 인해 음소거할 수 없습니다.
             value: ''
         footer: ''
-  errorRole:
-    content: ''
-    components: { }
-    embeds:
-      - author: ''
-        title: '{global:error}{global:separator}{meta:name}'
-        description: |-
-          __**직책을 가져오거나 만들지 못했습니다**__ 했으므로 음소거할 수 없습니다.
-          이러한 권한의 사용을 허용한 후 다시 실행하십시오.
-        fields:
-          - name: 권한 필요
-            value: ''
-        footer: ''
