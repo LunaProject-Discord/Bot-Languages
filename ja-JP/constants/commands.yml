@@ -24,3 +24,4 @@ constants:
   management_name: Management
   management_description: サービス運営用の機能が入っているカテゴリです。権限がないユーザーは利用できません。
   
+components: {}
