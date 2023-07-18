@@ -1,4 +1,3 @@
----
 meta:
   name: Intelligent Search
   description: Searches all objects in the server at once.
@@ -8,24 +7,30 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Summary{global:separator}{meta:name}'
         description: Found **{replace}** objects that match the specified criteria.
         fields:
-          - name: Category & Channel
+          - 
+            name: Category & Channel
             value: ''
-          - name: Roles
+          - 
+            name: Roles
             value: ''
-          - name: Members
+          - 
+            name: Members
             value: ''
-          - name: Emojis
+          - 
+            name: Emojis
             value: ''
         footer: ''
   loading:
     content: ''
     components: { }
     embeds:
-      - author: 'Data acquisition in progress...{global:separator}{meta:name}'
+      - 
+        author: 'Data acquisition in progress...{global:separator}{meta:name}'
         title: ''
         description: We are retrieving data. Please wait a moment...
         fields: [ ]
@@ -34,7 +39,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: 'Searching...{global:separator}{meta:name}'
+      - 
+        author: 'Searching...{global:separator}{meta:name}'
         title: ''
         description: Searching for objects that match the specified criteria. Please wait a moment...
         fields: [ ]
@@ -43,7 +49,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:error}{global:separator}{meta:name}'
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
         title: ''
         description: No objects were found that match the specified criteria.
         fields: [ ]

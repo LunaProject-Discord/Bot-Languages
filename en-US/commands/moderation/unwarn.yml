@@ -1,4 +1,3 @@
----
 meta:
   name: Unwarn
   description: Unwarning for the specified member
@@ -10,12 +9,14 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:help}{global:separator}{meta:name}'
         description: |-
           `{bot:prefix}{command:label} <MemberID | Member Mention ...>`: Unwarn specified member
         fields:
-          - name: Hint
+          - 
+            name: Hint
             value: |-
               ・Users can be specified by mixing IDs and Mentions.
               ・Multiple users can be specified at once.
@@ -24,7 +25,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:success}{global:separator}{meta:name}'
         description: 'Sucessfully unwarned {replace}'
         fields: [ ]
@@ -33,18 +35,21 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:success}{global:separator}{meta:name}'
         description: 'Successfully unwarned **{replace}** member(s)'
         fields:
-          - name: Members
+          - 
+            name: Members
             value: ''
         footer: ''
   cancelledSingle:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: 'Canceled unwarn {replace}'
         fields: [ ]
@@ -53,18 +58,21 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: 'Canceled unwarn **{replace}** member(s)'
         fields:
-          - name: Members
+          - 
+            name: Members
             value: ''
         footer: ''
   confirmSingle:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: |-
           Are you sure you want to remove the {replace} warning?
@@ -75,31 +83,37 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: |-
           Are you sure you want to remove the **{replace}** member(s) warning?
           :warning: This operation cannot be undone!
         fields:
-          - name: ''
+          - 
+            name: ''
             value: |-
               Some member warnings cannot be removed.
               Please tap "{global:viewDetail}" for details.
-          - name: Members
+          - 
+            name: Members
             value: ''
         footer: ''
   helpMembers:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:help}{global:separator}{meta:name}'
         description: |-
           Some member warnings cannot be removed.
           You can find the detailed reasons below.
         fields:
-          - name: These members have already been unmuted
+          - 
+            name: These members have already been unmuted
             value: ''
-          - name: These users cannot be unwarned because they are non-existent user(s).
+          - 
+            name: These users cannot be unwarned because they are non-existent user(s).
             value: ''
         footer: ''

@@ -1,4 +1,3 @@
----
 meta:
   name: Emoji Information
   description: Displays emoji information.
@@ -8,35 +7,41 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{meta:name}'
         description: 'You are viewing information about {replace}.'
         fields:
-          - name: Expiration Date
+          - 
+            name: Expiration Date
             value: |-
               Name (ID): {replace:name} ({replace:id})
               Animated?: {replace:animated}
               Created at: {replace:created_at}
-          - name: Server Information
+          - 
+            name: Server Information
             value: |-
               Name (ID): {replace:name} ({replace:id})
               Owner: {replace:owner_status} {replace:owner_tag} ({replace:owner_id})
               Created at: {replace:created_at}
-          - name: User Information
+          - 
+            name: User Information
             value: |-
               Name (ID): {replace:tag} ({replace:id})
               Status: {replace:status}
               Bot?: {replace:bot}
               Flags: {replace:flags}
               Created at: {replace:created_at}
-          - name: Roles with emote available ({replace:roles}, {replace:members} persons)
+          - 
+            name: Roles with emote available ({replace:roles}, {replace:members} persons)
             value: ''
         footer: ''
   searching:
     content: ''
     components: { }
     embeds:
-      - author: 'Searching...{global:separator}{meta:name}'
+      - 
+        author: 'Searching...{global:separator}{meta:name}'
         title: ''
         description: Searching for a emoji that matches the criteria you specified. Please wait a moment...
         fields: [ ]
@@ -45,7 +50,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:error}{global:separator}{meta:name}'
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
         title: ''
         description: No emojis were found that match the criteria you specified.
         fields: [ ]

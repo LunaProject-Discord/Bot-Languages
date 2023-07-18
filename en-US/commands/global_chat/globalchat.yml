@@ -1,4 +1,3 @@
----
 meta:
   name: Global chat
   description: You can manage the global chat.
@@ -11,7 +10,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:help}{global:separator}{meta:title}'
         description: |-
           > __**Connect to global chat**__
@@ -24,26 +24,74 @@ components:
           　`{bot:prefix}{command:label} <ID>`
         fields: [ ]
         footer: ''
+  create:
+    content: ''
+    components:
+      name: 名前の設定
+      description: 説明の設定
+      cooltime: クールタイムの設定
+      password: パスワードの設定
+      max_lines: 最大行数の設定
+      max_emotes: 最大絵文字数の設定
+      min_guild_created_at: 最低サーバー作成日数の設定
+      min_user_created_at: 最低ユーザー作成日数の設定
+      cancel: キャンセル
+      action: 作成
+    embeds:
+      - 
+        author: ''
+        title: 'グループの作成{global:separator}{meta:name}'
+        description: ''
+        fields:
+          - 
+            name: 名前
+            value: ''
+          - 
+            name: 説明
+            value: ''
+          - 
+            name: クールタイム
+            value: ''
+          - 
+            name: パスワード
+            value: ''
+          - 
+            name: 最大行数
+            value: ''
+          - 
+            name: 最大絵文字数
+            value: ''
+          - 
+            name: 最低サーバー作成日数
+            value: ''
+          - 
+            name: 最低ユーザー作成日数
+            value: ''
+        footer: ''
   connectSuccess:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:success}{global:separator}{meta:title}'
         description: |-
           This channel has been connected to global chat.
           Please run `{bot:prefix}{command:label} disconnect` if you want to disconnect.
         fields:
-          - name: Mode
+          - 
+            name: Mode
             value: ''
-          - name: Group
+          - 
+            name: Group
             value: ''
         footer: ''
   connectError:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:error}{global:separator}{meta:title}'
         description: |-
           This channel is already connected to global chat.
@@ -54,7 +102,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:success}{global:separator}{meta:title}'
         description: |-
           Disconnected from global chat.
@@ -65,7 +114,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:error}{global:separator}{meta:title}'
         description: |-
           This channel is not connected to global chat.
@@ -76,7 +126,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:success}{global:separator}{meta:title}'
         description: '{replace:count} channels are connected to {replace:category}.'
         fields: [ ]
@@ -85,7 +136,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:error}{global:separator}{meta:title}'
         description: |-
           This channel is not connected to global chat.
@@ -96,18 +148,24 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:title}'
-        description: You are displaying the messages sent from {replace}.
+        description: 'You are displaying the messages sent from {replace}.'
         fields:
-          - name: Content
+          - 
+            name: Content
             value: ''
-          - name: Server
+          - 
+            name: Server
             value: ''
-          - name: Channel
+          - 
+            name: Channel
             value: ''
-          - name: User
+          - 
+            name: User
             value: ''
-          - name: Send at
+          - 
+            name: Send at
             value: ''
         footer: ''

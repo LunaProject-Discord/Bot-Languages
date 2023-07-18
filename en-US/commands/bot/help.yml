@@ -1,4 +1,3 @@
----
 meta:
   name: Help
   description: Displays Bot help.
@@ -21,15 +20,18 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{meta:name}'
         description: The prefix for all commands is `{bot:prefix}`.
         fields:
-          - name: ''
+          - 
+            name: ''
             value: '[Click here for invite]({replace:join}) | [Click here for support server]({replace:support})'
-          - name: Hint
+          - 
+            name: Hint
             value: |-
-              If you enter the command name as an argument at the end of the help command, 
+              If you enter the command name as an argument at the end of the help command,
               detailed information about the command you entered will be displayed.
               Example: `{bot:prefix}help about`.
         footer: ''
@@ -37,43 +39,55 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Category: {replace}{global:separator}{meta:name}'
         description: ''
         fields:
-          - name: Commands
+          - 
+            name: Commands
             value: ''
         footer: ''
   search_command:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Command: {replace}{global:separator}{meta:name}'
         description: ''
         fields:
-          - name: Usage
+          - 
+            name: Usage
             value: ''
-          - name: Alternative Commands
+          - 
+            name: Alternative Commands
             value: ''
-          - name: Allowed Channels
+          - 
+            name: Allowed Channels
             value: ''
-          - name: Required Permissions (Bot)
+          - 
+            name: Required Permissions (Bot)
             value: ''
-          - name: Allowed Locations
+          - 
+            name: Allowed Locations
             value: ''
-          - name: Category
+          - 
+            name: Category
             value: ''
-          - name: Permissions required for User
+          - 
+            name: Permissions required for User
             value: ''
-          - name: Permissions required for Bot
+          - 
+            name: Permissions required for Bot
             value: ''
         footer: ''
   searching:
     content: ''
     components: { }
     embeds:
-      - author: 'Searching...{global:separator}{meta:name}'
+      - 
+        author: 'Searching...{global:separator}{meta:name}'
         title: ''
         description: Searching for commands and categories that match the specified criteria. Please wait a moment...
         fields: [ ]
@@ -82,7 +96,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:error}{global:separator}{meta:name}'
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
         title: ''
         description: No commands or categories were found that match the specified criteria.
         fields: [ ]

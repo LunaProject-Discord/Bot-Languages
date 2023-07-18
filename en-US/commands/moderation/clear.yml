@@ -1,4 +1,3 @@
----
 meta:
   name: Delete Messages
   description: Deletes the specified number of messages.
@@ -10,13 +9,15 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:help}{global:separator}{meta:name}'
         description: |-
           `{bot:prefix}{command:label} <Number to be delete> [Member ID | Mention ...]`:
           　Deletes the specified number of messages.
         fields:
-          - name: Hint
+          - 
+            name: Hint
             value: |-
               ・Delete only unpinned messages.
               ・Delete messages sent within two weeks.
@@ -28,7 +29,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:success}{global:separator}{meta:name}'
         description: 'Deleted **{replace}** message(s).'
         fields: [ ]
@@ -37,18 +39,21 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:success}{global:separator}{meta:name}'
         description: 'Deleted **{replace:count} message(s)** sent by **{replace:users}** member(s).'
         fields:
-          - name: Users
+          - 
+            name: Users
             value: ''
         footer: This message will delete after 5 second.
   cancelled:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: 'Cancelled deleting **{replace}** message(s).'
         fields: [ ]
@@ -57,18 +62,21 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: 'Cancelled deleting **{replace:count}** message(s) sent by **{replace:users}** member(s).'
         fields:
-          - name: Users
+          - 
+            name: Users
             value: ''
         footer: ''
   confirm:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:warning}{global:separator}{meta:name}'
         description: |-
           Are you sure you want to delete **{replace}** message(s)?
@@ -79,12 +87,14 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:warning}{global:separator}{meta:name}'
         description: |-
           Are you sure you want to delete **{replace:count}** messages sent by **{replace:users} member(s)?
           :warning: This operation cannot be undone!
         fields:
-          - name: Users
+          - 
+            name: Users
             value: ''
         footer: ''

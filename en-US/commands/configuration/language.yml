@@ -1,68 +1,72 @@
 meta:
   name: Change Language
   description: Change the display language.
-
 constants:
   user: User
   guild: Guild
   cancel: Cancel
-
 components:
   help:
     content: ''
-    components: {}
+    components: { }
     embeds:
-      - author: '{global:help}{global:separator}{meta:name}'
+      - 
+        author: '{global:help}{global:separator}{meta:name}'
         title: ''
         description: |-
           `{bot:prefix}{command:label} <ja-JP | en-US>`:
           　Change the display language to the specified language
-        fields: []
+        fields: [ ]
         footer: ''
   success:
     content: ''
-    components: {}
+    components: { }
     embeds:
-      - author: '{global:success}{global:separator}{meta:name}'
+      - 
+        author: '{global:success}{global:separator}{meta:name}'
         title: ''
         description: 'Changed the display language to {replace}.'
-        fields: []
+        fields: [ ]
         footer: ''
   success_user:
     content: ''
-    components: {}
+    components: { }
     embeds:
-      - author: '{global:success}{global:separator}{meta:name}'
+      - 
+        author: '{global:success}{global:separator}{meta:name}'
         title: ''
         description: 'Changed the user display language to {replace}.'
-        fields: []
+        fields: [ ]
         footer: ''
   success_guild:
     content: ''
-    components: {}
+    components: { }
     embeds:
-      - author: '{global:success}{global:separator}{meta:name}'
+      - 
+        author: '{global:success}{global:separator}{meta:name}'
         title: ''
         description: 'Changed the server display language to {replace}.'
-        fields: []
+        fields: [ ]
         footer: ''
   cancelled:
     content: ''
-    components: {}
+    components: { }
     embeds:
-      - author: '{global:information}{global:separator}{meta:name}'
+      - 
+        author: '{global:information}{global:separator}{meta:name}'
         title: ''
         description: 'Canceled change to {replace}.'
-        fields: []
+        fields: [ ]
         footer: ''
   confirm:
     content: ''
-    components: {}
+    components: { }
     embeds:
-      - author: '{global:warning}{global:separator}{meta:name}'
+      - 
+        author: '{global:warning}{global:separator}{meta:name}'
         title: ''
         description: |-
           You are about to change the display language to {replace}.
           Please select the target language to change.
-        fields: []
+        fields: [ ]
         footer: ''

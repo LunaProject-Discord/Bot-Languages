@@ -1,4 +1,3 @@
----
 constants:
   all: Repeat all
   single: Repeat single
@@ -8,7 +7,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:error}{global:separator}Music'
+      - 
+        author: '{global:error}{global:separator}Music'
         title: ''
         description: |-
           Cannot run because you are not on the voice channel.
@@ -19,7 +19,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:error}{global:separator}Music'
+      - 
+        author: '{global:error}{global:separator}Music'
         title: ''
         description: |-
           Cannot run because nothing is playing.
@@ -30,38 +31,59 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:error}{global:separator}Music'
+      - 
+        author: '{global:error}{global:separator}Music'
         title: ''
         description: |-
           Unable to execute because the read-out function is being used.
           Please terminate the reading-out function with `{bot:prefix}bye` and execute it again.
         fields: [ ]
         footer: ''
+  complete_playing:
+    content: ''
+    components: { }
+    embeds:
+      - 
+        author: '{global:information}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          All queued media has been played.
+          To play media, run `{bot:prefix}play <keyword | URL>`.
+          If no media is added within {replace} or everyone leaves the voice channel, the Bot will leave the voice channel to reduce load.
+        fields: [ ]
+        footer: ''
   control_panel:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'ControlPanel{global:separator}Music'
         description: ''
         fields:
-          - name: Contributor
+          - 
+            name: Contributor
             value: ''
-          - name: Added User
+          - 
+            name: Added User
             value: ''
-          - name: Repeat
+          - 
+            name: Repeat
             value: ''
-          - name: Next Media
+          - 
+            name: Next Media
             value: ''
         footer: ''
   information_panel:
     content: ''
-    components: {}
+    components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}Music'
         description: ''
         fields:
-          - name: Next Media
+          - 
+            name: Next Media
             value: ''
         footer: ''

@@ -1,0 +1,37 @@
+meta:
+  name: Left the voice channel
+  description: Leave the voice channel.
+constants: { }
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - 
+        author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 'Disconnected from the voice channel :wave:'
+        fields: [ ]
+        footer: ''
+  success_and_stop:
+    content: ''
+    components: { }
+    embeds:
+      - 
+        author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 'Stopped playback and disconnected from voice channel. :wave:'
+        fields: [ ]
+        footer: ''
+  error:
+    content: ''
+    components: { }
+    embeds:
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          You have already been disconnected from the voice channel.
+          To play the media, run `{bot:prefix}play <keyword | URL>`.
+        fields: [ ]
+        footer: ''

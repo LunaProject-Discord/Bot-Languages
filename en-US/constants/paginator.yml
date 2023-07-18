@@ -1,13 +1,13 @@
 constants:
   name: Pagination
   sort: Select a sorting method
-
 components:
   index:
     content: ''
     components: { }
     embeds:
-      - author: '{global:information}{global:separator}{paginator:name}'
+      - 
+        author: '{global:information}{global:separator}{paginator:name}'
         title: ''
         description: |-
           Enter the page number in **{replace:pages}** from 1 or press cancel.
@@ -18,7 +18,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:success}{global:separator}{paginator:name}'
+      - 
+        author: '{global:success}{global:separator}{paginator:name}'
         title: ''
         description: 'You will be redirected to **{replace}** page. Please wait a moment...'
         fields: [ ]
@@ -27,7 +28,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:error}{global:separator}{paginator:name}'
+      - 
+        author: '{global:error}{global:separator}{paginator:name}'
         title: ''
         description: |-
           There was no page with the number you entered.

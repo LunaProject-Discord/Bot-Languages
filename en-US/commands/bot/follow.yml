@@ -1,4 +1,3 @@
----
 meta:
   name: Follow
   description: Notify the channel of announcements from the Bot.
@@ -8,7 +7,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:success}{global:separator}{meta:name}'
+      - 
+        author: '{global:success}{global:separator}{meta:name}'
         title: ''
         description: Notices from the service will now be sent to this channel.
         fields: [ ]

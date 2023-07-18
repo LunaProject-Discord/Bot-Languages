@@ -1,6 +1,6 @@
 meta:
   name: 音楽 (メディアの再生)
-  description: 動画投稿サイトやアップロードされたメディアを再生します。
+  description: インターネット上にアップロードされたメディアを再生します。
 
 constants: {}
 
@@ -40,8 +40,12 @@ components:
     embeds:
       - author: '{global:success}{global:separator}{meta:name}'
         title: ''
-        description: '**{replace:media_name}** ({replace:media_author} / {replace:media_duration}) をキューに追加しました。'
-        fields: []
+        description: '{replace} をキューに追加しました。'
+        fields:
+          - name: 投稿者
+            value: ''
+          - name: 再生時間
+            value: ''
         footer: ''
   loaded_playlist:
     content: ''
@@ -49,8 +53,12 @@ components:
     embeds:
       - author: '{global:success}{global:separator}{meta:name}'
         title: ''
-        description: '**{replace:media_list_name}** ({replace:media_list_size} / {replace:media_list_duration}) をキューに追加しました。'
-        fields: []
+        description: '{replace} をキューに追加しました。'
+        fields:
+          - name: メディアの数
+            value: ''
+          - name: 総再生時間
+            value: ''
         footer: ''
   search_result:
     content: ''

@@ -1,0 +1,14 @@
+constants: { }
+components:
+  channel_not_connected:
+    content: ''
+    components: { }
+    embeds:
+      - 
+        author: '{global:error}{global:separator}Audio'
+        title: ''
+        description: |-
+          Cannot run because you are not on the voice channel.
+          Please join the voice channel and try again.
+        fields: [ ]
+        footer: ''

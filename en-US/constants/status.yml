@@ -4,20 +4,17 @@ constants:
   do_not_disturb: Do Not Disturb
   offline: Offline
   invisible: Offline
-
   web: Web
   desktop: Desktop
   mobile: Mobile
-
   category: Category
   channel: Channel
   text: Text Channel
   voice: Voice Channel
-  news: Announce Channel
+  news: Announcement Channel
   stage: Stage Channel
   forum: Forum Channel
   thread: Thread
   group: Group
   private: Private
-
-components: {}
+components: { }

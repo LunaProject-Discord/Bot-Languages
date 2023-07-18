@@ -1,4 +1,3 @@
----
 meta:
   name: Unban
   description: Removes Ban for the specified user.
@@ -10,13 +9,15 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:help}{global:separator}{meta:name}'
         description: |-
           `{bot:prefix}{command:label} <User ID | Mention ...>`:
           　Removes Ban for the specified user.
         fields:
-          - name: Hint
+          - 
+            name: Hint
             value: |-
               ・Users can be specified by mixing IDs and Mentions.
               ・Multiple users can be specified at once.
@@ -25,7 +26,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:success}{global:separator}{meta:name}'
         description: 'Ban of {replace} has been removed.'
         fields: [ ]
@@ -34,18 +36,21 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:success}{global:separator}{meta:name}'
         description: 'Unbanned **{replace}** users.'
         fields:
-          - name: Users
+          - 
+            name: Users
             value: ''
         footer: ''
   cancelledSingle:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: 'Canceled the unbanning of {replace}.'
         fields: [ ]
@@ -54,18 +59,21 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: 'Canceled unbanning of **{replace}** users.'
         fields:
-          - name: Users
+          - 
+            name: Users
             value: ''
         footer: ''
   confirmSingle:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: |-
           Are you sure you want to remove the ban on {replace}?
@@ -76,31 +84,37 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: |-
           Are you sure you want to unban **{replace}** users?
           :warning: This operation cannot be undone!
         fields:
-          - name: ''
+          - 
+            name: ''
             value: |-
               Ban of some users cannot be removed.
               Please tap "{global:viewDetail}" for details.
-          - name: Users
+          - 
+            name: Users
             value: ''
         footer: ''
   helpMembers:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:help}{global:separator}{meta:name}'
         description: |-
           Ban for some users cannot be removed.
           You can find the detailed reasons below.
         fields:
-          - name: These user(s) have already been unbanned.
+          - 
+            name: These user(s) have already been unbanned.
             value: ''
-          - name: These users cannot be unbanned because they are non-existent user(s).
+          - 
+            name: These users cannot be unbanned because they are non-existent user(s).
             value: ''
         footer: ''

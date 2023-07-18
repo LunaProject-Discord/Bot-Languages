@@ -1,29 +1,35 @@
----
 constants: { }
 components:
   delete:
     content: ''
     components: { }
     embeds:
-      - author: 'Delete Message{global:separator}{replace:title}'
+      - 
+        author: 'Delete Message{global:separator}{replace:title}'
         title: ''
         description: '{replace:user} message deleted from {replace:channel}.'
         fields:
-          - name: Contents
+          - 
+            name: Contents
             value: ''
-          - name: Attachment
+          - 
+            name: Attachment
             value: ''
-          - name: Reaction
+          - 
+            name: Reaction
             value: ''
-          - name: ID
+          - 
+            name: ID
             value: ''
-          - name: Channel Information
+          - 
+            name: Channel Information
             value: |-
               Name (ID): {replace:name} ({replace:id})
               Type: {replace:type}
               Parent: {replace:category}
               Created At: {replace:created_at}
-          - name: User Information
+          - 
+            name: User Information
             value: |-
               Name (ID): {replace:tag} ({replace:id})
               Status: {replace:status}
@@ -35,27 +41,35 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: 'Edit Message{global:separator}{replace:title}'
+      - 
+        author: 'Edit Message{global:separator}{replace:title}'
         title: ''
         description: '{replace} ban has been edited.'
         fields:
-          - name: Content before editing
+          - 
+            name: Content before editing
             value: ''
-          - name: Content after editing
+          - 
+            name: Content after editing
             value: ''
-          - name: Attachment
+          - 
+            name: Attachment
             value: ''
-          - name: Reaction
+          - 
+            name: Reaction
             value: ''
-          - name: ID
+          - 
+            name: ID
             value: ''
-          - name: Channel Information
+          - 
+            name: Channel Information
             value: |-
               Name (ID): {replace:name} ({replace:id})
               Type: {replace:type}
               Category: {replace:category}
               Created at: {replace:created_at}
-          - name: User Information
+          - 
+            name: User Information
             value: |-
               Name (ID): {replace:tag} ({replace:id})
               Status: {replace:status}
@@ -67,25 +81,32 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: 'Pin Message{global:separator}{replace:title}'
+      - 
+        author: 'Pin Message{global:separator}{replace:title}'
         title: ''
         description: '{replace} ban has been pinned.'
         fields:
-          - name: Content
+          - 
+            name: Content
             value: ''
-          - name: Attachment
+          - 
+            name: Attachment
             value: ''
-          - name: Reaction
+          - 
+            name: Reaction
             value: ''
-          - name: ID
+          - 
+            name: ID
             value: ''
-          - name: Channel Information
+          - 
+            name: Channel Information
             value: |-
               Name (ID): {replace:name} ({replace:id})
               Type: {replace:type}
               Category: {replace:category}
               Created at: {replace:created_at}
-          - name: User Information
+          - 
+            name: User Information
             value: |-
               Name (ID): {replace:tag} ({replace:id})
               Status: {replace:status}
@@ -97,25 +118,32 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: 'UnPin Message{global:separator}{replace:title}'
+      - 
+        author: 'UnPin Message{global:separator}{replace:title}'
         title: ''
         description: '{replace} ban has been unpinned.'
         fields:
-          - name: Content
+          - 
+            name: Content
             value: ''
-          - name: Attachment
+          - 
+            name: Attachment
             value: ''
-          - name: Reaction
+          - 
+            name: Reaction
             value: ''
-          - name: ID
+          - 
+            name: ID
             value: ''
-          - name: Channel Information
+          - 
+            name: Channel Information
             value: |-
               Name (ID): {replace:name} ({replace:id})
               Type: {replace:type}
               Category: {replace:category}
               Created at: {replace:created_at}
-          - name: User Information
+          - 
+            name: User Information
             value: |-
               Name (ID): {replace:tag} ({replace:id})
               Status: {replace:status}

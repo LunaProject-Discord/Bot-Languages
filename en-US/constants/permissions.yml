@@ -1,10 +1,8 @@
 constants:
   all_permissions: All Permissions
   category_all_permissions: All Permissions in Category
-
   category_advanced: Advanced Permissions
   administrator: Administrator
-
   category_general: General
   view_audit_logs: View Audit Log
   manage_server: Manage Server
@@ -15,7 +13,6 @@ constants:
   manage_webhooks: Manage Webhooks
   view_guild_insights: View Server Insights
   view_channel: View Channels
-
   category_membership: Membership
   create_instant_invite: Create Invite
   nickname_change: Change Nickname
@@ -23,7 +20,6 @@ constants:
   moderate_members: Timeout Members
   kick_members: Kick Members
   ban_members: Ban Members
-
   category_text: Text Channel
   message_send: Send Messages
   message_tts: Send Text-to-Speech Messages
@@ -36,13 +32,11 @@ constants:
   message_add_reaction: Add Reactions
   message_manage: Manage Messages
   use_application_commands: Use Application Commands
-
   category_thread: Thread
   message_send_in_threads: Send Messages in Threads
   create_public_threads: Create Public Threads
   create_private_threads: Create Private Threads
   manage_threads: Manage Threads
-
   category_voice: Voice Channel
   voice_connect: Connect
   voice_speak: Speak
@@ -53,8 +47,6 @@ constants:
   voice_deaf_others: Deafen Members
   voice_move_others: Move Members
   voice_start_activities: Use Activities
-
   category_stage: Stage Channel
   request_to_speak: Request To Speak
-
 components: { }

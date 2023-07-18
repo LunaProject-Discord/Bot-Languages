@@ -1,4 +1,3 @@
----
 meta:
   name: Name Change History
   description: Displays the name change history.
@@ -8,7 +7,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{meta:name}'
         description: 'You are viewing information about {replace}.'
         fields: [ ]
@@ -17,7 +17,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: 'Data acquisition in progress...{global:separator}{meta:name}'
+      - 
+        author: 'Data acquisition in progress...{global:separator}{meta:name}'
         title: ''
         description: We are retrieving data. Please wait a moment...
         fields: [ ]
@@ -26,7 +27,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: 'Searching...{global:separator}{meta:name}'
+      - 
+        author: 'Searching...{global:separator}{meta:name}'
         title: ''
         description: Searching for a name change history that matches the specified criteria. Please wait a moment...
         fields: [ ]
@@ -35,7 +37,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:error}{global:separator}{meta:name}'
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
         title: ''
         description: No name change history matching the specified criteria was found.
         fields: [ ]

@@ -1,48 +1,50 @@
 meta:
   name: Music (Stop)
   description: Stop playback.
-
-constants: {}
-
+constants: { }
 components:
   success:
     content: ''
     components:
       disconnect: Leave Voice Channel
     embeds:
-      - author: '{global:success}{global:separator}{meta:name}'
+      - 
+        author: '{global:success}{global:separator}{meta:name}'
         title: ''
         description: |-
           Playback has been stopped.
           To leave the voice channel, run `{bot:prefix}disconnect`.
-        fields: []
+        fields: [ ]
         footer: ''
   vote_success:
     content: ''
-    components: {}
+    components: { }
     embeds:
-      - author: '{global:success}{global:separator}{meta:name}'
+      - 
+        author: '{global:success}{global:separator}{meta:name}'
         title: ''
         description: 'Voted (Vote count: {replace:count} / {replace:max_count})'
-        fields: []
+        fields: [ ]
         footer: ''
   vote_error:
     content: ''
-    components: {}
+    components: { }
     embeds:
-      - author: '{global:error}{global:separator}{meta:name}'
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
         title: ''
         description: 'You have already voted (Vote count: {replace:count} / {replace:max_count})'
-        fields: []
+        fields: [ ]
         footer: ''
   not_playing:
     content: ''
-    components: {}
+    components: { }
     embeds:
-      - author: '{global:error}{global:separator}{meta:name}'
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
         title: ''
         description: |-
           Playback has already been stopped.
           To play the media, run `{bot:prefix}play <keyword | URL>`.
-        fields: []
+        fields: [ ]
         footer: ''

@@ -1,4 +1,3 @@
----
 meta:
   name: Role Information
   description: Displays the role information.
@@ -8,34 +7,40 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{meta:name}'
         description: 'You are viewing information about {replace}.'
         fields:
-          - name: Basic Information
+          - 
+            name: Basic Information
             value: |-
               Name (ID): {replace:name} ({replace:id})
               Color code: {replace:color}
               Mentionable?: {replace:mentionable}
               Hoisted?: {replace:hoisted}
               Created at: {replace:created_at}
-          - name: Bot Information
+          - 
+            name: Bot Information
             value: |-
               Name (ID): {replace:tag} ({replace:id})
               Status: {replace:status}
               Bot?: {replace:bot}
               Flags: {replace:flags}
               Created at: {replace:created_at}
-          - name: Members ({replace})
+          - 
+            name: Members ({replace})
             value: ''
-          - name: Permissions ({replace})
+          - 
+            name: Permissions ({replace})
             value: ''
         footer: ''
   loading:
     content: ''
     components: { }
     embeds:
-      - author: 'Data acquisition in progress...{global:separator}{meta:name}'
+      - 
+        author: 'Data acquisition in progress...{global:separator}{meta:name}'
         title: ''
         description: We are retrieving data. Please wait a moment...
         fields: [ ]
@@ -44,7 +49,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: 'Searching...{global:separator}{meta:name}'
+      - 
+        author: 'Searching...{global:separator}{meta:name}'
         title: ''
         description: Searching for a role that matches the specified criteria. Please wait a moment...
         fields: [ ]
@@ -53,7 +59,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:error}{global:separator}{meta:name}'
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
         title: ''
         description: No roles were found that match the criteria you specified.
         fields: [ ]
@@ -62,7 +69,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:error}{global:separator}{meta:name}'
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
         title: ''
         description: Could not be displayed because the roles has not been assigned.
         fields: [ ]

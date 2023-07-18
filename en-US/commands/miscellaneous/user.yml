@@ -1,4 +1,3 @@
----
 meta:
   name: User Information
   description: Displays the user information.
@@ -8,37 +7,44 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{meta:name}'
         description: 'You are viewing information about {replace}.'
         fields:
-          - name: Basic Information
+          - 
+            name: Basic Information
             value: |-
               Name (ID): {replace:tag} ({replace:id})
               Status: {replace:status}
               Bot?: {replace:bot}
               Flags: {replace:flags}
               Created at: {replace:created_at}
-          - name: Information in service
+          - 
+            name: Information in service
             value: |-
               Flags: {replace:flags}
               Evaluation value: {replace:evaluate_value}
               Verified?: {replace:verified}
               Permissions: {replace:permission}
-          - name: Member Information
+          - 
+            name: Member Information
             value: |-
               Nickname: {replace:nickname}
               Joined at: {replace:joined_at}
-          - name: Roles ({replace})
+          - 
+            name: Roles ({replace})
             value: ''
-          - name: Permissions ({replace})
+          - 
+            name: Permissions ({replace})
             value: ''
         footer: ''
   loading:
     content: ''
     components: { }
     embeds:
-      - author: 'Data acquisition in progress...{global:separator}{meta:name}'
+      - 
+        author: 'Data acquisition in progress...{global:separator}{meta:name}'
         title: ''
         description: We are retrieving data. Please wait a moment...
         fields: [ ]
@@ -47,7 +53,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: 'Searching...{global:separator}{meta:name}'
+      - 
+        author: 'Searching...{global:separator}{meta:name}'
         title: ''
         description: Searching for users who match the specified criteria. Please wait a moment...
         fields: [ ]
@@ -56,7 +63,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:error}{global:separator}{meta:name}'
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
         title: ''
         description: No users matching the specified criteria were found.
         fields: [ ]

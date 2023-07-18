@@ -1,4 +1,3 @@
----
 meta:
   name: Invite Information
   description: Displays the invite information.
@@ -9,58 +8,65 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{meta:name}'
         description: 'You are viewing information about {replace}.'
         fields:
-          - name: Expiration Date
+          - 
+            name: Basic Information
             value: |-
-              コード: {replace:code}
-              使用回数 (上限): {replace:uses} / {replace:max_uses}
-              有効期限: {replace:expired_at}
-              一時的なアクセス: {replace:temporary}
-              作成日時: {replace:created_at}
-          - name: Server Information
+              Code: {replace:code}
+              Times Used (Upper Limit): {replace:uses} / {replace:max_uses}
+              Expired at: {replace:expired_at}
+              Temporary Access?: {replace:temporary}
+              Created at: {replace:created_at}
+          - 
+            name: Server Information
             value: |-
-              名前 (ID): {replace:name} ({replace:id})
-              オーナー: {replace:owner_status} {replace:owner_tag} ({replace:owner_id})
-              メンバー数: {replace:members}
-              作成日時: {replace:created_at}
-          - name: Server Information
+              Name (ID): {replace:name} ({replace:id})
+              Owner: {replace:owner_status} {replace:owner_tag} ({replace:owner_id})
+              Members: {replace:members}
+              Created at: {replace:created_at}
+          - 
+            name: Server Information
             value: |-
-              名前 (ID): {replace:name} ({replace:id})
-              メンバー数: {replace:members}
-              作成日時: {replace:created_at}
-          - name: Channel Information
+              Name (ID): {replace:name} ({replace:id})
+              Members: {replace:members}
+              Created at: {replace:created_at}
+          - 
+            name: Channel Information
             value: |-
-              名前 (ID): {replace:name} ({replace:id})
-              種類: {replace:type}
-              親カテゴリ: {replace:category}
-              作成日時: {replace:created_at}
-          - name: Channel Information
+              Name (ID): {replace:name} ({replace:id})
+              Type: {replace:type}
+              Parent Category: {replace:category}
+              Created at: {replace:created_at}
+          - 
+            name: Channel Information
             value: |-
-              名前 (ID): {replace:name} ({replace:id})
-              種類: {replace:type}
-              作成日時: {replace:created_at}
-          - name: Group Information
+              Name (ID): {replace:name} ({replace:id})
+              Type: {replace:type}
+              Created at: {replace:created_at}
+          - 
+            name: Group Information
             value: |-
-              名前 (ID): {replace:name} ({replace:id})
-              種類: {replace:type}
-              親カテゴリ: {replace:category}
-              作成日時: {replace:created_at}
-          - name: User Information
+              Name (ID): {replace:name} ({replace:id})
+              Created at: {replace:created_at}
+          - 
+            name: User Information
             value: |-
-              名前 (ID): {replace:tag} ({replace:id})
-              ステータス: {replace:status}
+              Name (ID): {replace:tag} ({replace:id})
+              Status: {replace:status}
               Bot: {replace:bot}
-              フラグ: {replace:flags}
-              作成日時: {replace:created_at}
+              Flags: {replace:flags}
+              Created at: {replace:created_at}
         footer: ''
   searching:
     content: ''
     components: { }
     embeds:
-      - author: 'Searching...{global:separator}{meta:name}'
+      - 
+        author: 'Searching...{global:separator}{meta:name}'
         title: ''
         description: Searching for a invites that matches the criteria you specified. Please wait a moment...
         fields: [ ]
@@ -69,7 +75,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:error}{global:separator}{meta:name}'
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
         title: ''
         description: No invites were found that match the criteria you specified.
         fields: [ ]

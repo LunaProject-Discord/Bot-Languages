@@ -37,6 +37,18 @@ components:
           `{bot:prefix}bye` で読み上げ機能を終了してからもう一度実行してください。
         fields: []
         footer: ''
+  complete_playing:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:information}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          キューに入っているメディアの再生がすべて完了しました。
+          メディアを再生するには `{bot:prefix}play <キーワード | URL>` と実行してください。
+          {replace}以内にメディアが追加されないか、ボイスチャンネルから全員退出すると、負荷軽減のためボイスチャンネルから Bot が退出します。
+        fields: [ ]
+        footer: ''
   control_panel:
     content: ''
     components: {}

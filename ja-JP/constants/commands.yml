@@ -1,0 +1,26 @@
+constants:
+  bot_name: Bot
+  bot_description: Bot の概要やヘルプなどの情報を表示するための機能が入っているカテゴリです。
+  configuration_name: Configuration
+  configuration_description: サーバーやユーザーごとの Bot の設定を変更するための機能が入っているカテゴリです。
+  fun_name: Fun
+  fun_description: ちょっとした遊び心を持った機能が入っているカテゴリです。
+  game_name: Game
+  game_description: ゲームに関する機能が入っているカテゴリです。
+  global_chat_name: Global Chat
+  global_chat_description: ほかのサーバーのメンバーとおしゃべりができる機能が入っているカテゴリです。
+  audio_name: Audio
+  audio_description: 音楽やメッセージの読み上げに共通で必要な機能が入っているカテゴリです。
+  media_name: Media (Music)
+  media_description: 音楽を再生するための機能が入っているカテゴリです。
+  text_to_speech_name: Text to Speech
+  text_to_speech_description: 通話中にメッセージを読み上げるための機能が入っているカテゴリです。
+  miscellaneous_name: Miscellaneous
+  miscellaneous_description: いろいろな情報を確認できる機能が入っているカテゴリです。
+  moderation_name: Moderation
+  moderation_description: サーバーの管理を補助するための機能が入っているカテゴリです。
+  premium_name: Premium
+  premium_description: 認証済みサーバーやユーザー、有料プランの契約者が利用できる機能が入っているカテゴリです。
+  management_name: Management
+  management_description: サービス運営用の機能が入っているカテゴリです。権限がないユーザーは利用できません。
+  

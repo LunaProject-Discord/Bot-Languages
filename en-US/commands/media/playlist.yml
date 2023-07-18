@@ -1,0 +1,73 @@
+meta:
+  name: Music (Manage playlist)
+  description: Manage media that have been played in the past or will be played next.
+constants:
+  select_placeholder: Choose media
+components:
+  queue_list:
+    content: ''
+    components:
+      clear: Clear queue
+      history: Display history
+    embeds:
+      - 
+        author: ''
+        title: 'Manage Queue{global:separator}{meta:name}'
+        description: ''
+        fields: [ ]
+        footer: ''
+  history_list:
+    content: ''
+    components:
+      clear: Clear history
+      queue: Display queue
+    embeds:
+      - 
+        author: ''
+        title: 'Manage History{global:separator}{meta:name}'
+        description: ''
+        fields: [ ]
+        footer: ''
+  queue_detail:
+    content: ''
+    components:
+      remove: Remove from queue
+      interrupt: Play interrupt
+    embeds:
+      - 
+        author: ''
+        title: 'Manage Media{global:separator}{meta:name}'
+        description: ''
+        fields:
+          - 
+            name: Post by
+            value: ''
+          - 
+            name: Duration
+            value: ''
+          - 
+            name: キューに追加したメンバー
+            value: ''
+        footer: ''
+  history_detail:
+    content: ''
+    components:
+      remove: Remove from history
+      interrupt: Play interrupt
+      replay: Replay
+    embeds:
+      - 
+        author: ''
+        title: 'Manage Media{global:separator}{meta:name}'
+        description: ''
+        fields:
+          - 
+            name: Post by
+            value: ''
+          - 
+            name: Duration
+            value: ''
+          - 
+            name: キューに追加したメンバー
+            value: ''
+        footer: ''

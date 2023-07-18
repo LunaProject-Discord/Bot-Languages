@@ -1,0 +1,14 @@
+constants: {}
+
+components: 
+  channel_not_connected:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}オーディオ'
+        title: ''
+        description: |-
+          ボイスチャンネルに参加していないため実行できません。
+          ボイスチャンネルに参加してから再度実行してください。
+        fields: []
+        footer: ''

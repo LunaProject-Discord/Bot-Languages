@@ -1,0 +1,25 @@
+constants:
+  bot_name: Bot
+  bot_description: This category contains functions for displaying information such as Bot overview and help.
+  configuration_name: Configuration
+  configuration_description: This category contains functions for changing Bot settings for each server and user.
+  fun_name: Fun
+  fun_description: This category contains features that are a bit more playful.
+  game_name: Game
+  game_description: This category contains game-related features.
+  global_chat_name: Global Chat
+  global_chat_description: This category contains the ability to chat with members of other servers.
+  audio_name: Audio
+  audio_description: This category contains common and necessary functions for reading out music and messages.
+  media_name: Media (Music)
+  media_description: This category contains functions for playing music.
+  text_to_speech_name: Text to Speech
+  text_to_speech_description: This category contains functions for reading out messages during a call.
+  miscellaneous_name: Miscellaneous
+  miscellaneous_description: This category contains functions that allow you to check various types of information.
+  moderation_name: Moderation
+  moderation_description: This category contains functions to assist in the management of the server.
+  premium_name: Premium
+  premium_description: This category contains functions available to authenticated servers, users, and subscribers of paid plans.
+  management_name: Management
+  management_description: This category contains functions for service operation. Unauthorized users cannot use this category.

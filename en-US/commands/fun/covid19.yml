@@ -1,4 +1,3 @@
----
 meta:
   name: Covid-19
   description: View information about the new coronavirus.
@@ -24,7 +23,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: Summary{global:separator}{meta:name}
         description: '{replace} Displaying data for Japan.'
         fields: [ ]
@@ -33,7 +33,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{meta:name}'
         description: 'You are viewing data from {replace}.'
         fields: [ ]
@@ -42,7 +43,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: Data acquisition in progress...{global:separator}{meta:name}
         description: We are retrieving data. Please wait a moment...
         fields: [ ]
@@ -51,7 +53,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: Searching...{global:separator}{meta:name}
         description: Searching for data who match the specified criteria. Please wait a moment...
         fields: [ ]
@@ -60,7 +63,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:error}{global:separator}{meta:name}'
         description: No data matching the specified criteria was found.
         fields: [ ]

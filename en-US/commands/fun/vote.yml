@@ -1,19 +1,43 @@
----
 meta:
   name: Vote
   description: You can make a simple vote using the reaction.
-
-constants: {}
-
+constants:
+  in: '{replace:min}個以上{replace:max}個以下'
+  least: '{replace}個以上'
+  most: '{replace}個以下'
+  only: '{replace}個のみ'
+  indefinitely: 無期限
 components:
   index:
     content: ''
-    components: {}
+    components:
+      clear_selected_choices: 選択を解除
+      close: 投票を締め切る
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: ''
         description: ''
-        fields: []
+        fields:
+          - 
+            name: 回答の選択可能数
+            value: ''
+          - 
+            name: 投票期限
+            value: ''
+        footer: ''
+  result:
+    content: ''
+    components: { }
+    embeds:
+      - 
+        author: ''
+        title: ''
+        description: ''
+        fields:
+          - 
+            name: '{replace:rank}位 ({replace:count}票): {replace:label}'
+            value: ''
         footer: ''
   create:
     content: ''
@@ -22,31 +46,70 @@ components:
       remove: Remove Choice
       anonymous_enable: Enable Anonymous Voting
       anonymous_disable: Disable Anonymous Voting
-      multiple_enable: Enable Multiple Voting
-      multiple_disable: Disable Multiple Voting
+      required_range_select: 回答の選択可能数の設定
+      import: インポート
+      export: エクスポート
+      start: 投票を開始
     embeds:
-      - author: ''
-        title: 'Vote Add{global:separator}{meta:title}'
+      - 
+        author: '投票の作成{global:separator}{meta:name}'
+        title: ''
         description: ''
-        fields: []
+        fields:
+          - 
+            name: 回答の選択可能数
+            value: ''
+          - 
+            name: 投票期限
+            value: ''
         footer: ''
   choice_add:
     content: ''
     components:
-      confirm: Add
+      label: ラベル
+      emoji: 絵文字
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Add Choice (Vote Add){global:separator}{meta:title}'
-        description: Click the button below to add the Choice.
-        fields: []
+        description: ''
+        fields: [ ]
         footer: ''
   choice_remove:
     content: ''
-    components: {}
+    components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Remove Choice (Vote Add){global:separator}{meta:title}'
         description: Select the choice you wish to remove from the ballot below or press Cancel.
-        fields: []
+        fields: [ ]
         footer: ''
-  
+  required_range_select:
+    content: ''
+    components: { }
+    embeds:
+      - 
+        author: ''
+        title: '回答の選択可能数の設定 (投票の作成){global:separator}{meta:name}'
+        description: |-
+          メンバーが投票できる選択肢の数を下から選択するか、**【{replace} キャンセル】**を押してください。
+          数を1つのみ選択した場合は、その数**以上**か**以下**、**のみ**のいずれかを選択できます。
+          数を2つ選択した場合は、その範囲の数のみ投票できるようにします。
+        fields: [ ]
+        footer: ''
+  required_option_select:
+    content: ''
+    components:
+      back: 戻る
+    embeds:
+      - 
+        author: ''
+        title: '回答の選択可能数の強制方法の設定 (投票の作成){global:separator}{meta:name}'
+        description: |-
+          メンバーが投票できる選択肢の数の強制方法を下から指定するか、**【{replace:cancel} キャンセル】**を押してください。
+          **【{replace:count}個以上】**{replace:count}個以上で選択して投票
+          **【{replace:count}個以下】**{replace:count}個以下で選択して投票
+          **【{replace:count}個のみ】**{replace:count}個だけ選択して投票
+        fields: [ ]
+        footer: ''

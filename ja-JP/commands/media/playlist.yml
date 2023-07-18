@@ -1,0 +1,65 @@
+meta:
+  name: 音楽 (プレイリストの管理)
+  description: 過去に再生したメディアや次に再生するメディアを管理します。
+
+constants:
+  select_placeholder: メディアを選択
+
+components:
+  queue_list:
+    content: ''
+    components:
+      clear: キューをすべて削除
+      history: 再生履歴を表示
+    embeds:
+      - author: ''
+        title: 'キューの管理{global:separator}{meta:name}'
+        description: ''
+        fields: []
+        footer: ''
+  history_list:
+    content: ''
+    components:
+      clear: 履歴をすべて削除
+      queue: キューを表示
+    embeds:
+      - author: ''
+        title: '再生履歴の管理{global:separator}{meta:name}'
+        description: ''
+        fields: []
+        footer: ''
+  queue_detail:
+    content: ''
+    components:
+      remove: キューから削除
+      interrupt: 割り込んで次に再生
+    embeds:
+      - author: ''
+        title: 'メディアの管理{global:separator}{meta:name}'
+        description: ''
+        fields:
+          - name: 投稿者
+            value: ''
+          - name: 再生時間
+            value: ''
+          - name: キューに追加したメンバー
+            value: ''
+        footer: ''
+  history_detail:
+    content: ''
+    components:
+      remove: 履歴から削除
+      interrupt: 割り込んで次に再生
+      replay: もう一度再生
+    embeds:
+      - author: ''
+        title: 'メディアの管理{global:separator}{meta:name}'
+        description: ''
+        fields:
+          - name: 投稿者
+            value: ''
+          - name: 再生時間
+            value: ''
+          - name: キューに追加したメンバー
+            value: ''
+        footer: ''

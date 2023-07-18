@@ -1,103 +1,130 @@
 constants:
   nolimit: Unlimited
-
   avatar: Avatar
   nick: Nickname
   boost_time: Boost Duration
   pending: Pending status
   timeout_time: Time Out Duration
-
 components:
   join:
     content: ''
     components: { }
     embeds:
-      - author: 'Join{global:separator}{replace:title}'
+      - 
+        author: 'Join{global:separator}{replace:title}'
         title: ''
         description: '{replace} joined the guild'
         fields:
-          - name: User Name
+          - 
+            name: User Name
             value: ''
-          - name: Invite Link
+          - 
+            name: Invite Link
             value: ''
-          - name: Time difference from previous user
+          - 
+            name: Time difference from previous user
             value: ''
-          - name: Created at
+          - 
+            name: Created at
             value: ''
-          - name: Users
+          - 
+            name: Users
             value: '{replace:total} ({replace:user}, {replace:bot})'
-          - name: Bot
+          - 
+            name: Bot
             value: ''
-          - name: Evaluation Value
+          - 
+            name: Evaluation Value
             value: ''
-          - name: Verified (Bot)
+          - 
+            name: Verified (Bot)
             value: ''
-          - name: Permission (Bot)
+          - 
+            name: Permission (Bot)
             value: ''
         footer: ''
   leave:
     content: ''
     components: { }
     embeds:
-      - author: 'Left{global:separator}{replace:title}'
+      - 
+        author: 'Left{global:separator}{replace:title}'
         title: ''
         description: '{replace} left the guild'
         fields:
-          - name: User Name
+          - 
+            name: User Name
             value: ''
-          - name: Users
+          - 
+            name: Users
             value: '{replace:total} ({replace:user}, {replace:bot})'
-          - name: Joined at
+          - 
+            name: Joined at
             value: ''
-          - name: Created at
+          - 
+            name: Created at
             value: ''
-          - name: Bot
+          - 
+            name: Bot
             value: ''
-          - name: Evaluation Value
+          - 
+            name: Evaluation Value
             value: ''
-          - name: Verified (Bot)
+          - 
+            name: Verified (Bot)
             value: ''
-          - name: Permission (Bot)
+          - 
+            name: Permission (Bot)
             value: ''
         footer: ''
   update:
     content: ''
     components: { }
     embeds:
-      - author: 'Change Member{global:separator}{replace:title}'
+      - 
+        author: 'Change Member{global:separator}{replace:title}'
         title: ''
         description: '{replace:member} of {replace:property} has been changed'
         fields:
-          - name: User Name
+          - 
+            name: User Name
             value: ''
-          - name: '{replace} before change'
+          - 
+            name: '{replace} before change'
             value: ''
-          - name: '{replace} after change'
+          - 
+            name: '{replace} after change'
             value: ''
         footer: ''
   role_add:
     content: ''
     components: { }
     embeds:
-      - author: 'Add Role{global:separator}{replace:title}'
+      - 
+        author: 'Add Role{global:separator}{replace:title}'
         title: ''
         description: 'The {replace:roles} role of {replace:member} has been assigned.'
         fields:
-          - name: User Name
+          - 
+            name: User Name
             value: ''
-          - name: Role granted
+          - 
+            name: Role granted
             value: ''
         footer: ''
   role_remove:
     content: ''
     components: { }
     embeds:
-      - author: 'Remove Role{global:separator}{replace:title}'
+      - 
+        author: 'Remove Role{global:separator}{replace:title}'
         title: ''
         description: 'The {replace:roles} role of {replace:member} has been revoked.'
         fields:
-          - name: User Name
+          - 
+            name: User Name
             value: ''
-          - name: Role removed
+          - 
+            name: Role removed
             value: ''
         footer: ''

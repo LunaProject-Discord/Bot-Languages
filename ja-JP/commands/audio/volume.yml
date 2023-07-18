@@ -1,5 +1,5 @@
 meta:
-  name: 音楽 (音量の変更)
+  name: 音量の変更
   description: 音量を変更します。
 
 constants:
@@ -13,7 +13,7 @@ components:
     embeds:
       - author: '{global:success}{global:separator}{meta:name}'
         title: ''
-        description: 音量を{replace}に変更しました。
+        description: 音量を {replace} に変更しました。
         fields: []
         footer: ''
   cancel:

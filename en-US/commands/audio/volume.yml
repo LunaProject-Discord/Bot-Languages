@@ -1,6 +1,5 @@
----
 meta:
-  name: Music (volume)
+  name: Change the volume
   description: Change the volume
 constants:
   action: Confirm
@@ -10,8 +9,9 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:success}{global:separator}{meta:name}'
-        title: '{global:success}{global:separator}{meta:name}'
+      - 
+        author: '{global:success}{global:separator}{meta:name}'
+        title: ''
         description: Volume changed to **{replace}**
         fields: [ ]
         footer: ''
@@ -19,8 +19,9 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:information}{global:separator}{meta:name}'
-        title: '{global:information}{global:separator}{meta:name}'
+      - 
+        author: '{global:information}{global:separator}{meta:name}'
+        title: ''
         description: Canceled.
         fields: [ ]
         footer: ''
@@ -28,7 +29,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:warning}{global:separator}{meta:name}'
+      - 
+        author: '{global:warning}{global:separator}{meta:name}'
         title: ''
         description: |-
           Do you want to keep turning up the volume until it exceeds the recommended level? Continuing to listen to sound at a higher volume may damage your hearing.
@@ -41,7 +43,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:error}{global:separator}{meta:name}'
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
         title: ''
         description: |-
           Invalid argument. Arguments should be specified with **binary digits**.

@@ -14,6 +14,19 @@ constants:
   warning: 警告
   error: エラー
 
+  year: 年
+  years: 年
+  month: 月
+  months: 月
+  day: 日
+  days: 日
+  hour: 時間
+  hours: 時間
+  minute: 分
+  minutes: 分
+  second: 秒
+  seconds: 秒
+
   botInvite: Botを導入
   joinSupportServer: サポートサーバーに参加
   dashboard: ダッシュボード

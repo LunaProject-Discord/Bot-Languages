@@ -1,4 +1,3 @@
----
 constants:
   name: Name
   roles: Roles
@@ -7,53 +6,64 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: 'Add Emoji(s){global:separator}{replace:title}'
+      - 
+        author: 'Add Emoji(s){global:separator}{replace:title}'
         title: ''
         description: '{replace} was added to the server.'
         fields:
-          - name: Basic Information
+          - 
+            name: Basic Information
             value: |-
               Name (ID): {replace:name} ({replace:id})
               Animation: {replace:animated}
               Creation Date & Time: {replace:created_at}
-          - name: User Information
+          - 
+            name: User Information
             value: |-
               Name (ID): {replace:tag} ({replace:id})
               Status: {replace:status}
               Bot: {replace:bot}
               Flags: {replace:flags}
               Creation Date & Time: {replace:created_at}
-          - name: Usable Roles ({replace:roles}, {replace:members} members)
+          - 
+            name: Usable Roles ({replace:roles}, {replace:members} members)
             value: ''
         footer: ''
   remove:
     content: ''
     components: { }
     embeds:
-      - author: 'Delete Emoji(s){global:separator}{replace:title}'
+      - 
+        author: 'Delete Emoji(s){global:separator}{replace:title}'
         title: ''
         description: '{replace} was deleted from the server.'
         fields:
-          - name: Basic Information
+          - 
+            name: Basic Information
             value: |-
               Name (ID): {replace:name} ({replace:id})
               Animation: {replace:animated}
               Creation Date & Time: {replace:created_at}
-          - name: Usable Roles ({replace:roles}, {replace:members} members)
+          - 
+            name: Usable Roles ({replace:roles}, {replace:members} members)
             value: ''
         footer: ''
   update:
     content: ''
     components: { }
     embeds:
-      - author: 'Change Emoji(s){global:separator}{replace:title}'
+      - 
+        author: 'Change Emoji(s){global:separator}{replace:title}'
         title: ''
         description: '{replace:emote}''s {replace:property} has been changed.'
         fields:
-          - name: Emoji Name
+          - 
+            name: Emoji Name
             value: ''
-          - name: '{replace} before change'
+          - 
+            name: '{replace} before change'
             value: ''
-          - name: '{replace} after change'
+          - 
+            name: '{replace} after change'
             value: ''
         footer: ''

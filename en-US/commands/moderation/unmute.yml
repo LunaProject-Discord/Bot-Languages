@@ -1,4 +1,3 @@
----
 meta:
   name: Unmute
   description: Member has been unmuted
@@ -10,13 +9,15 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:help}{global:separator}{meta:name}'
         description: |-
           `{bot:prefix}{command:label} <Member ID | Mention ...> [Time] [Reason]`:
           　Unmute specified member
         fields:
-          - name: Hint
+          - 
+            name: Hint
             value: |-
               ・Users can be specified by mixing IDs and Mentions.
               ・Multiple users can be specified at once.
@@ -25,7 +26,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:success}{global:separator}{meta:name}'
         description: '{replace} has been unmuted.'
         fields: [ ]
@@ -34,18 +36,21 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:success}{global:separator}{meta:name}'
         description: '{replace} members have been unmuted.'
         fields:
-          - name: Members
+          - 
+            name: Members
             value: ''
         footer: ''
   cancelledSingle:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: '{replace} will remain muted.'
         fields: [ ]
@@ -54,18 +59,21 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: '{replace} members will remain muted.'
         fields:
-          - name: Members
+          - 
+            name: Members
             value: ''
         footer: ''
   confirmSingle:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: |-
           Are you sure you want to unmute {replace}?
@@ -76,31 +84,37 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: |-
           Are you sure you want to unmute {replace} members?
           :warning: This cannot be undone!
         fields:
-          - name: ''
+          - 
+            name: ''
             value: |-
               These members cannot be unmuted.
               Please tap {global:viewDetail} for more details.
-          - name: Members
+          - 
+            name: Members
             value: ''
         footer: ''
   helpMembers:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:help}{global:separator}{meta:name}'
         description: |-
           These members cannot be unmuted.
           Please see below for more details.
         fields:
-          - name: These members have already been unmuted.
+          - 
+            name: These members have already been unmuted.
             value: ''
-          - name: These users cannot be unmuted because they are not in the server, or do not exist.
+          - 
+            name: These users cannot be unmuted because they are not in the server, or do not exist.
             value: ''
         footer: ''

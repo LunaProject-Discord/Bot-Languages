@@ -1,4 +1,3 @@
----
 meta:
   name: Music (Media Played)
   description: Play video posting sites and uploaded media.
@@ -8,7 +7,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:error}{global:separator}{meta:name}'
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
         title: ''
         description: |-
           Invalid argument. Please specify a keyword or URL.
@@ -19,7 +19,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:information}{global:separator}{meta:name}'
+      - 
+        author: '{global:information}{global:separator}{meta:name}'
         title: ''
         description: Searching for media who match the specified criteria. Please wait a moment...
         fields: [ ]
@@ -28,7 +29,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:error}{global:separator}{meta:name}'
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
         title: ''
         description: Not media matching the specified criteria were found
         fields: [ ]
@@ -37,42 +39,60 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:success}{global:separator}{meta:name}'
+      - 
+        author: '{global:success}{global:separator}{meta:name}'
         title: ''
-        description: 'Added **{replace:media_name}** ({replace:media_author} / {replace:media_duration}) to the queue.'
-        fields: [ ]
+        description: 'Added {replace} to the queue.'
+        fields:
+          - 
+            name: Post by
+            value: ''
+          - 
+            name: Duration
+            value: ''
         footer: ''
   loaded_playlist:
     content: ''
     components: { }
     embeds:
-      - author: '{global:success}{global:separator}{meta:name}'
+      - 
+        author: '{global:success}{global:separator}{meta:name}'
         title: ''
-        description: 'Added **{replace:media_list_name}** ({replace:media_list_size} / {replace:media_list_duration}) to the queue.'
-        fields: [ ]
+        description: 'Added {replace} to the queue.'
+        fields:
+          - 
+            name: Number of media
+            value: ''
+          - 
+            name: Total Duration
+            value: ''
         footer: ''
   search_result:
     content: ''
     components:
       cancel: Cancel
     embeds:
-      - author: '{global:information}{global:separator}{meta:name}'
+      - 
+        author: '{global:information}{global:separator}{meta:name}'
         title: ''
         description: |-
           Your search for {replace:keyword} found {replace:size} candidates.
           Please select the media you wish to play from below or press cancel.
         fields:
-          - name: '{replace} YouTube search suggestions'
+          - 
+            name: '{replace} YouTube search suggestions'
             value: ''
-          - name: '{replace} Search suggestions for NicoNico'
+          - 
+            name: '{replace} Search suggestions for NicoNico'
             value: ''
         footer: ''
   cancel:
     content: ''
     components: { }
     embeds:
-      - author: '{global:information}{global:separator}{meta:name}'
-        title: '{global:information}{global:separator}{meta:name}'
+      - 
+        author: '{global:information}{global:separator}{meta:name}'
+        title: ''
         description: Canceled.
         fields: [ ]
         footer: ''

@@ -81,7 +81,7 @@ components:
     embeds:
       - author: '役職の付与{global:separator}{replace:title}'
         title: ''
-        description: '{replace:member} の {replace:roles} の役職が付与されました。'
+        description: '{replace:member} に役職 {replace:roles} が付与されました。'
         fields:
           - name: ユーザー名
             value: ''
@@ -94,7 +94,7 @@ components:
     embeds:
       - author: '役職の剥奪{global:separator}{replace:title}'
         title: ''
-        description: '{replace:member} の {replace:roles} の役職が剥奪されました。'
+        description: '{replace:member} から役職 {replace:roles} が剥奪されました。'
         fields:
           - name: ユーザー名
             value: ''

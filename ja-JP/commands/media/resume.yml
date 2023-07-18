@@ -1,6 +1,6 @@
 meta:
   name: 音楽 (メディアの再開)
-  description: 一時停止中のメディアを再開します。
+  description: 一時停止中のメディアの再生を再開します。
 
 constants: {}
 

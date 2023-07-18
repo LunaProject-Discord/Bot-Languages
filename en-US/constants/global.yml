@@ -1,4 +1,3 @@
----
 constants:
   separator: ' - '
   yes: "Yes"
@@ -14,6 +13,18 @@ constants:
   success: Success
   warning: Warning
   error: Error
+  year: ' year '
+  years: ' years '
+  month: ' month '
+  months: ' months '
+  day: ' day '
+  days: ' days '
+  hour: ' hour '
+  hours: ' hours '
+  minute: ' minute '
+  minutes: ' minutes '
+  second: ' second '
+  seconds: ' seconds '
   botInvite: Invite Bot
   joinSupportServer: Join the support server
   dashboard: Dashboard
@@ -26,7 +37,8 @@ components:
     components:
       sendReport: Send an error report.
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Unexpected Error{global:separator}{global:error}'
         description: |-
           I'm sorry. __**An unexpected error occurred**__.
@@ -37,20 +49,23 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Unknown command{global:separator}{global:error}'
         description: |-
           The __**command you tried to run was not found**__.
           Please check `{bot:prefix}help` to see if the command is there.
         fields:
-          - name: Did you mean?
+          - 
+            name: Did you mean?
             value: ''
         footer: ''
   argumentNotFound:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Unknown argument{global:separator}{global:error}'
         description: |-
           The __** argument is invalid**__. Please check the following items.
@@ -64,7 +79,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Disabled command{global:separator}{global:error}'
         description: |-
           The __**command you are trying to execute has been disabled by your server administrator**__.
@@ -75,7 +91,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Prohibited command{global:separator}{global:error}'
         description: |-
           The __**command you are trying to execute has been disabled by your server administrator**__.
@@ -86,7 +103,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Prohibited channel{global:separator}{global:error}'
         description: |-
           The __**command you are trying to execute is not allowed to be executed in this channel**__.
@@ -97,7 +115,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Prohibited role{global:separator}{global:error}'
         description: |-
           The __**command you are trying to execute is prohibited by your role settings**__.
@@ -108,7 +127,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Channel restrictions{global:separator}{global:error}'
         description: |-
           This function __**cannot be performed by this bot**__.
@@ -119,7 +139,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Channel restrictions{global:separator}{global:error}'
         description: |-
           This function __**cannot be performed by this bot**__.
@@ -130,7 +151,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Channel restrictions{global:separator}{global:error}'
         description: |-
           This function __**cannot be performed by this bot**__.
@@ -141,7 +163,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Channel restrictions{global:separator}{global:error}'
         description: |-
           This function __**cannot be performed by this bot**__.
@@ -152,7 +175,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Channel restriction error{global:separator}{global:help}'
         description: |-
           This error is displayed when the function you are trying to perform cannot be performed by this bot.
@@ -166,7 +190,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Lack of server permissions{global:separator}{global:error}'
         description: |-
           Some __** permissions are missing**__.
@@ -177,13 +202,15 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Lack of server permissions{global:separator}{global:error}'
         description: |-
           Some permissions are not available to you.
           Please allow the use of these permissions and run it again.
         fields:
-          - name: ''
+          - 
+            name: ''
             value: |-
               Permissions in bold are restricted by the channel.
               Please allow the use of these permissions in the channel settings.
@@ -192,13 +219,15 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Lack of server permissions{global:separator}{global:error}'
         description: |-
           Some permissions are missing from the bot.
           Please allow the Bot to use these permissions and then run it again.
         fields:
-          - name: ''
+          - 
+            name: ''
             value: |-
               Permissions in bold are restricted by the channel.
               Please allow the use of these permissions in the channel settings.
@@ -207,26 +236,31 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Lack of server permissions{global:separator}{global:error}'
         description: |-
           Some permissions are not available to you and the bot.
           Please allow the Bot to use these permissions and then run it again.
         fields:
-          - name: ''
+          - 
+            name: ''
             value: |-
               Permissions in bold are restricted by the channel.
               Please allow the use of these permissions in the channel settings.
-          - name: Additional permissions required for you
+          - 
+            name: Additional permissions required for you
             value: ''
-          - name: Additional permissions required for the bot
+          - 
+            name: Additional permissions required for the bot
             value: ''
         footer: ''
   permissionError:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Server permission error{global:separator}{global:help}'
         description: |-
           This error is displayed when the necessary permissions are not granted by the server.
@@ -240,7 +274,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Lack of service permissions{global:separator}{global:error}'
         description: |-
           Some __**permissions are not available**__ of you.
@@ -251,7 +286,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Lack of service permissions{global:separator}{global:error}'
         description: |-
           You do not have permissions.
@@ -262,7 +298,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Lack of service permissions{global:separator}{global:error}'
         description: |-
           You do not have permissions.
@@ -273,7 +310,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Lack of service permissions{global:separator}{global:error}'
         description: |-
           You do not have permissions.
@@ -284,7 +322,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Lack of service permissions{global:separator}{global:error}'
         description: |-
           You do not have permissions.
@@ -295,7 +334,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Lack of service permissions{global:separator}{global:error}'
         description: |-
           Some __**permissions are missing**__.
@@ -306,7 +346,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Service permission error{global:separator}{global:help}'
         description: |-
           This error appears when you have not been granted permissions on this service.
@@ -320,7 +361,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Restrictions on Use{global:separator}{global:error}'
         description: |-
           The command you are trying to execute is __**Not available here**__.
@@ -331,7 +373,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Restrictions on Use{global:separator}{global:error}'
         description: |-
           The command you are trying to execute is __**Not available here**__.
@@ -342,7 +385,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Restrictions on Use{global:separator}{global:error}'
         description: |-
           The command you tried to execute is __**Not available here**__.
@@ -353,7 +397,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: 'Usage restriction error{global:separator}{global:help}'
         description: |-
           This error is displayed when the function you are trying to perform cannot be performed in this location.

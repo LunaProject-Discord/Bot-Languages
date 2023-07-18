@@ -1,0 +1,55 @@
+meta:
+  name: 音楽 (再生位置の変更)
+  description: 再生中のメディアの再生位置を変更します。
+
+constants: {}
+
+components:
+  success:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: '再生位置を **{replace}** に変更しました。'
+        fields: []
+        footer: ''
+  error_cannot_parse_duration:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          指定した時間を解析できませんでした。
+          時間は以下の方法で指定してください。
+
+          ### 秒数として指定
+          例: 20分 を指定したい場合 → 1200
+          ### 時間・分・秒をまとめて指定
+          例: 1時間23分45秒 を指定したい場合 → 1:23:45 か 1h23m45s
+          　  12分34秒 を指定したい場合 → 12:34 か 12m34s
+        fields: []
+        footer: ''
+  error_invalid_duration:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          現在再生しているメディアでは指定した時間への変更はできません。
+          **0分0秒** から **{replace}** の間で指定してください。
+        fields: []
+        footer: ''
+  error_not_seekable:
+    content: ''
+    components: {}
+    embeds:
+      - author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          現在再生しているメディアでは再生位置の変更はできません。
+          ほかのメディアに切り替えて再度お試しください。
+        fields: []
+        footer: ''

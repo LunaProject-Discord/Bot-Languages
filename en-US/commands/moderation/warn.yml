@@ -1,4 +1,3 @@
----
 meta:
   name: Warning
   description: Warn a specified member.
@@ -10,13 +9,15 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:help}{global:separator}{meta:name}'
         description: |-
           `{bot:prefix}{command:label} <Member ID | Mention ...> [Reason]`:
           　Warn the specified member.
         fields:
-          - name: Hint
+          - 
+            name: Hint
             value: |-
               ・Users can be specified by mixing IDs and Mentions.
               ・Multiple users can be specified at once.
@@ -25,31 +26,37 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:success}{global:separator}{meta:name}'
         description: '{replace} was warned with reason.'
         fields:
-          - name: Reason
+          - 
+            name: Reason
             value: ''
         footer: ''
   successMultiple:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:success}{global:separator}{meta:name}'
         description: '**{replace}** members were warned with reason.'
         fields:
-          - name: Members
+          - 
+            name: Members
             value: ''
-          - name: Reason
+          - 
+            name: Reason
             value: ''
         footer: ''
   cancelledSingle:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: 'Canceled warning {replace}'
         fields: [ ]
@@ -58,59 +65,71 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: 'Canceled warning **{replace}** member(s)'
         fields:
-          - name: Members
+          - 
+            name: Members
             value: ''
         footer: ''
   confirmSingle:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: |-
           Are you sure you want to warn {replace} for the following reasons?
           :warning: This operation cannot be undone!
         fields:
-          - name: Reason
+          - 
+            name: Reason
             value: ''
         footer: ''
   confirmMultiple:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:information}{global:separator}{meta:name}'
         description: |-
           Are you sure you want to warn a member of **{replace}** members for the following reason?
           :warning: This operation cannot be undone!
         fields:
-          - name: ''
+          - 
+            name: ''
             value: |-
               Some member(s) cannot be warn.
               Please tap "{global:viewDetail}" for details.
-          - name: Members
+          - 
+            name: Members
             value: ''
-          - name: Reason
+          - 
+            name: Reason
             value: ''
         footer: ''
   helpMembers:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{global:help}{global:separator}{meta:name}'
         description: |-
           Some members cannot be warn.
           You can find the detailed reasons below.
         fields:
-          - name: You don't have permission to warn member(s).
+          - 
+            name: You don't have permission to warn member(s).
             value: ''
-          - name: Bot doesn't have these permission to warn member(s).
+          - 
+            name: Bot doesn't have these permission to warn member(s).
             value: ''
-          - name: These users are not allowed to warn because they are not part of the server or they do not exist.
+          - 
+            name: These users are not allowed to warn because they are not part of the server or they do not exist.
             value: ''
         footer: ''

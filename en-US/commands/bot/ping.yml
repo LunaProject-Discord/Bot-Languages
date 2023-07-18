@@ -1,4 +1,3 @@
----
 meta:
   name: Ping
   description: Displays the communication status between Discord gateway and Bot.
@@ -8,20 +7,24 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{meta:name}'
         description: 'Pong! :ping_pong:'
         fields:
-          - name: Bot (Gateway)
+          - 
+            name: Bot (Gateway)
             value: ''
-          - name: WebSocket
+          - 
+            name: WebSocket
             value: ''
         footer: ''
   loading:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{meta:name}'
         description: We are getting a ping. Please wait a moment...
         fields: [ ]

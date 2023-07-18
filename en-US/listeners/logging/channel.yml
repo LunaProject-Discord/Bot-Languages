@@ -1,14 +1,13 @@
----
 constants:
   category: Category
   channel: Channel
   text: Text Channel
   voice: Voice Channel
   stage: Stage Channel
-  role: Role(s)
-  member: Member(s)
+  role: Roles
+  member: Members
   name: Name
-  position: Position
+  position: Potision
   parent: Parent Category
   topic: Description
   nsfw: age restriction
@@ -22,113 +21,139 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: 'Create {replace}{global:separator}{replace:title}'
+      - 
+        author: 'Create {replace}{global:separator}{replace:title}'
         title: ''
         description: '{replace} was created on the server.'
         fields:
-          - name: Basic Information
+          - 
+            name: Basic Information
             value: |-
               Name (ID): {replace:name} ({replace:id})
               Type: {replace:type}
               Category: {replace:category}
               Created at: {replace:created_at}
-          - name: Text Channel Information
+          - 
+            name: Text Channel Information
             value: |-
               Description: {replace:topic}
               Age restricted: {replace:age_restricted}
               Slowmode (sec): {replace:slowmode}
-          - name: Voice Channel Information
+          - 
+            name: Voice Channel Information
             value: |-
               Region: {replace:region}
               Users (Limit): {replace:user_limit}
               Bitrate (Limit): {replace:bitrate}
-          - name: Accessible Roles ({replace:roles}, {replace:members} persons)
+          - 
+            name: Accessible Roles ({replace:roles}, {replace:members} persons)
             value: ''
-          - name: Accessable Member(s) ({replace})
+          - 
+            name: Accessable Member(s) ({replace})
             value: ''
         footer: ''
   delete:
     content: ''
     components: { }
     embeds:
-      - author: 'Delete {replace}{global:separator}{replace:title}'
+      - 
+        author: 'Delete {replace}{global:separator}{replace:title}'
         title: ''
-        description: '{replace} was deleted on the server'
+        description: '{replace} was deleted from the server.'
         fields:
-          - name: Basic Information
+          - 
+            name: Basic Information
             value: |-
               Name (ID): {replace:name} ({replace:id})
               Type: {replace:type}
               Parent Category: {replace:category}
               Created at: {replace:created_at}
-          - name: Text Channel Information
+          - 
+            name: Text Channel Information
             value: |-
               Description: {replace:topic}
               Age restricted: {replace:age_restricted}
               Slowmode (sec): {replace:slowmode}
-          - name: Voice Channel Information
+          - 
+            name: Voice Channel Information
             value: |-
               Region: {replace:region}
               Users (Limit): {replace:user_limit}
               Bitrate (Limit): {replace:bitrate}
-          - name: Accessible Roles ({replace:roles}, {replace:members} persons)
+          - 
+            name: Accessible Roles ({replace:roles}, {replace:members} persons)
             value: ''
-          - name: Accessable Member(s) ({replace})
+          - 
+            name: Accessable Member(s) ({replace})
             value: ''
         footer: ''
   update:
     content: ''
     components: { }
     embeds:
-      - author: 'Change {replace}{global:separator}{replace:title}'
+      - 
+        author: 'Change {replace}{global:separator}{replace:title}'
         title: ''
         description: '{replace:property} of {replace:channel} has been changed.'
         fields:
-          - name: '{replace}Name'
+          - 
+            name: '{replace}Name'
             value: ''
-          - name: '{replace} before change'
+          - 
+            name: '{replace} before change'
             value: ''
-          - name: '{replace} after change'
+          - 
+            name: '{replace} after change'
             value: ''
         footer: ''
   permission_create:
     content: ''
     components: { }
     embeds:
-      - author: 'Creation of {replace} permission settings {global:separator}{replace:title}'
+      - 
+        author: 'Creation of {replace} permission settings {global:separator}{replace:title}'
         title: ''
         description: 'Permission settings for {replace:channel} for {replace:property} have been created.'
         fields:
-          - name: '{replace}Name'
+          - 
+            name: '{replace}Name'
             value: ''
-          - name: Target {replace}
+          - 
+            name: Target {replace}
             value: ''
         footer: ''
   permission_delete:
     content: ''
     components: { }
     embeds:
-      - author: 'Delete {replace}{global:separator}{replace:title}'
+      - 
+        author: 'Delete {replace}{global:separator}{replace:title}'
         title: ''
         description: 'Permission settings for {replace:channel} for {replace:property} have been deleted.'
         fields:
-          - name: '{replace}Name'
+          - 
+            name: '{replace}Name'
             value: ''
-          - name: Target {replace}
+          - 
+            name: Target {replace}
             value: ''
         footer: ''
   permission_update:
     content: ''
     components: { }
     embeds:
-      - author: 'Change permissions {replace}{global:separator}{replace:title}'
+      - 
+        author: 'Change permissions {replace}{global:separator}{replace:title}'
         title: ''
         description: 'Permission settings for {replace:channel} for {replace:property} have been changed.'
         fields:
-          - name: '{replace}Name'
+          - 
+            name: '{replace}Name'
             value: ''
-          - name: Target {replace}
+          - 
+            name: Target {replace}
             value: ''
-          - name: Changed Permissions
+          - 
+            name: Changed Permissions
             value: ''
         footer: ''

@@ -1,4 +1,3 @@
----
 meta:
   name: Channel Information
   description: Displays channel information.
@@ -10,36 +9,43 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: ''
+      - 
+        author: ''
         title: '{meta:name}'
         description: 'You are viewing information about {replace}.'
         fields:
-          - name: Basic Information
+          - 
+            name: Basic Information
             value: |-
               Name (ID): {replace:name} ({replace:id})
               Type: {replace:type}
               Category: {replace:category}
               Created at: {replace:created_at}
-          - name: Text Channel Information
+          - 
+            name: Text Channel Information
             value: |-
               Topic: {replace:topic}
               NSFW?: {replace:age_restricted}
               Slowmode (sec): {replace:slowmode}
-          - name: Voice Channel Information
+          - 
+            name: Voice Channel Information
             value: |-
               Region: {replace:region}
               Bitrate: {replace:bitrate}
               Users (Limit): {replace:users}
-          - name: Accessible Roles ({replace:roles}, {replace:members} persons)
+          - 
+            name: Accessible Roles ({replace:roles}, {replace:members} persons)
             value: ''
-          - name: Accessible Members ({replace})
+          - 
+            name: Accessible Members ({replace})
             value: ''
         footer: ''
   loading:
     content: ''
     components: { }
     embeds:
-      - author: 'Data acquisition in progress...{global:separator}{meta:name}'
+      - 
+        author: 'Data acquisition in progress...{global:separator}{meta:name}'
         title: ''
         description: We are retrieving data. Please wait a moment...
         fields: [ ]
@@ -48,7 +54,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: 'Searching...{global:separator}{meta:name}'
+      - 
+        author: 'Searching...{global:separator}{meta:name}'
         title: ''
         description: Searching for channels that match the specified criteria. Please wait a moment...
         fields: [ ]
@@ -57,7 +64,8 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: '{global:error}{global:separator}{meta:name}'
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
         title: ''
         description: No channels were found that match the specified criteria.
         fields: [ ]

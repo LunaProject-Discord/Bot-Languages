@@ -1,0 +1,58 @@
+meta:
+  name: Music (Change playback position)
+  description: Changes the playback position of the currently playing media.
+constants: { }
+components:
+  success:
+    content: ''
+    components: { }
+    embeds:
+      - 
+        author: '{global:success}{global:separator}{meta:name}'
+        title: ''
+        description: 'Playback position changed to **{replace}**.'
+        fields: [ ]
+        footer: ''
+  error_cannot_parse_duration:
+    content: ''
+    components: { }
+    embeds:
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          The specified time could not be analyzed.
+          Please specify the time in the following way.
+
+          ### Specify as seconds
+          Example: To specify 20 minutes → 1200
+          ### Specify hours, minutes, and seconds together
+          Example:
+          - To specify 1 hour, 23 minutes, and 45 seconds → 1:23:45 or 1h23m45s
+          - To specify 12 minutes and 34 seconds → 12:34 or 12m34s
+        fields: [ ]
+        footer: ''
+  error_invalid_duration:
+    content: ''
+    components: { }
+    embeds:
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          The currently playing media cannot change to the specified time.
+          Specify a time between **0 minutes and 0 seconds** and **{replace}**.
+        fields: [ ]
+        footer: ''
+  error_not_seekable:
+    content: ''
+    components: { }
+    embeds:
+      - 
+        author: '{global:error}{global:separator}{meta:name}'
+        title: ''
+        description: |-
+          The playback position cannot be changed for the currently playing media.
+          Please switch to other media and try again.
+        fields: [ ]
+        footer: ''

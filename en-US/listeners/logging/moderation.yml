@@ -1,4 +1,3 @@
----
 constants:
   name: Name
   description: Description
@@ -41,81 +40,108 @@ components:
     content: ''
     components: { }
     embeds:
-      - author: 'Changed Server Settings{global:separator}{replace:title}'
+      - 
+        author: 'Changed Server Settings{global:separator}{replace:title}'
         title: ''
         description: 'The server {replace} has been changed.'
         fields:
-          - name: '{replace} before change'
+          - 
+            name: '{replace} before change'
             value: ''
-          - name: '{replace} after change'
+          - 
+            name: '{replace} after change'
             value: ''
         footer: ''
   kick:
     content: ''
     components: { }
     embeds:
-      - author: 'Kick{global:separator}{replace:title}'
+      - 
+        author: 'Kick{global:separator}{replace:title}'
         title: ''
         description: '{replace} was kicked from the server.'
         fields:
-          - name: User Name
+          - 
+            name: User Name
             value: ''
-          - name: Reason
+          - 
+            name: Reason
             value: ''
-          - name: Joined at
+          - 
+            name: Joined at
             value: ''
-          - name: Created at
+          - 
+            name: Created at
             value: ''
-          - name: Bot?
+          - 
+            name: Bot?
             value: ''
-          - name: Evaluation Value
+          - 
+            name: Evaluation Value
             value: ''
-          - name: Verified? (Bot)
+          - 
+            name: Verified? (Bot)
             value: ''
-          - name: Permission (Bot)
+          - 
+            name: Permission (Bot)
             value: ''
         footer: ''
   ban:
     content: ''
     components: { }
     embeds:
-      - author: 'Ban{global:separator}{replace:title}'
+      - 
+        author: 'Ban{global:separator}{replace:title}'
         title: ''
         description: '{replace} has been banned from the server.'
         fields:
-          - name: User Name
+          - 
+            name: User Name
             value: ''
-          - name: Reason
+          - 
+            name: Reason
             value: ''
-          - name: Created at
+          - 
+            name: Created at
             value: ''
-          - name: Bot?
+          - 
+            name: Bot?
             value: ''
-          - name: Evaluation Value
+          - 
+            name: Evaluation Value
             value: ''
-          - name: Verified? (Bot)
+          - 
+            name: Verified? (Bot)
             value: ''
-          - name: Permission (Bot)
+          - 
+            name: Permission (Bot)
             value: ''
         footer: ''
   unban:
     content: ''
     components: { }
     embeds:
-      - author: 'UnBan{global:separator}{replace:title}'
+      - 
+        author: 'UnBan{global:separator}{replace:title}'
         title: ''
         description: '{replace} ban has been removed.'
         fields:
-          - name: User Name
+          - 
+            name: User Name
             value: ''
-          - name: Created at
+          - 
+            name: Created at
             value: ''
-          - name: Bot?
+          - 
+            name: Bot?
             value: ''
-          - name: Evaluate Value
+          - 
+            name: Evaluate Value
             value: ''
-          - name: Verified? (Bot)
+          - 
+            name: Verified? (Bot)
             value: ''
-          - name: Permission (Bot)
+          - 
+            name: Permission (Bot)
             value: ''
         footer: ''
