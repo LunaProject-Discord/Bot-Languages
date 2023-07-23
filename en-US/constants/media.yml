@@ -39,12 +39,12 @@ components:
           Please terminate the reading-out function with `{bot:prefix}bye` and execute it again.
         fields: [ ]
         footer: ''
-  complete_playing:
+  success_all_played_queue:
     content: ''
     components: { }
     embeds:
       - 
-        author: '{global:information}{global:separator}{meta:name}'
+        author: '{global:success}{global:separator}Music (Media Play)'
         title: ''
         description: |-
           All queued media has been played.
@@ -52,38 +52,15 @@ components:
           If no media is added within {replace} or everyone leaves the voice channel, the Bot will leave the voice channel to reduce load.
         fields: [ ]
         footer: ''
-  control_panel:
+  error_stucked_track:
     content: ''
     components: { }
     embeds:
       - 
-        author: ''
-        title: 'ControlPanel{global:separator}Music'
-        description: ''
-        fields:
-          - 
-            name: Contributor
-            value: ''
-          - 
-            name: Added User
-            value: ''
-          - 
-            name: Repeat
-            value: ''
-          - 
-            name: Next Media
-            value: ''
-        footer: ''
-  information_panel:
-    content: ''
-    components: { }
-    embeds:
-      - 
-        author: ''
-        title: '{global:information}{global:separator}Music'
-        description: ''
-        fields:
-          - 
-            name: Next Media
-            value: ''
+        author: '{global:error}{global:separator}Music (Media Play)'
+        title: ''
+        description: |-
+          An error occurred while playing media.
+          Remove this media from the queue and play the next media.
+        fields: [ ]
         footer: ''

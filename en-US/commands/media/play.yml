@@ -1,5 +1,5 @@
 meta:
-  name: Music (Media Played)
+  name: Music (Media Play)
   description: Play video posting sites and uploaded media.
 constants: { }
 components:

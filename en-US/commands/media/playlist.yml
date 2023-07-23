@@ -46,7 +46,7 @@ components:
             name: Duration
             value: ''
           - 
-            name: キューに追加したメンバー
+            name: Members added to queue
             value: ''
         footer: ''
   history_detail:
@@ -68,6 +68,6 @@ components:
             name: Duration
             value: ''
           - 
-            name: キューに追加したメンバー
+            name: Members added to queue
             value: ''
         footer: ''

@@ -23,5 +23,4 @@ constants:
   premium_description: This category contains functions available to authenticated servers, users, and subscribers of paid plans.
   management_name: Management
   management_description: This category contains functions for service operation. Unauthorized users cannot use this category.
-
-components: {}
+components: { }
