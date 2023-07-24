@@ -44,8 +44,8 @@ components:
     components: { }
     embeds:
       - 
-        author: ''
-        title: 'Next Media{global:separator}{meta:name} (Media Play)'
+        author: 'Next Media{global:separator}Music (Media Play)'
+        title: ''
         description: ''
         fields:
           - 
