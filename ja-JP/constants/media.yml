@@ -37,6 +37,19 @@ components:
           `{bot:prefix}bye` で読み上げ機能を終了してからもう一度実行してください。
         fields: []
         footer: ''
+  next_media_detail:
+    content: ''
+    components: {}
+    embeds:
+      - author: ''
+        title: '次のメディア{global:separator}{meta:name} (メディアの再生)'
+        description: ''
+        fields:
+          - name: 投稿者
+            value: ''
+          - name: 再生時間
+            value: ''
+        footer: ''
   success_all_played_queue:
     content: ''
     components: {}

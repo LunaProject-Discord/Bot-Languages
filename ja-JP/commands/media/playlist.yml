@@ -17,17 +17,6 @@ components:
         description: ''
         fields: []
         footer: ''
-  history_list:
-    content: ''
-    components:
-      clear: 履歴をすべて削除
-      queue: キューを表示
-    embeds:
-      - author: ''
-        title: '再生履歴の管理{global:separator}{meta:name}'
-        description: ''
-        fields: []
-        footer: ''
   queue_detail:
     content: ''
     components:
@@ -44,6 +33,17 @@ components:
             value: ''
           - name: キューに追加したメンバー
             value: ''
+        footer: ''
+  history_list:
+    content: ''
+    components:
+      clear: 履歴をすべて削除
+      queue: キューを表示
+    embeds:
+      - author: ''
+        title: '再生履歴の管理{global:separator}{meta:name}'
+        description: ''
+        fields: []
         footer: ''
   history_detail:
     content: ''

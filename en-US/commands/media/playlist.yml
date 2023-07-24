@@ -16,18 +16,6 @@ components:
         description: ''
         fields: [ ]
         footer: ''
-  history_list:
-    content: ''
-    components:
-      clear: Clear history
-      queue: Display queue
-    embeds:
-      - 
-        author: ''
-        title: 'Manage History{global:separator}{meta:name}'
-        description: ''
-        fields: [ ]
-        footer: ''
   queue_detail:
     content: ''
     components:
@@ -48,6 +36,18 @@ components:
           - 
             name: Members added to queue
             value: ''
+        footer: ''
+  history_list:
+    content: ''
+    components:
+      clear: Clear history
+      queue: Display queue
+    embeds:
+      - 
+        author: ''
+        title: 'Manage History{global:separator}{meta:name}'
+        description: ''
+        fields: [ ]
         footer: ''
   history_detail:
     content: ''

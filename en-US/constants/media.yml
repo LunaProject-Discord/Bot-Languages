@@ -39,6 +39,22 @@ components:
           Please terminate the reading-out function with `{bot:prefix}bye` and execute it again.
         fields: [ ]
         footer: ''
+  next_media_detail:
+    content: ''
+    components: { }
+    embeds:
+      - 
+        author: ''
+        title: 'Next Media{global:separator}{meta:name} (Media Play)'
+        description: ''
+        fields:
+          - 
+            name: Post by
+            value: ''
+          - 
+            name: Duration
+            value: ''
+        footer: ''
   success_all_played_queue:
     content: ''
     components: { }
