@@ -6,14 +6,16 @@ constants:
   administrator: 管理者
 
   category_general: サーバー全般
-  view_audit_logs: サーバーログの表示
   manage_server: サーバーの管理
   manage_channel: チャンネルの管理
   manage_roles: 役職の管理
   manage_permissions: 権限の管理
+  manage_webhooks: Webhook の管理
+  manage_guild_expressions: 絵文字やステッカー、サウンドの管理
   manage_emojis_and_stickers: 絵文字とステッカーの管理
-  manage_webhooks: Webhookの管理
+  view_audit_logs: サーバーログの表示
   view_guild_insights: サーバー統計の表示
+  view_creator_monetization_analytics: クリエイター収益分析の表示
   view_channel: チャンネルの表示
   
   category_membership: メンバーシップ
@@ -27,13 +29,14 @@ constants:
   category_text: テキストチャンネル
   message_send: メッセージの送信
   message_tts: 音声読み上げメッセージの送信
+  message_attach_voice_message: ボイスメッセージの送信
   message_history: メッセージ履歴の表示
   message_attach_files: ファイルの添付
   message_embed_links: 埋め込みリンクの送信
-  message_mention_everyone: 役職・全員宛メンション
   message_ext_emoji: 外部の絵文字の使用
   message_ext_sticker: 外部のスタンプの使用
   message_add_reaction: リアクションの追加
+  message_mention_everyone: 役職・全員宛メンション
   message_manage: メッセージの管理
   use_application_commands: アプリケーションコマンドの使用
 
@@ -47,14 +50,19 @@ constants:
   voice_connect: 接続
   voice_speak: 発言
   voice_stream: 配信
-  voice_use_vad: 音声検出を使用
+  voice_start_activities: アクティビティの使用
+  voice_use_soundboard: サウンドボードの使用
+  voice_use_external_sounds: 外部のサウンドの使用
+  voice_use_vad: 音声検出の使用
   priority_speaker: 優先スピーカー
   voice_mute_others: メンバーをミュート
   voice_deaf_others: メンバーのスピーカーをミュート
   voice_move_others: メンバーの移動
-  voice_start_activities: アクティビティを使用
   
   category_stage: ステージチャンネル
-  request_to_speak: スピーカー参加をリクエスト
+  request_to_speak: スピーカーへの参加をリクエスト
+
+  category_events: イベント
+  manage_events: イベントの管理
 
 components: {}

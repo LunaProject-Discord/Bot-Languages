@@ -4,14 +4,16 @@ constants:
   category_advanced: Advanced Permissions
   administrator: Administrator
   category_general: General
-  view_audit_logs: View Audit Log
   manage_server: Manage Server
   manage_channel: Manage Channels
   manage_roles: Manage Roles
   manage_permissions: Manage Permissions
-  manage_emojis_and_stickers: Manage Emojis and Stickers
   manage_webhooks: Manage Webhooks
+  manage_guild_expressions: Manage Emoji, Stickers and Sounds
+  manage_emojis_and_stickers: Manage Emojis and Stickers
+  view_audit_logs: View Audit Log
   view_guild_insights: View Server Insights
+  view_creator_monetization_analytics: View Creator Monetization Analytics
   view_channel: View Channels
   category_membership: Membership
   create_instant_invite: Create Invite
@@ -23,13 +25,14 @@ constants:
   category_text: Text Channel
   message_send: Send Messages
   message_tts: Send Text-to-Speech Messages
+  message_attach_voice_message: Send Voice Messages
   message_history: Read Message History
   message_attach_files: Attach Files
   message_embed_links: Embed Links
-  message_mention_everyone: Mention @everyone, @here and All Roles
   message_ext_emoji: Use External Emoji
-  message_ext_sticker: Use External Sticker
+  message_ext_sticker: Use External Stickers
   message_add_reaction: Add Reactions
+  message_mention_everyone: Mention @everyone, @here and All Roles
   message_manage: Manage Messages
   use_application_commands: Use Application Commands
   category_thread: Thread
@@ -41,12 +44,16 @@ constants:
   voice_connect: Connect
   voice_speak: Speak
   voice_stream: Stream
+  voice_start_activities: Use Activities
+  voice_use_soundboard: Use Soundboard
+  voice_use_external_sounds: Use External Sounds
   voice_use_vad: Use Voice Activity
   priority_speaker: Priority Speaker
   voice_mute_others: Mute Members
   voice_deaf_others: Deafen Members
   voice_move_others: Move Members
-  voice_start_activities: Use Activities
   category_stage: Stage Channel
-  request_to_speak: Request To Speak
+  request_to_speak: Request to Speak
+  category_events: Events
+  manage_events: Manage Events
 components: { }
